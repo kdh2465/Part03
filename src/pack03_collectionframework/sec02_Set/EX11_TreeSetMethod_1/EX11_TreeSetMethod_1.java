@@ -23,7 +23,7 @@ public class EX11_TreeSetMethod_1 {
 		System.out.println(treeSet.floor(26)); //26
 		//#6. ceiling(E element)
 		System.out.println(treeSet.ceiling(25)); //26
-		System.out.println(treeSet.ceiling(25)); //26
+		System.out.println(treeSet.ceiling(26)); //26
 
 		//#7. pollFirst()
 		int treeSetSize = treeSet.size();

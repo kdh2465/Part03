@@ -72,7 +72,7 @@ public class EX12_TreeSetMethod_2 {
 		TreeSet<MyClass> treeSet5 = new TreeSet<MyClass>(new Comparator<MyClass>() {
 		  @Override
 		  public int compare(MyClass o1, MyClass o2) {
-		    if(o1.data1 < o1.data2) return -1;
+		    if(o1.data1 < o2.data1) return -1;
 		    else if(o1.data1 == o2.data1) return 0;
 		    else return 1;
 		  }
