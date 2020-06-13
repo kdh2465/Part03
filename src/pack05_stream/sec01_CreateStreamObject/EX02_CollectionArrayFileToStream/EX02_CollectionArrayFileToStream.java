@@ -33,7 +33,7 @@ public class EX02_CollectionArrayFileToStream {
 		System.out.println();
 
 				
-		//현재의 작업 폴더 위치 알아내기 (default: 프로젝트 루트 위치)
+		//참고사항. 현재의 작업 폴더 위치 알아내기 (default: 프로젝트 루트 위치)
 		System.out.println(System.getProperty("user.dir"));
 		
 		//#3-1. 파일(UTF-8) --> 스트림
