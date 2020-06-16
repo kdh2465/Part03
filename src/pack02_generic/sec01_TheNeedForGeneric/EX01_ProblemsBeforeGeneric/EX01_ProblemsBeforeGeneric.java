@@ -27,9 +27,9 @@ class Goods2{
 public class EX01_ProblemsBeforeGeneric {
 	public static void main(String[] args) {
 		//Goods1은 Apple만 사용 가능
-		Goods1 goods1 = new Goods1();
+		Goods1 goods1 = new Goods1(); 
 		goods1.set(new Apple());
-		Apple apple = goods1.get();
+		Apple apple = goods1.get(); 
 		
 		//Goods2은 Pencil만 사용 가능
 		Goods2 goods2 = new Goods2();
