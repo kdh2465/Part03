@@ -2,7 +2,7 @@ package pack02_generic.sec01_TheNeedForGeneric.EX01_ProblemsBeforeGeneric;
 
 //#1. Apple 클래스와 Apple을 담을 수 있는 클래스
 class Apple{ }
-class Goods1{
+class Goods1{ 
 	private Apple apple = new Apple();
 	public Apple get() {
 		return apple;
