@@ -18,7 +18,7 @@ class Goods2{
 	private Pencil pencil = new Pencil();
 	public Pencil get() {
 		return pencil;
-	}
+	} 
 	public void set(Pencil pencil) {
 		this.pencil = pencil;
 	}	
