@@ -1,18 +1,18 @@
 package pack05_stream.sec03_TerminalOperations.EX17_Iterating_forEach;
 
 import java.util.stream.Stream;
-
+//pull
 public class EX17_Iterating_forEach {
 	public static void main(String[] args) {
 		
 		//#. Iterating (forEach())
 		Stream.of(1,2,3,4).forEach(s->System.out.println(s));
-		Stream.of("¶¯Å¥", "º£¸®", "°¨»ç").forEach(System.out::print);
+		Stream.of("ë•¡í", "ë² ë¦¬", "ê°ì‚¬").forEach(System.out::print);
 		System.out.println();
 
-		//cf. peek(..)´Â Áß°£ÀÛ¾÷ (ÃÖÁ¾ÀÛ¾÷ÀÌ ¾øÀ¸¸é µ¿ÀÛÇÏÁö ¾ÊÀ½) 
-		Stream.of(1,2,3,4).peek(s->System.out.println(s));//µ¿ÀÛ¾ÈÇÔ
-		Stream.of(1,2,3,4).peek(s->System.out.print(s+" ")).count();//µ¿ÀÛÇÔ
+		//cf. peek(..)ëŠ” ì¤‘ê°„ì‘ì—… (ìµœì¢…ì‘ì—…ì´ ì—†ìœ¼ë©´ ë™ì‘í•˜ì§€ ì•ŠìŒ) 
+		Stream.of(1,2,3,4).peek(s->System.out.println(s));//ë™ì‘ì•ˆí•¨
+		Stream.of(1,2,3,4).peek(s->System.out.print(s+" ")).count();//ë™ì‘í•¨
 
 	}
 }
