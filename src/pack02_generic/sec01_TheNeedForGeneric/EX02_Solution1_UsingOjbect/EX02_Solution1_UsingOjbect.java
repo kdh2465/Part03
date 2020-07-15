@@ -1,5 +1,7 @@
 package pack02_generic.sec01_TheNeedForGeneric.EX02_Solution1_UsingOjbect;
 
+/*해결책 1. Object를 사용한 다양한 객체의 저장 및 추가적인 문제점*/
+
 class Apple{ }
 class Pencil{ }
 

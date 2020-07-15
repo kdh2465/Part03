@@ -1,5 +1,7 @@
 package pack01_exceptionhandling.sec01_TypeOfException.EX02_UnCheckedException;
 
+/*대표적인 실행예외(RuntimeException, Unchecked Exception)*/
+
 class A{}
 class B extends A{}
 public class EX02_UnCheckedException {

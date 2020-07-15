@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
 
+/*LinkedList<E> 클래스의 주요 메서드 활용방법*/
+
 public class EX05_LinkedListMethod {
 	public static void main(String[] args) {
 		

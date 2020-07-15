@@ -6,6 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
 
+/*동적크기와 정적크기를 가지는 리스트 객체 생성*/
+
 public class EX02_CreateListObject {
 	public static void main(String[] args) {
 		

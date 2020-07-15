@@ -3,6 +3,8 @@ package pack01_exceptionhandling.sec01_TypeOfException.EX01_CheckedException;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
+/*대표적인 일반예외(Checked Exception)*/
+
 class A {
 	@Override
 	protected Object clone() throws CloneNotSupportedException {

@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
 
+/*List<E> 구현 클래스 Summary*/
+
 public class EX07_ListSummary {
 	public static void main(String[] args) {
 		//#1. ArrayList

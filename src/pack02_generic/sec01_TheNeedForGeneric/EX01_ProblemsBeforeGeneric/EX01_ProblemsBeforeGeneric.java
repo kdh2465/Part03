@@ -1,5 +1,7 @@
 package pack02_generic.sec01_TheNeedForGeneric.EX01_ProblemsBeforeGeneric;
 
+/*제네릭 이전의 문제점 확인 사과와 연필만을 저장할 수 있는 클래스의 생성 및 활용*/
+
 //#1. Apple 클래스와 Apple을 담을 수 있는 클래스
 class Apple{ }
 class Goods1{ 

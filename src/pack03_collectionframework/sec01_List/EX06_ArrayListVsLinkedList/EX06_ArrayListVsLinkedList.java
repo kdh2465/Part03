@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/*ArrayList<E>와 LinkedList<E>의 성능 비교 (데이터추가/검색/삭제)*/
+
 public class EX06_ArrayListVsLinkedList {
 	public static void main(String[] args) {
 		

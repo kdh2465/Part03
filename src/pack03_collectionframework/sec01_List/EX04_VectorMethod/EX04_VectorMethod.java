@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Vector;
 
+/*Vector<E> 클래스의 주요 메서드 활용방법*/
+
 public class EX04_VectorMethod {
 	public static void main(String[] args) {
 		List<Integer> vector1 = new Vector<Integer>();

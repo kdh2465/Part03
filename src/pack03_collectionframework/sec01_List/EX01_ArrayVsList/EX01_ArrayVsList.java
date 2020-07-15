@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/*배열과 리스트의 비교*/
+
 public class EX01_ArrayVsList {
 	public static void main(String[] args) {
 		
