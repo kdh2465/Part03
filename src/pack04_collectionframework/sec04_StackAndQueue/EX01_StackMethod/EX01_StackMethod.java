@@ -1,7 +1,8 @@
 package pack04_collectionframework.sec04_StackAndQueue.EX01_StackMethod;
 
-import java.util.LinkedList;
 import java.util.Stack;
+
+/*Stack<E> 클래스의 주요 메서드 활용방법*/
 
 public class EX01_StackMethod {
 	public static void main(String[] args) {
@@ -33,6 +34,6 @@ public class EX01_StackMethod {
 
 		//#5. boolean empty()
 		System.out.println(stack.empty()); //true
-		
+
 	}
 }

@@ -3,6 +3,8 @@ package pack04_collectionframework.sec04_StackAndQueue.EX02_QueueMethod;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/*Queue<E> 컬렉션의 주요 메서드 활용방법*/
+
 public class EX02_QueueMethod {
 	public static void main(String[] args) {
 		
