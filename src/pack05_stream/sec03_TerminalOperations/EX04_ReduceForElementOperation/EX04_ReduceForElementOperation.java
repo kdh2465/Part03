@@ -6,6 +6,8 @@ import java.util.OptionalInt;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+/*스트림 요소간의 임의 연산 : reduce()*/
+
 public class EX04_ReduceForElementOperation {
 	public static void main(String[] args) {
 		

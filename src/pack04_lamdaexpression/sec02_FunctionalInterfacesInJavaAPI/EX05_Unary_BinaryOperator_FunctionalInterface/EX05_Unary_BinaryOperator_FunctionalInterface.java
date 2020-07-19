@@ -9,6 +9,8 @@ import java.util.function.LongBinaryOperator;
 import java.util.function.LongUnaryOperator;
 import java.util.function.UnaryOperator;
 
+/*UnaryOperator<T>와 BinaryOperator<T> 함수형 인터페이스 (자바 API 제공)*/
+
 public class EX05_Unary_BinaryOperator_FunctionalInterface {
 	public static void main(String[] args) {
 
@@ -53,8 +55,5 @@ public class EX05_Unary_BinaryOperator_FunctionalInterface {
 		System.out.println(bo2.applyAsInt(10,20)); //30
 		System.out.println(bo3.applyAsLong(20L, 10L)); //200
 		System.out.println(bo4.applyAsDouble(42.0, 12.0)); //3.5
-		
-		System.out.println();
-		
 	}
 }

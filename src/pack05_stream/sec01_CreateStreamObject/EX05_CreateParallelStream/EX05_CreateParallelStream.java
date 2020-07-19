@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+/*병렬스트림(ParallelStream) 생성*/
+
 public class EX05_CreateParallelStream {
 	public static void main(String[] args) {
 		//#1.컬렉션 --> 병렬(Parallel) 스트림

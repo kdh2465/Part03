@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/*스트림으로부터의 새로운 수집(collect) 조합 구성 : collect() #2*/
+
 public class EX06_CollectForNewDataSet_2 {
 	public static void main(String[] args) {
 		

@@ -1,10 +1,10 @@
 package pack03_collectionframework.sec03_Map.EX02_HashMapMachanism;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Set;
+
+/*HashMap<K,V>에서 키(Key)의 중복확인 메커니즘*/
 
 //#1. CASE1. equals(): 오버라이딩 X + hashcode(): 오버라이딩 X
 class A {

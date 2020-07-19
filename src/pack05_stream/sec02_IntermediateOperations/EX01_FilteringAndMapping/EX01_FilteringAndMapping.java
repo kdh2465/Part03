@@ -5,6 +5,8 @@ import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
+/*필터링(filtering)과 맵핑(Mapping) 및 필터링/매핑 연속 호출*/
+
 public class EX01_FilteringAndMapping {
 	public static void main(String[] args) {
 		//#1. filtering

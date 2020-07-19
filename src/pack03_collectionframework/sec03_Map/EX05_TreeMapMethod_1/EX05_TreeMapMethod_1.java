@@ -5,6 +5,8 @@ import java.util.NavigableSet;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+/*TreeMap<K,V> 클래스의 주요 메서드 활용방법*/
+
 public class EX05_TreeMapMethod_1 {
 	public static void main(String[] args) {
 		TreeMap<Integer, String> treeMap = new TreeMap<Integer, String>();

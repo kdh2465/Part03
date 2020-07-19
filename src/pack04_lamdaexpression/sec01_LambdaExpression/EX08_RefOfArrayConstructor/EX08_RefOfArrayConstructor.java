@@ -1,5 +1,7 @@
 package pack04_lamdaexpression.sec01_LambdaExpression.EX08_RefOfArrayConstructor;
 
+/*활용#3-1. 배열의 생성자 참조*/
+
 interface A {
 	int[] abc(int len);
 }

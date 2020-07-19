@@ -5,6 +5,8 @@ import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
+/*기본자료형 배열로부터 기본자료형스트림(Int/Long/DoubleStream) 생성*/
+
 public class EX02_PrimitiveArrayToxxxStream {
 	public static void main(String[] args) {
 		//#1-1.int[] --> 스트림

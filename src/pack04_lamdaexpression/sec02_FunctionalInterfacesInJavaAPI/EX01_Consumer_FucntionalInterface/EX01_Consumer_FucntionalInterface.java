@@ -5,6 +5,8 @@ import java.util.function.DoubleConsumer;
 import java.util.function.IntConsumer;
 import java.util.function.LongConsumer;
 
+/*Consumer<T> 함수형 인터페이스 (자바 API 제공)*/
+
 public class EX01_Consumer_FucntionalInterface {
 	public static void main(String[] args) {
 		

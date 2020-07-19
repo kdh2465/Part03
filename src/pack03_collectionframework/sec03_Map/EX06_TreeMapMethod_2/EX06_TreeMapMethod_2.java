@@ -3,6 +3,8 @@ package pack03_collectionframework.sec03_Map.EX06_TreeMapMethod_2;
 import java.util.Comparator;
 import java.util.TreeMap;
 
+/*사용자 클래스의 대소비교 기준 제공 및 TreeMap<K,V> 데이터로의 활용*/
+
 class MyClass {
 	int data1;
 	int data2;

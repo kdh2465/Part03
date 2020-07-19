@@ -5,6 +5,8 @@ import java.util.function.IntSupplier;
 import java.util.function.LongSupplier;
 import java.util.function.Supplier;
 
+/*Consumer<T> 함수형 인터페이스 (자바 API 제공)*/
+
 public class EX02_Supplier_FucntionalInterface {
 	public static void main(String[] args) {
 		

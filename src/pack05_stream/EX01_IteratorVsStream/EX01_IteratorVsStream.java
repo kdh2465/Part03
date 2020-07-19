@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Stream;
 
+/*외부반복자(iterator)와 내부반복자(stream)의 코드 비교*/
+
 public class EX01_IteratorVsStream {
 	public static void main(String[] args) {
 		

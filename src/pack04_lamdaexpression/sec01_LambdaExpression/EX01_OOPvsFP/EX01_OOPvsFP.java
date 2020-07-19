@@ -1,5 +1,7 @@
 package pack04_lamdaexpression.sec01_LambdaExpression.EX01_OOPvsFP;
 
+/*객체 지향 프로그래밍 문법과 함수적 프로그래밍 문법*/
+
 interface A {
 	void abc();
 }

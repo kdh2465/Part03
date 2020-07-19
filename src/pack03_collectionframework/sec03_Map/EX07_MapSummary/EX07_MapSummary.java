@@ -6,6 +6,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
+/*Map<K,V> 구현클래스 Summary*/
+
 public class EX07_MapSummary {
 	public static void main(String[] args) {
 

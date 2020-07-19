@@ -6,6 +6,8 @@ import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
+/*기본자료형스트림(Int/Long/DoubleStream)으로부터 Stream<E> 객체 생성*/
+
 public class EX03_xxxStreamToStream {
 	public static void main(String[] args) {
 		

@@ -1,5 +1,7 @@
 package pack04_lamdaexpression.sec01_LambdaExpression.EX06_RefOfInstanceMethod_Type2_1;
 
+/*활용#2-3. 인스턴스 메서드 참조 Type2(직접 정의한 인스턴스 메서드 참조)*/
+
 interface A {
 	void abc(B b, int k);
 }
