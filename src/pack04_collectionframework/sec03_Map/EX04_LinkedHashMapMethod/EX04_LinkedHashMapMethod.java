@@ -4,6 +4,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
+/*LinkedHashMap<K,V> 클래스의 주요 메서드 활용방법*/
+
 public class EX04_LinkedHashMapMethod {
 	public static void main(String[] args) {
 		

@@ -33,6 +33,6 @@ public class EX01_StackMethod {
 
 		//#5. boolean empty()
 		System.out.println(stack.empty()); //true
-		LinkedList l;
+		
 	}
 }

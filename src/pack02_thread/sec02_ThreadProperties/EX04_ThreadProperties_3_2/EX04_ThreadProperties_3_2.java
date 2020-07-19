@@ -1,6 +1,6 @@
-package pack02_thread.sec02_ThreadProperties.EX03_ThreadProperties_3_3;
+package pack02_thread.sec02_ThreadProperties.EX04_ThreadProperties_3_2;
 
-/*쓰레드의 데몬(daemon) 설정 #3 : 일반쓰레드 vs. 데몬쓰레드*/
+/*쓰레드의 데몬(daemon) 설정 #2 : 데몬쓰레드*/
 
 class MyThread extends Thread {
 	@Override
@@ -13,14 +13,14 @@ class MyThread extends Thread {
 	}
 }
 
-public class EX05_ThreadProperties_3_3 {
+public class EX04_ThreadProperties_3_2 {
 	public static void main(String[] args) {
 		
 		//#1. 일반쓰레드
-		Thread thread1 = new MyThread();
-		thread1.setDaemon(false);
-		thread1.setName("thread1");
-		thread1.start();
+		//Thread thread1 = new MyThread();
+		//thread1.setDaemon(false);
+		//thread1.setName("thread1");
+		//thread1.start();
 		
 		//#2. 데몬쓰레드
 		Thread thread2 = new MyThread();

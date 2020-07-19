@@ -4,6 +4,8 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.Set;
 
+/*HashTable<K,V> 클래스의 주요 메서드 활용방법*/
+
 public class EX03_HashTableMethod {
 	public static void main(String[] args) {
 		Map<Integer, String> hTable1 = new Hashtable<Integer, String>();
