@@ -1,5 +1,7 @@
 package pack05_lamdaexpression.sec01_LambdaExpression.EX05_RefOfStaticMethod;
 
+/*활용#2-2. 정적 메서드 참조*/
+
 interface A {
 	void abc();
 }

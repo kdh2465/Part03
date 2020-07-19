@@ -1,5 +1,7 @@
 package pack05_lamdaexpression.sec01_LambdaExpression.EX10_RefOfClassConstructor_2;
 
+/*활용#3-2. 클래스의 생성자 참조 (매개변수를 가진 생성자 참조)*/
+
 interface A {
 	B abc(int a);
 }

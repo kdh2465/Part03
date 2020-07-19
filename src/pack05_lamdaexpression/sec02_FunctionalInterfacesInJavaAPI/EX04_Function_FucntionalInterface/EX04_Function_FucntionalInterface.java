@@ -1,6 +1,5 @@
 package pack05_lamdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX04_Function_FucntionalInterface;
 import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
 import java.util.function.DoubleFunction;
 import java.util.function.Function;
 import java.util.function.IntFunction;
@@ -8,6 +7,8 @@ import java.util.function.LongFunction;
 import java.util.function.ToDoubleFunction;
 import java.util.function.ToIntFunction;
 import java.util.function.ToLongFunction;
+
+/*Function<T,R> 함수형 인터페이스 (자바 API 제공)*/
 
 public class EX04_Function_FucntionalInterface {
 	public static void main(String[] args) {

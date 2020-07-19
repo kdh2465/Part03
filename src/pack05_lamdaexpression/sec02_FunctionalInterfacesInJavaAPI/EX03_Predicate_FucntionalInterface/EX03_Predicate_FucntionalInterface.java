@@ -5,6 +5,8 @@ import java.util.function.IntPredicate;
 import java.util.function.LongPredicate;
 import java.util.function.Predicate;
 
+/*Predicate<T> 함수형 인터페이스 (자바 API 제공)*/
+
 public class EX03_Predicate_FucntionalInterface {
 	public static void main(String[] args) {
 		
