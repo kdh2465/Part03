@@ -31,8 +31,7 @@ public class EX05_TryWithResource_1 {
 					isr2.close();
 				} catch (IOException e) { }
 			}
-		}
-		
+		}		
 				
 	}
 }
