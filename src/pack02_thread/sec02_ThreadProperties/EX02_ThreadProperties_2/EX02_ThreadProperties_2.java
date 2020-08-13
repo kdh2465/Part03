@@ -36,3 +36,4 @@ public class EX02_ThreadProperties_2 {
 				
 	}
 }
+

@@ -5,7 +5,7 @@ package pack02_thread.sec04_TheradStates.EX05_BlockedState;
 class MyClass{
 	synchronized void syncMethod() {
 		System.out.println(Thread.currentThread().getName());
-		for(long i=0; i<1000000000L; i++) {}
+		for(long i=0; i<10000000000L; i++) {}
 	}
 }
 
@@ -38,16 +38,21 @@ public class EX05_BlockedState {
 		while(true) {
 			new_t1=t1.getState();
 			new_t2=t2.getState();
-			new_t3=t3.getState();
+			new_t3=t3.getState();					
 			
 			if(old_t1!=new_t1||old_t2!=new_t2||old_t3!=new_t3) {						
-				System.out.println("t1 : "+new_t1);
-				System.out.println("t2 : "+new_t2);
-				System.out.println("t3 : "+new_t3);
 				if(t1.getState()==Thread.State.TERMINATED
 						&& t2.getState()==Thread.State.TERMINATED 
 						&& t3.getState()==Thread.State.TERMINATED)
 					break;
+				if(t1.getState()==Thread.State.RUNNABLE
+						&& t2.getState()==Thread.State.RUNNABLE 
+						&& t3.getState()==Thread.State.RUNNABLE)
+					continue;
+				
+				System.out.println("t1 : "+new_t1);
+				System.out.println("t2 : "+new_t2);
+				System.out.println("t3 : "+new_t3);
 			}
 			old_t1=new_t1; old_t2=new_t2; old_t3=new_t3;
 			
