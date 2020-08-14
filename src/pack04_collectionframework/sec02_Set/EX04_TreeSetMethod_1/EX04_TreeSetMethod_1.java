@@ -18,7 +18,7 @@ public class EX04_TreeSetMethod_1 {
 		System.out.println(treeSet.last()); //50
 		//#3. lower(E element)
 		System.out.println(treeSet.lower(26)); //24
-		//#4. lower(E element)
+		//#4. higher(E element)
 		System.out.println(treeSet.higher(26)); //28
 		//#5. floor(E element)
 		System.out.println(treeSet.floor(25)); //24

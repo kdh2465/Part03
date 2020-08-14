@@ -8,7 +8,7 @@ import java.util.Queue;
 public class EX02_QueueMethod {
 	public static void main(String[] args) {
 		
-		//#1. Collection Methods
+		//#1. 예외처리기능 미포함 메서드
 		Queue<Integer> queue1 = new LinkedList<Integer>();
 		//System.out.println(queue1.element()); //NoSuchElementException
 
@@ -27,7 +27,7 @@ public class EX02_QueueMethod {
 		//System.out.println(queue1.remove()); //NoSuchElementException
 		
 	
-		//#2. Queue Methods
+		//#2. 예외처리기능 포함 메서드
 		Queue<Integer> queue2 = new LinkedList<Integer>();
 		System.out.println(queue2.peek()); //null
 		
