@@ -25,17 +25,17 @@ class MyRTException extends RuntimeException{
 }
 
 class A {
-	void abc(int num) throws MyException {
-		
-		//#3. 사용자 정의 예외 객체 생성
-		MyException me1 = new MyException();
-		MyException me2 = new MyException("예외메세지: MyException");
-		
-		MyRTException mre1 = new MyRTException();
-		MyRTException mre2 = new MyRTException("예외메세지: MyRTException");
-
-		//#4. 예외 던지기
-		//@방법#1. 예외를 직접 처리		
+	
+	//#3. 사용자 정의 예외 객체 생성
+	MyException me1 = new MyException();
+	MyException me2 = new MyException("예외메세지: MyException");
+	
+	MyRTException mre1 = new MyRTException();
+	MyRTException mre2 = new MyRTException("예외메세지: MyRTException");
+	
+	//#4. 예외 던지기
+	//@방법#1. 예외를 직접 처리
+	void abc_1(int num) {		
 		try {			
 			if (num>70) 
 				System.out.println("정상동작");
@@ -43,16 +43,23 @@ class A {
 				throw new MyException();
 		} catch(MyException e) {
 			System.out.println("예외처리");
-		}
-		
-		//@방법#2. 예외를 상위로 전가
-		throw new MyException();
+		}		
+	}
+	void bcd_1() {
+		abc_1(65);
 	}
 	
-	//#5. 상위 메서드에서 전가받은 예외처리하기	
-	void bcd() {
+	//#5. 예외 던지기
+	//@방법#2. 예외를 전가하기
+	void abc_2(int num) throws MyException {		
+		if (num>70) 
+			System.out.println("정상동작");
+		else 
+			throw new MyException();
+	}
+	void bcd_2() {
 		try {
-			abc(65);
+			abc_2(65);
 		} catch (MyException e) {
 			System.out.println("예외처리");
 		}
