@@ -21,6 +21,7 @@ class KeyValue<K, V>{
 
 public class EX02_TwoGenericArguments {
 	public static void main(String[] args) {
+		
 		KeyValue<String, Integer> kv1 = new KeyValue<>();
 		kv1.setKey("사과");
 		kv1.setValue(1000);		
@@ -36,8 +37,9 @@ public class EX02_TwoGenericArguments {
 		System.out.println("key: "+key2+" value: "+value2);
 		
 		KeyValue<String, Void> kv3 = new KeyValue<>();
-		kv3.setKey("키값만 사용");				
+		kv3.setKey("키값만 사용");
 		String key3 = kv3.getKey();		
 		System.out.println("key: "+key3);
+		
 	}
 }
