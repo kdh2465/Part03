@@ -4,10 +4,9 @@ package pack02_thread.sec04_TheradStates.EX02_YieldInRunnableState;
 
 class MyThread extends Thread{
 	boolean yieldFlag;
-	boolean stopFlag;
 	@Override
 	public void run() {
-		while(!stopFlag) {
+		while(true) {
 			if(yieldFlag) {
 				Thread.yield();
 			} else {
@@ -23,11 +22,13 @@ public class EX02_YieldInRunnableState {
 		MyThread thread1 = new MyThread();
 		thread1.setName("thread1");
 		thread1.yieldFlag=false;
+		thread1.setDaemon(true);
 		thread1.start();
 		
 		MyThread thread2 = new MyThread();
 		thread2.setName("thread2");	
 		thread2.yieldFlag=true;
+		thread2.setDaemon(true);
 		thread2.start();
 		
 		//#. 1초마다 한번씩 양보
@@ -36,6 +37,5 @@ public class EX02_YieldInRunnableState {
 			thread1.yieldFlag=!thread1.yieldFlag;
 			thread2.yieldFlag=!thread2.yieldFlag;
 		}
-		thread1.stopFlag=thread2.stopFlag=true;		
 	}
 }
