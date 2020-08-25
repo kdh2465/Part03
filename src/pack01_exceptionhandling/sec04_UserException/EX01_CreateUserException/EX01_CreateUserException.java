@@ -40,9 +40,9 @@ class A {
 			if (num>70) 
 				System.out.println("정상동작");
 			else 
-				throw new MyException();
+				throw me1;
 		} catch(MyException e) {
-			System.out.println("예외처리");
+			System.out.println("예외처리 1");
 		}		
 	}
 	void bcd_1() {
@@ -55,17 +55,21 @@ class A {
 		if (num>70) 
 			System.out.println("정상동작");
 		else 
-			throw new MyException();
+			throw me1;
 	}
 	void bcd_2() {
 		try {
 			abc_2(65);
 		} catch (MyException e) {
-			System.out.println("예외처리");
+			System.out.println("예외처리 2");
 		}
 	}
 }
 
 public class EX01_CreateUserException {
-	
+	public static void main(String[] args) {
+		A a = new A();
+		a.bcd_1();
+		a.bcd_2();
+	}
 }
