@@ -28,6 +28,7 @@ class MyBlockTest {
 	
 	class MyClass{
 		synchronized void syncMethod() {
+			try {Thread.sleep(100);} catch (InterruptedException e) {} //쓰레드 시작 준비 시간
 			System.out.println("["+Thread.currentThread().getName()+"]");
 			System.out.println("thread1->"+t1.getState());
 			System.out.println("thread2->"+t2.getState());
