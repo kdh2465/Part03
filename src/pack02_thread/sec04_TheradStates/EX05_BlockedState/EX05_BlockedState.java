@@ -5,7 +5,7 @@ package pack02_thread.sec04_TheradStates.EX05_BlockedState;
 class MyBlockTest {
 	MyClass mc = new MyClass();
 	Thread t1 = new Thread("thread1") {
-		public void run() {
+		public void run() {			
 			mc.syncMethod();
 		}
 	};
