@@ -15,7 +15,7 @@ public class EX07_ListSummary {
 		arrayList.add("마");
 		arrayList.add("나");
 		arrayList.add("가");
-		System.out.println(arrayList.toString()); //[가, 다, 마, 나]
+		System.out.println(arrayList.toString()); //[다, 마, 나, 가]
 
 		//#2. Vector
 		List<String> vector = new Vector<String>();
