@@ -1,4 +1,4 @@
-package pack05_lamdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX01_Consumer_FucntionalInterface;
+package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX01_Consumer_FucntionalInterface;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.DoubleConsumer;

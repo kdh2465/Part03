@@ -1,4 +1,4 @@
-package pack05_lamdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX04_Function_FucntionalInterface;
+package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX04_Function_FucntionalInterface;
 import java.util.function.BiFunction;
 import java.util.function.DoubleFunction;
 import java.util.function.Function;
@@ -13,7 +13,7 @@ import java.util.function.ToLongFunction;
 public class EX04_Function_FucntionalInterface {
 	public static void main(String[] args) {
 		
-		//#1. Function<T> 의 익명이너클래스 표현		
+		//#1. Function<T,R> 의 익명이너클래스 표현		
 		Function<String, Integer> f = new Function<String, Integer>() {
 			@Override
 			public Integer apply(String t) {				
@@ -22,12 +22,12 @@ public class EX04_Function_FucntionalInterface {
 		};		
 		System.out.println(f.apply("안녕")); //2 (문자열의 길이)
 		
-		//#2. 기본 Function<T> 함수형 인터페이스의 람다식 표현
+		//#2. 기본 Function<T,R> 함수형 인터페이스의 람다식 표현
 		//@2-1. 기본형 Function
 		Function<String, Integer> f1 = str->str.length();
 		System.out.println(f1.apply("안녕")); //2 (문자열의 길이)
 
-		//@2-2. 확장 Function<T> 함수형 인터페이스의 람다식 표현 		
+		//@2-2. 확장 Function<.> 함수형 인터페이스의 람다식 표현 		
 		IntFunction<Double> f2 = (num)->(double)num; //int->double		
 		LongFunction<String> f3 = (num)->String.valueOf(num);//long->문자열
 		DoubleFunction<Integer> f4 = (num)->(int)num; //double->int

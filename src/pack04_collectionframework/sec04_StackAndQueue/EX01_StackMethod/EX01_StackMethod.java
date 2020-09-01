@@ -18,7 +18,7 @@ public class EX01_StackMethod {
 		System.out.println(stack.size()); //4
 		System.out.println();
 
-		//#3. E search(Object o)
+		//#3. int search(Object o)
 		System.out.println(stack.search(7)); //1
 		System.out.println(stack.search(3)); //2
 		System.out.println(stack.search(5)); //3

@@ -1,4 +1,4 @@
-package pack05_lamdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX05_Unary_BinaryOperator_FunctionalInterface;
+package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX05_Unary_BinaryOperator_FunctionalInterface;
 
 import java.util.function.BinaryOperator;
 import java.util.function.DoubleBinaryOperator;

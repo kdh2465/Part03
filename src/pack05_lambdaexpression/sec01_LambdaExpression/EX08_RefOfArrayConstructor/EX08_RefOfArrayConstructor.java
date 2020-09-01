@@ -1,4 +1,4 @@
-package pack05_lamdaexpression.sec01_LambdaExpression.EX08_RefOfArrayConstructor;
+package pack05_lambdaexpression.sec01_LambdaExpression.EX08_RefOfArrayConstructor;
 
 /*활용#3-1. 배열의 생성자 참조*/
 

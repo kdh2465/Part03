@@ -1,4 +1,4 @@
-package pack05_lamdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX03_Predicate_FucntionalInterface;
+package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX03_Predicate_FucntionalInterface;
 import java.util.function.BiPredicate;
 import java.util.function.DoublePredicate;
 import java.util.function.IntPredicate;

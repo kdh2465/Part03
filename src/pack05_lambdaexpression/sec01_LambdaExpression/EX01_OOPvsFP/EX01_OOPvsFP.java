@@ -1,4 +1,4 @@
-package pack05_lamdaexpression.sec01_LambdaExpression.EX01_OOPvsFP;
+package pack05_lambdaexpression.sec01_LambdaExpression.EX01_OOPvsFP;
 
 /*객체 지향 프로그래밍 문법과 함수적 프로그래밍 문법*/
 

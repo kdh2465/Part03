@@ -1,4 +1,4 @@
-package pack05_lamdaexpression.sec01_LambdaExpression.EX09_RefOfClassConstructor_1;
+package pack05_lambdaexpression.sec01_LambdaExpression.EX09_RefOfClassConstructor_1;
 
 /*활용#3-2. 클래스의 생성자 참조 (기본생성자 참조)*/
 

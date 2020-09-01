@@ -1,4 +1,4 @@
-package pack05_lamdaexpression.sec01_LambdaExpression.EX07_RefOfInstanceMethod_Type2_2;
+package pack05_lambdaexpression.sec01_LambdaExpression.EX07_RefOfInstanceMethod_Type2_2;
 
 /*활용#2-3. 인스턴스 메서드 참조 Type2(자바 제공 인스턴스 메서드 참조)*/
 

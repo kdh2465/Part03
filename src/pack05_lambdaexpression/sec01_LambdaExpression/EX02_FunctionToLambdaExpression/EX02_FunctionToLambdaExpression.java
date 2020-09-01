@@ -1,4 +1,4 @@
-package pack05_lamdaexpression.sec01_LambdaExpression.EX02_FunctionToLambdaExpression;
+package pack05_lambdaexpression.sec01_LambdaExpression.EX02_FunctionToLambdaExpression;
 
 /*함수적 인터페이스의 객체생성을 위한 람다식 표현방법*/
 

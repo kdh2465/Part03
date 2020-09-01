@@ -1,11 +1,11 @@
-package pack05_lamdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX02_Supplier_FucntionalInterface;
+package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX02_Supplier_FucntionalInterface;
 import java.util.function.BooleanSupplier;
 import java.util.function.DoubleSupplier;
 import java.util.function.IntSupplier;
 import java.util.function.LongSupplier;
 import java.util.function.Supplier;
 
-/*Consumer<T> 함수형 인터페이스 (자바 API 제공)*/
+/*Supplier<T> 함수형 인터페이스 (자바 API 제공)*/
 
 public class EX02_Supplier_FucntionalInterface {
 	public static void main(String[] args) {

@@ -65,9 +65,9 @@ public class EX05_TreeMapMethod_1 {
 		System.out.println(navigableMap); //{8=8번째 데이터, 10=10번째 데이터}
 
 		//#15. NavigableSet<K> descendingKeySet()
-		NavigableSet<Integer> nevigableSet = treeMap.descendingKeySet();
-		System.out.println(nevigableSet); //[18, 16, 14, ..., 4]
-		System.out.println(nevigableSet.descendingSet()); //[4, 6, 8, ..., 18]
+		NavigableSet<Integer> navigableSet = treeMap.descendingKeySet();
+		System.out.println(navigableSet); //[18, 16, 14, ..., 4]
+		System.out.println(navigableSet.descendingSet()); //[4, 6, 8, ..., 18]
 
 		//#16. NavigableMap<K,V> descendingMap()
 		navigableMap = treeMap.descendingMap();
