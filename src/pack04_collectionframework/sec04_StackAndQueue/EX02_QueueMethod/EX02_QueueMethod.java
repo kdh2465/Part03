@@ -1,14 +1,14 @@
-package pack04_collectionframework.sec04_StackAndQueue.EX02_QueueMethod;
+ï»¿package pack04_collectionframework.sec04_StackAndQueue.EX02_QueueMethod;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-/*Queue<E> ÄÃ·º¼ÇÀÇ ÁÖ¿ä ¸Ş¼­µå È°¿ë¹æ¹ı*/
+/*Queue<E> ì»¬ë ‰ì…˜ì˜ ì£¼ìš” ë©”ì„œë“œ í™œìš©ë°©ë²•*/
 
 public class EX02_QueueMethod {
 	public static void main(String[] args) {
 		
-		//#1. ¿¹¿ÜÃ³¸®±â´É ¹ÌÆ÷ÇÔ ¸Ş¼­µå
+		//#1. ì˜ˆì™¸ì²˜ë¦¬ê¸°ëŠ¥ ë¯¸í¬í•¨ ë©”ì„œë“œ
 		Queue<Integer> queue1 = new LinkedList<Integer>();
 		//System.out.println(queue1.element()); //NoSuchElementException
 
@@ -27,7 +27,7 @@ public class EX02_QueueMethod {
 		//System.out.println(queue1.remove()); //NoSuchElementException
 		
 	
-		//#2. ¿¹¿ÜÃ³¸®±â´É Æ÷ÇÔ ¸Ş¼­µå
+		//#2. ì˜ˆì™¸ì²˜ë¦¬ê¸°ëŠ¥ í¬í•¨ ë©”ì„œë“œ
 		Queue<Integer> queue2 = new LinkedList<Integer>();
 		System.out.println(queue2.peek()); //null
 		

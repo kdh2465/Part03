@@ -1,71 +1,71 @@
-package pack04_collectionframework.sec01_List.EX06_ArrayListVsLinkedList;
+ï»¿package pack04_collectionframework.sec01_List.EX06_ArrayListVsLinkedList;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-/*ArrayList<E>¿Í LinkedList<E>ÀÇ ¼º´É ºñ±³ (µ¥ÀÌÅÍÃß°¡/°Ë»ö/»èÁ¦)*/
+/*ArrayList<E>ì™€ LinkedList<E>ì˜ ì„±ëŠ¥ ë¹„êµ (ë°ì´í„°ì¶”ê°€/ê²€ìƒ‰/ì‚­ì œ)*/
 
 public class EX06_ArrayListVsLinkedList {
 	public static void main(String[] args) {
 		
-		//#1. µ¥ÀÌÅÍ Ãß°¡ ½Ã°£ ÃøÁ¤ºñ±³		
+		//#1. ë°ì´í„° ì¶”ê°€ ì‹œê°„ ì¸¡ì •ë¹„êµ		
 		List<Integer> aList = new ArrayList<>();
 		List<Integer> linkedList = new LinkedList<>();
 		long startTime=0, endTime=0;
 		
-		//@1-1 ArrayList µ¥ÀÌÅÍ Ãß°¡½Ã°£ ÃøÁ¤
+		//@1-1 ArrayList ë°ì´í„° ì¶”ê°€ì‹œê°„ ì¸¡ì •
 		startTime = System.nanoTime();
 		for(int i=0; i<100000; i++) {
 		  aList.add(0, i);
 		}
 		endTime = System.nanoTime();
-		System.out.println("ArrayList µ¥ÀÌÅÍ Ãß°¡½Ã°£: " + (endTime-startTime) + "ns");
+		System.out.println("ArrayList ë°ì´í„° ì¶”ê°€ì‹œê°„: " + (endTime-startTime) + "ns");
 		
-		//@1-2 LinkedList µ¥ÀÌÅÍ Ãß°¡½Ã°£ ÃøÁ¤
+		//@1-2 LinkedList ë°ì´í„° ì¶”ê°€ì‹œê°„ ì¸¡ì •
 		startTime = System.nanoTime();
 		for(int i=0; i<100000; i++) {
 		  linkedList.add(0, i);
 		}
 		endTime = System.nanoTime();
-		System.out.println("LinkedList µ¥ÀÌÅÍ Ãß°¡½Ã°£: " + (endTime-startTime) + "ns");
+		System.out.println("LinkedList ë°ì´í„° ì¶”ê°€ì‹œê°„: " + (endTime-startTime) + "ns");
 		
 		
 		
-		//#2. µ¥ÀÌÅÍÀÇ °Ë»ö(get) ½Ã°£ ºñ±³
-		//@2-1. ArrayList µ¥ÀÌÅÍ °Ë»ö ½Ã°£ ÃøÁ¤
+		//#2. ë°ì´í„°ì˜ ê²€ìƒ‰(get) ì‹œê°„ ë¹„êµ
+		//@2-1. ArrayList ë°ì´í„° ê²€ìƒ‰ ì‹œê°„ ì¸¡ì •
 		startTime = System.nanoTime();
 		for(int i=0; i<aList.size(); i++) {
 		  aList.get(i);
 		}
 		endTime = System.nanoTime();
-		System.out.println("ArrayList µ¥ÀÌÅÍ °Ë»ö½Ã°£: " + (endTime-startTime) + "ns");
+		System.out.println("ArrayList ë°ì´í„° ê²€ìƒ‰ì‹œê°„: " + (endTime-startTime) + "ns");
 
-		//@2-2. LinkedList µ¥ÀÌÅÍ °Ë»ö ½Ã°£ ÃøÁ¤
+		//@2-2. LinkedList ë°ì´í„° ê²€ìƒ‰ ì‹œê°„ ì¸¡ì •
 		startTime = System.nanoTime();
 		for(int i=0; i<linkedList.size(); i++) {
 			linkedList.get(i);
 		}
 		endTime = System.nanoTime();
-		System.out.println("LinkedList µ¥ÀÌÅÍ °Ë»ö½Ã°£: " + (endTime-startTime) + "ns");
+		System.out.println("LinkedList ë°ì´í„° ê²€ìƒ‰ì‹œê°„: " + (endTime-startTime) + "ns");
 
 		
-		//#3. µ¥ÀÌÅÍÀÇ Á¦°Å (remove) ½Ã°£ ºñ±³
-		//@3-1. ArrayList µ¥ÀÌÅÍ Á¦°Å ½Ã°£ ÃøÁ¤
+		//#3. ë°ì´í„°ì˜ ì œê±° (remove) ì‹œê°„ ë¹„êµ
+		//@3-1. ArrayList ë°ì´í„° ì œê±° ì‹œê°„ ì¸¡ì •
 		startTime = System.nanoTime();
 		for(int i=0; i<aList.size(); i++) {
 		  aList.remove(0);
 		}
 		endTime = System.nanoTime();
-		System.out.println("ArrayList µ¥ÀÌÅÍ Á¦°Å½Ã°£: " + (endTime-startTime) + "ns");
+		System.out.println("ArrayList ë°ì´í„° ì œê±°ì‹œê°„: " + (endTime-startTime) + "ns");
 		
-		//@3-2. LinkedList µ¥ÀÌÅÍ Á¦°Å ½Ã°£ ÃøÁ¤
+		//@3-2. LinkedList ë°ì´í„° ì œê±° ì‹œê°„ ì¸¡ì •
 		startTime = System.nanoTime();
 		for(int i=0; i<linkedList.size(); i++) {
 			linkedList.remove(0);
 		}
 		endTime = System.nanoTime();
-		System.out.println("LinkedList µ¥ÀÌÅÍ Á¦°Å½Ã°£: " + (endTime-startTime) + "ns");
+		System.out.println("LinkedList ë°ì´í„° ì œê±°ì‹œê°„: " + (endTime-startTime) + "ns");
 		
 	}
 }

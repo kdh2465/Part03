@@ -1,20 +1,20 @@
-package pack01_exceptionhandling.sec04_UserException.EX02_ExceptionMethods_1;
+ï»¿package pack01_exceptionhandling.sec04_UserException.EX02_ExceptionMethods_1;
 
-/*¿¹¿Ü °´Ã¼ÀÇ ´ëÇ¥ÀûÀÎ ¸Ş¼­µå (getMessage())*/
+/*ì˜ˆì™¸ ê°ì²´ì˜ ëŒ€í‘œì ì¸ ë©”ì„œë“œ (getMessage())*/
 
 public class EX02_ExceptionMethods_1 {
 	public static void main(String[] args) {
 		
-		//#1. ¿¹¿Ü°´Ã¼ »ı¼º½Ã ¸Ş½ÃÁö¸¦ Àü´ŞÇÏÁö ¾ÊÀº °æ¿ì 
+		//#1. ì˜ˆì™¸ê°ì²´ ìƒì„±ì‹œ ë©”ì‹œì§€ë¥¼ ì „ë‹¬í•˜ì§€ ì•Šì€ ê²½ìš° 
 		try {
 			throw new Exception();
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
 		
-		//#2. ¿¹¿Ü°´Ã¼ »ı¼º½Ã ¸Ş½ÃÁö¸¦ Àü´ŞÇÑ °æ¿ì
+		//#2. ì˜ˆì™¸ê°ì²´ ìƒì„±ì‹œ ë©”ì‹œì§€ë¥¼ ì „ë‹¬í•œ ê²½ìš°
 		try {
-			throw new Exception("¿¹¿Ü ¸Ş½ÃÁö");
+			throw new Exception("ì˜ˆì™¸ ë©”ì‹œì§€");
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
 		}

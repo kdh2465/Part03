@@ -1,6 +1,6 @@
-package pack05_lambdaexpression.sec01_LambdaExpression.EX04_RefOfInstanceMethod_Type1_2;
+ï»¿package pack05_lambdaexpression.sec01_LambdaExpression.EX04_RefOfInstanceMethod_Type1_2;
 
-/*È°¿ë#2-1. ÀÎ½ºÅÏ½º ¸Ş¼­µå ÂüÁ¶ Type1 (ÀÚ¹Ù Á¦°ø ÀÎ½ºÅÏ½º ¸Ş¼­µå ÂüÁ¶)*/
+/*í™œìš©#2-1. ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œ ì°¸ì¡° Type1 (ìë°” ì œê³µ ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œ ì°¸ì¡°)*/
 
 interface A {
 	void abc(int k);
@@ -8,20 +8,20 @@ interface A {
 
 public class EX04_RefOfInstanceMethod_Type1_2 {
 	public static void main(String[] args) {
-		// #ÀÎ½ºÅÏ½º ¸Ş¼­µå ÂüÁ¶ Type1
-		// #1. ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		// #ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œ ì°¸ì¡° Type1
+		// #1. ìµëª…ì´ë„ˆí´ë˜ìŠ¤ í‘œí˜„
 		A a1 = new A() {
 			public void abc(int k) {
 				System.out.println(k);
 			}
 		};
 
-		// #2. ÀÏ¹İ ¶÷´Ù½Ä Ç¥Çö
+		// #2. ì¼ë°˜ ëŒë‹¤ì‹ í‘œí˜„
 		A a2 = (k) -> {
 			System.out.println(k);
 		};
 
-		// #3. ÀÎ½ºÅÏ½º ¸Ş¼­µå ÂüÁ¶ Type1 Ç¥Çö
+		// #3. ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œ ì°¸ì¡° Type1 í‘œí˜„
 		A a3 = System.out::println;
 
 		a1.abc(3);

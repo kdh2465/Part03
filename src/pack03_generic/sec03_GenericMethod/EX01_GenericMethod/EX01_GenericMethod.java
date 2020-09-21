@@ -1,10 +1,10 @@
-package pack03_generic.sec03_GenericMethod.EX01_GenericMethod;
+ï»¿package pack03_generic.sec03_GenericMethod.EX01_GenericMethod;
 
-/*ÀÏ¹İÅ¬·¡½º ³»ºÎ¿¡ Æ÷ÇÔµÇ´Â Á¦³×¸¯ ¸Ş¼­µå*/
+/*ì¼ë°˜í´ë˜ìŠ¤ ë‚´ë¶€ì— í¬í•¨ë˜ëŠ” ì œë„¤ë¦­ ë©”ì„œë“œ*/
 
 class GenericMethods {
 	public <T> T method1(T t) {
-		return t; //³»ºÎ¿¡¼­´Â Object ¸Ş¼­µå¸¸ »ç¿ë °¡´É
+		return t; //ë‚´ë¶€ì—ì„œëŠ” Object ë©”ì„œë“œë§Œ ì‚¬ìš© ê°€ëŠ¥
 	}
 	public <T> boolean method2(T t1, T t2) {
 		return t1.equals(t2);		
@@ -24,15 +24,15 @@ public class EX01_GenericMethod {
 		
 		GenericMethods gm = new GenericMethods();
 		
-		String str1 = gm.<String>method1("¾È³ç");
-		String str2 = gm.method1("¾È³ç");
-		System.out.println(str1 + ", "+ str2);//¾È³ç, ¾È³ç
+		String str1 = gm.<String>method1("ì•ˆë…•");
+		String str2 = gm.method1("ì•ˆë…•");
+		System.out.println(str1 + ", "+ str2);//ì•ˆë…•, ì•ˆë…•
 		
 		boolean bool1 = gm.<Double>method2(2.5,2.5);
 		boolean bool2 = gm.method2(2.5,2.5);
 		System.out.println(bool1 + ", "+ bool2);//true, true
 		
-		gm.<String, Integer>method3("±¹¾î", 80); //±¹¾î : 80
-		gm.method3("±¹¾î", 80); //±¹¾î : 80
+		gm.<String, Integer>method3("êµ­ì–´", 80); //êµ­ì–´ : 80
+		gm.method3("êµ­ì–´", 80); //êµ­ì–´ : 80
 	}
 }

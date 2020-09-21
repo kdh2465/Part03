@@ -1,36 +1,36 @@
-package pack04_collectionframework.sec01_List.EX07_ListSummary;
+ï»¿package pack04_collectionframework.sec01_List.EX07_ListSummary;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
 
-/*List<E> ±¸Çö Å¬·¡½º Summary*/
+/*List<E> êµ¬í˜„ í´ë˜ìŠ¤ Summary*/
 
 public class EX07_ListSummary {
 	public static void main(String[] args) {
 		//#1. ArrayList
 		List<String> arrayList = new ArrayList<String>();
-		arrayList.add("´Ù");
-		arrayList.add("¸¶");
-		arrayList.add("³ª");
-		arrayList.add("°¡");
-		System.out.println(arrayList.toString()); //[´Ù, ¸¶, ³ª, °¡]
+		arrayList.add("ë‹¤");
+		arrayList.add("ë§ˆ");
+		arrayList.add("ë‚˜");
+		arrayList.add("ê°€");
+		System.out.println(arrayList.toString()); //[ë‹¤, ë§ˆ, ë‚˜, ê°€]
 
 		//#2. Vector
 		List<String> vector = new Vector<String>();
-		vector.add("´Ù");
-		vector.add("¸¶");
-		vector.add("³ª");
-		vector.add("°¡");
-		System.out.println(vector.toString()); //[´Ù, ¸¶, ³ª, °¡]
+		vector.add("ë‹¤");
+		vector.add("ë§ˆ");
+		vector.add("ë‚˜");
+		vector.add("ê°€");
+		System.out.println(vector.toString()); //[ë‹¤, ë§ˆ, ë‚˜, ê°€]
 
 		//#3. LinkedList
 		List<String> linkedList = new LinkedList<String>();
-		linkedList.add("´Ù");
-		linkedList.add("¸¶");
-		linkedList.add("³ª");
-		linkedList.add("°¡");
+		linkedList.add("ë‹¤");
+		linkedList.add("ë§ˆ");
+		linkedList.add("ë‚˜");
+		linkedList.add("ê°€");
 		System.out.println(linkedList.toString());
 	}
 }

@@ -1,11 +1,11 @@
-package pack03_generic.sec01_TheNeedForGeneric.EX02_Solution1_UsingOjbect;
+ï»¿package pack03_generic.sec01_TheNeedForGeneric.EX02_Solution1_UsingOjbect;
 
-/*ÇØ°áÃ¥ 1. Object¸¦ »ç¿ëÇÑ ´Ù¾çÇÑ °´Ã¼ÀÇ ÀúÀå ¹× Ãß°¡ÀûÀÎ ¹®Á¦Á¡*/
+/*í•´ê²°ì±… 1. Objectë¥¼ ì‚¬ìš©í•œ ë‹¤ì–‘í•œ ê°ì²´ì˜ ì €ì¥ ë° ì¶”ê°€ì ì¸ ë¬¸ì œì */
 
 class Apple{ }
 class Pencil{ }
 
-//# Good ÇÊµå¸¦ Object·Î ±¸¼ºÇÏ¿© ¸ğµç Å¸ÀÔÀ» get/setÇÒ ¼ö ÀÖµµ·Ï ÇÔ
+//# Good í•„ë“œë¥¼ Objectë¡œ êµ¬ì„±í•˜ì—¬ ëª¨ë“  íƒ€ì…ì„ get/setí•  ìˆ˜ ìˆë„ë¡ í•¨
 class Goods{
 	private Object object = new Object();
 	public Object get() {
@@ -18,18 +18,18 @@ class Goods{
 
 public class EX02_Solution1_UsingOjbect {
 	public static void main(String[] args) {
-		//Apple ÀúÀå 
+		//Apple ì €ì¥ 
 		Goods goods1 = new Goods();
 		goods1.set(new Apple());
 		Apple apple = (Apple)goods1.get();
 		
-		//Pencil ÀúÀå
+		//Pencil ì €ì¥
 		Goods goods2 = new Goods();
 		goods2.set(new Pencil());
 		Pencil pencil = (Pencil)goods2.get();		
 		
 		/*
-		//Àß¸øµÈ Ä³½ºÆÃ (¾àÇÑ Å¸ÀÔÃ¼Å©)
+		//ì˜ëª»ëœ ìºìŠ¤íŒ… (ì•½í•œ íƒ€ì…ì²´í¬)
 		Goods goods3 = new Goods();
 		goods3.set(new Apple());
 		Pencil pen = (Pencil)goods3.get(); //classcastException

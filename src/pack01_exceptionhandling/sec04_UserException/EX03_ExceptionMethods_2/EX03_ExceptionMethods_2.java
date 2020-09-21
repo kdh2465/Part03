@@ -1,6 +1,6 @@
-package pack01_exceptionhandling.sec04_UserException.EX03_ExceptionMethods_2;
+ï»¿package pack01_exceptionhandling.sec04_UserException.EX03_ExceptionMethods_2;
 
-/*¿¹¿Ü °´Ã¼ÀÇ ´ëÇ¥ÀûÀÎ ¸Ş¼­µå (printStackTrace())*/
+/*ì˜ˆì™¸ ê°ì²´ì˜ ëŒ€í‘œì ì¸ ë©”ì„œë“œ (printStackTrace())*/
 
 class A{
 	void abc() throws NumberFormatException {
@@ -17,9 +17,9 @@ class A{
 
 public class EX03_ExceptionMethods_2 {
 	public static void main(String[] args) {
-		//#1.°´Ã¼ »ı¼º
+		//#1.ê°ì²´ ìƒì„±
 		A a = new A();
-		//#2. ¸Ş¼­µå È£Ãâ + ¿¹¿ÜÃ³¸®
+		//#2. ë©”ì„œë“œ í˜¸ì¶œ + ì˜ˆì™¸ì²˜ë¦¬
 		try {
 			a.abc();
 		} catch (NumberFormatException e) {

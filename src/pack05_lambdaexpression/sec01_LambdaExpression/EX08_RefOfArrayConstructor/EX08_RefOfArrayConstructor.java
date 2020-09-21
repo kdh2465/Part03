@@ -1,6 +1,6 @@
-package pack05_lambdaexpression.sec01_LambdaExpression.EX08_RefOfArrayConstructor;
+ï»¿package pack05_lambdaexpression.sec01_LambdaExpression.EX08_RefOfArrayConstructor;
 
-/*È°¿ë#3-1. ¹è¿­ÀÇ »ı¼ºÀÚ ÂüÁ¶*/
+/*í™œìš©#3-1. ë°°ì—´ì˜ ìƒì„±ì ì°¸ì¡°*/
 
 interface A {
 	int[] abc(int len);
@@ -9,18 +9,18 @@ interface A {
 public class EX08_RefOfArrayConstructor {
 	public static void main(String[] args) {
 						
-		// #¹è¿­ »ı¼ºÀÚ ÂüÁ¶
-		// #1. ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		// #ë°°ì—´ ìƒì„±ì ì°¸ì¡°
+		// #1. ìµëª…ì´ë„ˆí´ë˜ìŠ¤ í‘œí˜„
 		A a1 = new A() {
 			public int[] abc(int len) {
 				return new int[len];
 			}
 		};
 
-		// #2. ÀÏ¹İ ¶÷´Ù½Ä Ç¥Çö
+		// #2. ì¼ë°˜ ëŒë‹¤ì‹ í‘œí˜„
 		A a2 = (len)->(new int[len]);
 		
-		// #3. ¹è¿­ »ı¼ºÀÚ ÂüÁ¶ Ç¥Çö
+		// #3. ë°°ì—´ ìƒì„±ì ì°¸ì¡° í‘œí˜„
 		A a3 = int[]::new;
 		
 		int [] array1 = a1.abc(3); System.out.println(array1.length);

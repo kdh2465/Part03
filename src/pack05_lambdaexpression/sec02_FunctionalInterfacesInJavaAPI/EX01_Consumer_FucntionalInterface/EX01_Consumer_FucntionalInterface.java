@@ -1,38 +1,38 @@
-package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX01_Consumer_FucntionalInterface;
+ï»¿package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX01_Consumer_FucntionalInterface;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.DoubleConsumer;
 import java.util.function.IntConsumer;
 import java.util.function.LongConsumer;
 
-/*Consumer<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½º (ÀÚ¹Ù API Á¦°ø)*/
+/*Consumer<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ (ìë°” API ì œê³µ)*/
 
 public class EX01_Consumer_FucntionalInterface {
 	public static void main(String[] args) {
 		
-		//#1. Consumer<T>ÀÇ ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		//#1. Consumer<T>ì˜ ìµëª…ì´ë„ˆí´ë˜ìŠ¤ í‘œí˜„
 		Consumer<String> c = new Consumer<String>() {
 			@Override
 			public void accept(String t) {
 				System.out.println(t);
 			}			
 		};
-		c.accept("Consumer<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½º");
+		c.accept("Consumer<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤");
 		
-		//#2. ±âº» Consumer<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½ºÀÇ ¶÷´Ù½Ä Ç¥Çö
-		//@2-1. ±âº»Çü Consumer
+		//#2. ê¸°ë³¸ Consumer<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ì˜ ëŒë‹¤ì‹ í‘œí˜„
+		//@2-1. ê¸°ë³¸í˜• Consumer
 		Consumer<String> c1 = (str)->System.out.println(str); 
-		c1.accept("Consumer<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½º");
+		c1.accept("Consumer<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤");
 
-		//@2-2. È®Àå Consumer<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½ºÀÇ ¶÷´Ù½Ä Ç¥Çö	
-		IntConsumer c2 = (num)->System.out.println("int °ª="+num);		
-		LongConsumer c3 = (num)->System.out.println("Long °ª="+num);
-		DoubleConsumer c4 = (num)->System.out.println("Double °ª="+num);		
-		BiConsumer<String, Integer> c5 = (name, age)->System.out.println("ÀÌ¸§:"+name + " ³ªÀÌ:"+age);
+		//@2-2. í™•ì¥ Consumer<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ì˜ ëŒë‹¤ì‹ í‘œí˜„	
+		IntConsumer c2 = (num)->System.out.println("int ê°’="+num);		
+		LongConsumer c3 = (num)->System.out.println("Long ê°’="+num);
+		DoubleConsumer c4 = (num)->System.out.println("Double ê°’="+num);		
+		BiConsumer<String, Integer> c5 = (name, age)->System.out.println("ì´ë¦„:"+name + " ë‚˜ì´:"+age);
 		c2.accept(3);
 		c3.accept(5L);
 		c4.accept(7.8);
-		c5.accept("È«±æµ¿", 16);		
+		c5.accept("í™ê¸¸ë™", 16);		
 		
 	}
 }

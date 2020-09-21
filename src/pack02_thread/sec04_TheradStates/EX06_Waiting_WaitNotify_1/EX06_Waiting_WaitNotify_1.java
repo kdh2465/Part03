@@ -1,16 +1,16 @@
-package pack02_thread.sec04_TheradStates.EX06_Waiting_WaitNotify_1;
+ï»¿package pack02_thread.sec04_TheradStates.EX06_Waiting_WaitNotify_1;
 
-/*µ¿±âÈ­¸¸À» »ç¿ëÇÑ °æ¿ì ÀÓÀÇÀûÀÎ µÎ ¾²·¹µåÀÇ ½ÇÇà ¼ø¼­*/
+/*ë™ê¸°í™”ë§Œì„ ì‚¬ìš©í•œ ê²½ìš° ì„ì˜ì ì¸ ë‘ ì“°ë ˆë“œì˜ ì‹¤í–‰ ìˆœì„œ*/
 
 class DataBox {
 
 	int data;
 	synchronized void inputData(int data) throws InterruptedException {
 		this.data = data;		
-		System.out.println("ÀÔ·Â µ¥ÀÌÅÍ: "+data);
+		System.out.println("ì…ë ¥ ë°ì´í„°: "+data);
 	}
 	synchronized void outputData() throws InterruptedException {		
-		System.out.println("Ãâ·Â µ¥ÀÌÅÍ: "+data);
+		System.out.println("ì¶œë ¥ ë°ì´í„°: "+data);
 	}
 }
 

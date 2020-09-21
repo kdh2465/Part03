@@ -1,45 +1,45 @@
-package pack01_exceptionhandling.sec04_UserException.EX04_UserExceptionExample;
+ï»¿package pack01_exceptionhandling.sec04_UserException.EX04_UserExceptionExample;
 
-/*»ç¿ëÀÚ ¿¹¿Ü Å¬·¡½º Á¤ÀÇ ¹× ¿¹¿Ü ¹ß»ı½ÃÅ°±â*/
+/*ì‚¬ìš©ì ì˜ˆì™¸ í´ë˜ìŠ¤ ì •ì˜ ë° ì˜ˆì™¸ ë°œìƒì‹œí‚¤ê¸°*/
 
-//#.Á¡¼ö°¡ À½¼öÀÎ °æ¿ì ¹ß»ıÇÏ´Â ¿¹¿Ü Å¬·¡½º »ı¼º
+//#.ì ìˆ˜ê°€ ìŒìˆ˜ì¸ ê²½ìš° ë°œìƒí•˜ëŠ” ì˜ˆì™¸ í´ë˜ìŠ¤ ìƒì„±
 class MinusException extends Exception {
 	MinusException() {
 	}
 	MinusException(String s) {
-		super(s); // ºÎ¸ğ»ı¼ºÀÚÈ£Ãâ
+		super(s); // ë¶€ëª¨ìƒì„±ìí˜¸ì¶œ
 	}
 }
-//#.Á¡¼ö°¡ 100À» ÃÊ°úÇÏ´Â °æ¿ì ¹ß»ıÇÏ´Â ¿¹¿Ü Å¬·¡½º »ı¼º
+//#.ì ìˆ˜ê°€ 100ì„ ì´ˆê³¼í•˜ëŠ” ê²½ìš° ë°œìƒí•˜ëŠ” ì˜ˆì™¸ í´ë˜ìŠ¤ ìƒì„±
 class OverException extends Exception {
 	OverException() {
 	}
 	OverException(String s) {
-		super(s); // ºÎ¸ğ»ı¼ºÀÚÈ£Ãâ
+		super(s); // ë¶€ëª¨ìƒì„±ìí˜¸ì¶œ
 	}
 }
 
 class A {
-	// #.Á¡¼ö°¡ 0~100 ¹üÀ§°¡ ¾Æ´Ñ °æ¿ì ¿¹¿Ü¸¦ ¹ß»ıÇÏ´Â ¸Ş¼­µå
+	// #.ì ìˆ˜ê°€ 0~100 ë²”ìœ„ê°€ ì•„ë‹Œ ê²½ìš° ì˜ˆì™¸ë¥¼ ë°œìƒí•˜ëŠ” ë©”ì„œë“œ
 	void checkScore(int score) throws MinusException, OverException {
 		if (score < 0) {
-			throw new MinusException("¿¹¿Ü¹ß»ı:À½¼ö°ª ÀÔ·Â");
+			throw new MinusException("ì˜ˆì™¸ë°œìƒ:ìŒìˆ˜ê°’ ì…ë ¥");
 		} else if (score > 100) {
-			throw new OverException("¿¹¿Ü¹ß»ı:100Á¡ ÃÊ°ú");
+			throw new OverException("ì˜ˆì™¸ë°œìƒ:100ì  ì´ˆê³¼");
 		} else {
-			System.out.println("Á¤»óÀûÀÎ °ªÀÔ´Ï´Ù");
+			System.out.println("ì •ìƒì ì¸ ê°’ì…ë‹ˆë‹¤");
 		}
 	}
 }
 
 public class EX04_UserExceptionExample {
-	//#. A °´Ã¼ÀÇ checkScore ¸Ş¼­µå¸¦ È£ÃâÇÏ¿© ¿¹¿ÜÃ³¸®ÇÏ´Â ¸Ş¼­µå
+	//#. A ê°ì²´ì˜ checkScore ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ ì˜ˆì™¸ì²˜ë¦¬í•˜ëŠ” ë©”ì„œë“œ
 	public static void main(String[] args) {
 
 		A a = new A();		
 		try {
 			a.checkScore(85);
-			a.checkScore(150); //¿¹¿Ü¹ß»ı
+			a.checkScore(150); //ì˜ˆì™¸ë°œìƒ
 		} catch (MinusException | OverException e) {			
 			System.out.println(e.getMessage());
 		} 

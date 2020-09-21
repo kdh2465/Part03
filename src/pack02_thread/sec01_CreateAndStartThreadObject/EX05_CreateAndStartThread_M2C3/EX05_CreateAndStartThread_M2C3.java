@@ -1,22 +1,22 @@
-package pack02_thread.sec01_CreateAndStartThreadObject.EX05_CreateAndStartThread_M2C3;
+ï»¿package pack02_thread.sec01_CreateAndStartThreadObject.EX05_CreateAndStartThread_M2C3;
 
-/*¹æ¹ı #2 : case3 (ÀÌ³ÊÅ¬·¡½º¸¦ È°¿ëÇÑ ¾²·¹µå °´Ã¼ »ı¼º ¹× ½ÇÇà)*/
+/*ë°©ë²• #2 : case3 (ì´ë„ˆí´ë˜ìŠ¤ë¥¼ í™œìš©í•œ ì“°ë ˆë“œ ê°ì²´ ìƒì„± ë° ì‹¤í–‰)*/
 
 public class EX05_CreateAndStartThread_M2C3 {
 	public static void main(String[] args) {
 
-		// Thread »ı¼º
+		// Thread ìƒì„±
 		Thread myThread1 = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				// (ÀÚ¸· ¹øÈ£) ÇÏ³ª~´Ù¼¸ ÀúÀå Ãâ·Â
-				String[] strArray = new String[] { "ÇÏ³ª", "µÑ", "¼Â", "³İ", "´Ù¼¸" };
+				// (ìë§‰ ë²ˆí˜¸) í•˜ë‚˜~ë‹¤ì„¯ ì €ì¥ ì¶œë ¥
+				String[] strArray = new String[] { "í•˜ë‚˜", "ë‘˜", "ì…‹", "ë„·", "ë‹¤ì„¯" };
 				try {
 					Thread.sleep(10);
 				} catch (InterruptedException e1) {
 				}
 				for (int i = 0; i < strArray.length; i++) {
-					System.out.println("(ÀÚ¸·) " + strArray[i]);
+					System.out.println("(ìë§‰) " + strArray[i]);
 					try {
 						Thread.sleep(200);
 					} catch (InterruptedException e) {
@@ -25,14 +25,14 @@ public class EX05_CreateAndStartThread_M2C3 {
 			}
 		});
 
-		// Thread »ı¼º
+		// Thread ìƒì„±
 		Thread myThread2 = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				// (ºñµğ¿ÀÇÁ·¹ÀÓ¹øÈ£) 1~5 ÀúÀå + Ãâ·Â
+				// (ë¹„ë””ì˜¤í”„ë ˆì„ë²ˆí˜¸) 1~5 ì €ì¥ + ì¶œë ¥
 				int[] intArray = new int[] { 1, 2, 3, 4, 5 };
 				for (int i = 0; i < intArray.length; i++) {
-					System.out.print("(ºñµğ¿À ÇÁ·¹ÀÓ) " + intArray[i] + "-");
+					System.out.print("(ë¹„ë””ì˜¤ í”„ë ˆì„) " + intArray[i] + "-");
 					try {
 						Thread.sleep(200);
 					} catch (InterruptedException e) {
@@ -41,7 +41,7 @@ public class EX05_CreateAndStartThread_M2C3 {
 			}
 		});
 
-		// Thread ½ÇÇà
+		// Thread ì‹¤í–‰
 		myThread1.start();
 		myThread2.start();
 

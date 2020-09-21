@@ -1,6 +1,6 @@
-package pack03_generic.sec04_BoundedType.EX03_BoundTypeOfInputArguments;
+ï»¿package pack03_generic.sec04_BoundedType.EX03_BoundTypeOfInputArguments;
 
-/*¸Ş¼­µå ¸Å°³º¯¼ö·Î¼­ Á¦³×¸¯ Å¬·¡½ºÀÇ Å¸ÀÔ Á¦ÇÑ ¹üÀ§ ¼³Á¤*/
+/*ë©”ì„œë“œ ë§¤ê°œë³€ìˆ˜ë¡œì„œ ì œë„¤ë¦­ í´ë˜ìŠ¤ì˜ íƒ€ì… ì œí•œ ë²”ìœ„ ì„¤ì •*/
 
 class A{}
 class B extends A{}

@@ -1,23 +1,23 @@
-package pack02_thread.sec02_ThreadProperties.EX02_ThreadProperties_2;
+ï»¿package pack02_thread.sec02_ThreadProperties.EX02_ThreadProperties_2;
 
-/*¾²·¹µåÀÇ ¿ì¼±¼øÀ§(priority)*/
+/*ì“°ë ˆë“œì˜ ìš°ì„ ìˆœìœ„(priority)*/
 
 class MyThread extends Thread {
 	@Override
 	public void run() {
-		for(long i=0; i<1000000000; i++) {} //#¾à°£ÀÇ ½Ã°£ Áö¿¬
-		System.out.println(getName() + " ¿ì¼±¼øÀ§:" + getPriority());
+		for(long i=0; i<1000000000; i++) {} //#ì•½ê°„ì˜ ì‹œê°„ ì§€ì—°
+		System.out.println(getName() + " ìš°ì„ ìˆœìœ„:" + getPriority());
 	}
 }
 
 public class EX02_ThreadProperties_2 {
 	public static void main(String[] args) {
 		
-		//#Âü°í. CPU Core ¼ö °¡Á®¿À±â
-		System.out.print("ÄÚ¾î¼ö : ");
+		//#ì°¸ê³ . CPU Core ìˆ˜ ê°€ì ¸ì˜¤ê¸°
+		System.out.print("ì½”ì–´ìˆ˜ : ");
 		System.out.println(Runtime.getRuntime().availableProcessors());
 		
-		//#1. µğÆúÆ®(default) ¿ì¼±¼øÀ§
+		//#1. ë””í´íŠ¸(default) ìš°ì„ ìˆœìœ„
 		for (int i = 0; i < 3; i++) {
 			Thread thread = new MyThread();
 			thread.start();
@@ -25,10 +25,10 @@ public class EX02_ThreadProperties_2 {
 		
 		try { Thread.sleep(1000); } catch (InterruptedException e) {}
 		
-		//#2. ¿ì¼±¼øÀ§ ÁöÁ¤
+		//#2. ìš°ì„ ìˆœìœ„ ì§€ì •
 		for (int i = 0; i < 10; i++) {
 			Thread thread = new MyThread();
-			thread.setName(i + " ¹øÂ° ¾²·¹µå");
+			thread.setName(i + " ë²ˆì§¸ ì“°ë ˆë“œ");
 			if (i == 9)
 				thread.setPriority(Thread.MAX_PRIORITY);
 			thread.start();

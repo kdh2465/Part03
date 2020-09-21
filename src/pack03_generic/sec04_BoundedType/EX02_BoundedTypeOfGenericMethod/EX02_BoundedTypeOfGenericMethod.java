@@ -1,6 +1,6 @@
-package pack03_generic.sec04_BoundedType.EX02_BoundedTypeOfGenericMethod;
+ï»¿package pack03_generic.sec04_BoundedType.EX02_BoundedTypeOfGenericMethod;
 
-/*Á¦³×¸¯ ¸Ş¼­µå¿¡¼­ÀÇ Á¦³×¸¯ Å¸ÀÔ Á¦ÇÑ ¹üÀ§ ¼³Á¤*/
+/*ì œë„¤ë¦­ ë©”ì„œë“œì—ì„œì˜ ì œë„¤ë¦­ íƒ€ì… ì œí•œ ë²”ìœ„ ì„¤ì •*/
 
 class A {
 	public <T extends String> void method1(T t) {
@@ -21,13 +21,13 @@ class B {
 public class EX02_BoundedTypeOfGenericMethod {
 	public static void main(String[] args) {
 		A a = new A();
-		a.method1("¾È³ç"); //¾È
+		a.method1("ì•ˆë…•"); //ì•ˆ
 		
 		B b = new B();
 		b.method1(new MyInterface() {
 			@Override
 			public void print() {
-				System.out.println("print() ±¸Çö");
+				System.out.println("print() êµ¬í˜„");
 			}
 		});
 	}

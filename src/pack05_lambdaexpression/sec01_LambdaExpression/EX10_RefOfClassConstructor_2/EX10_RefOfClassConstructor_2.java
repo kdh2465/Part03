@@ -1,6 +1,6 @@
-package pack05_lambdaexpression.sec01_LambdaExpression.EX10_RefOfClassConstructor_2;
+ï»¿package pack05_lambdaexpression.sec01_LambdaExpression.EX10_RefOfClassConstructor_2;
 
-/*È°¿ë#3-2. Å¬·¡½ºÀÇ »ý¼ºÀÚ ÂüÁ¶ (¸Å°³º¯¼ö¸¦ °¡Áø »ý¼ºÀÚ ÂüÁ¶)*/
+/*í™œìš©#3-2. í´ëž˜ìŠ¤ì˜ ìƒì„±ìž ì°¸ì¡° (ë§¤ê°œë³€ìˆ˜ë¥¼ ê°€ì§„ ìƒì„±ìž ì°¸ì¡°)*/
 
 interface A {
 	B abc(int a);
@@ -8,33 +8,33 @@ interface A {
 
 class B {
 	B() {
-		System.out.println("Ã¹¹øÂ° »ý¼ºÀÚ");
+		System.out.println("ì²«ë²ˆì§¸ ìƒì„±ìž");
 	}
 
 	B(int k) {
-		System.out.println("µÎ¹øÂ° »ý¼ºÀÚ");
+		System.out.println("ë‘ë²ˆì§¸ ìƒì„±ìž");
 	}
 }
 
 public class EX10_RefOfClassConstructor_2 {
 	public static void main(String[] args) {
-		// #Å¬·¡½º »ý¼ºÀÚ ÂüÁ¶
-		// #1. ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		// #í´ëž˜ìŠ¤ ìƒì„±ìž ì°¸ì¡°
+		// #1. ìµëª…ì´ë„ˆí´ëž˜ìŠ¤ í‘œí˜„
 		A a1 = new A() {
 			public B abc(int a) {
 				return new B(a);
 			}
 		};
 
-		// #2. ÀÏ¹Ý ¶÷´Ù½Ä Ç¥Çö
+		// #2. ì¼ë°˜ ëžŒë‹¤ì‹ í‘œí˜„
 		A a2 = (a) -> new B(a);
 
-		// #3. Å¬·¡½º »ý¼ºÀÚ ÂüÁ¶ Ç¥Çö
+		// #3. í´ëž˜ìŠ¤ ìƒì„±ìž ì°¸ì¡° í‘œí˜„
 		A a3 = B::new;
 
-		a1.abc(3); // µÎ¹øÂ° »ý¼ºÀÚ
-		a2.abc(3); // µÎ¹øÂ° »ý¼ºÀÚ
-		a3.abc(3); // µÎ¹øÂ° »ý¼ºÀÚ
+		a1.abc(3); // ë‘ë²ˆì§¸ ìƒì„±ìž
+		a2.abc(3); // ë‘ë²ˆì§¸ ìƒì„±ìž
+		a3.abc(3); // ë‘ë²ˆì§¸ ìƒì„±ìž
 
 	}
 }

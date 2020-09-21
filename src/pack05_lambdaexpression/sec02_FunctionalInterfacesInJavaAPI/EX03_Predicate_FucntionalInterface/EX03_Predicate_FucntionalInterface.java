@@ -1,30 +1,30 @@
-package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX03_Predicate_FucntionalInterface;
+ï»¿package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX03_Predicate_FucntionalInterface;
 import java.util.function.BiPredicate;
 import java.util.function.DoublePredicate;
 import java.util.function.IntPredicate;
 import java.util.function.LongPredicate;
 import java.util.function.Predicate;
 
-/*Predicate<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½º (ÀÚ¹Ù API Á¦°ø)*/
+/*Predicate<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ (ìë°” API ì œê³µ)*/
 
 public class EX03_Predicate_FucntionalInterface {
 	public static void main(String[] args) {
 		
-		//#1. Predicate<T> ÀÇ ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		//#1. Predicate<T> ì˜ ìµëª…ì´ë„ˆí´ë˜ìŠ¤ í‘œí˜„
 		Predicate<String> p = new Predicate<String>() {
 			@Override
 			public boolean test(String t) {
 				return (t.length()>0)? true:false;
 			}
 		};		
-		System.out.println(p.test("¾È³ç")); //true
+		System.out.println(p.test("ì•ˆë…•")); //true
 		
-		//#2. ±âº» Predicate<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½ºÀÇ ¶÷´Ù½Ä Ç¥Çö
-		//@2-1. ±âº»Çü Predicate
+		//#2. ê¸°ë³¸ Predicate<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ì˜ ëŒë‹¤ì‹ í‘œí˜„
+		//@2-1. ê¸°ë³¸í˜• Predicate
 		Predicate<String> p1 = (str)->(str.length()>0)? true:false;
-		System.out.println(p1.test("¾È³ç")); //true
+		System.out.println(p1.test("ì•ˆë…•")); //true
 
-		//@2-2. È®Àå Predicate<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½ºÀÇ ¶÷´Ù½Ä Ç¥Çö
+		//@2-2. í™•ì¥ Predicate<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ì˜ ëŒë‹¤ì‹ í‘œí˜„
 		
 		IntPredicate p2 = (num)->(num%2==0)? true:false;		
 		LongPredicate p3 = (num)->(num>100)? true:false;
@@ -34,7 +34,7 @@ public class EX03_Predicate_FucntionalInterface {
 		System.out.println(p2.test(2)); 			//true
 		System.out.println(p3.test(85L)); 			//false
 		System.out.println(p4.test(-5.8));  		//false
-		System.out.println(p5.test("¾È³ç", "¾È³ç"));	//true
+		System.out.println(p5.test("ì•ˆë…•", "ì•ˆë…•"));	//true
 	
 	}
 }

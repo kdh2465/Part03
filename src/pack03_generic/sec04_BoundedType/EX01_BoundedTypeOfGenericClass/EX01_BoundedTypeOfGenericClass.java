@@ -1,6 +1,6 @@
-package pack03_generic.sec04_BoundedType.EX01_BoundedTypeOfGenericClass;
+ï»¿package pack03_generic.sec04_BoundedType.EX01_BoundedTypeOfGenericClass;
 
-/*Á¦³×¸¯ Å¬·¡½º¿¡¼­ÀÇ Á¦³×¸¯ Å¸ÀÔ Á¦ÇÑ ¹üÀ§ ¼³Á¤*/
+/*ì œë„¤ë¦­ í´ë˜ìŠ¤ì—ì„œì˜ ì œë„¤ë¦­ íƒ€ì… ì œí•œ ë²”ìœ„ ì„¤ì •*/
 
 class A{}
 class B extends A{}
@@ -18,14 +18,14 @@ class D<T extends B>{
 
 public class EX01_BoundedTypeOfGenericClass {
 	public static void main(String[] args) {
-		//D<A> d1 = new D<>(); //(ºÒ°¡´É)
+		//D<A> d1 = new D<>(); //(ë¶ˆê°€ëŠ¥)
 		D<B> d2 = new D<>();
 		D<C> d3 = new D<>();
-		D d4 = new D(); //D<B> d4 = D<>();¿Í µ¿ÀÏ
+		D d4 = new D(); //D<B> d4 = D<>();ì™€ ë™ì¼
 		
 		d2.set(new B());
 		d2.set(new C());
-		//d3.set(new B()); //(ºÒ°¡´É)
+		//d3.set(new B()); //(ë¶ˆê°€ëŠ¥)
 		d3.set(new C());
 		d4.set(new B());
 		d4.set(new C());

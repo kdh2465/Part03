@@ -1,9 +1,9 @@
-package pack01_exceptionhandling.sec01_TypeOfException.EX01_CheckedException;
+ï»¿package pack01_exceptionhandling.sec01_TypeOfException.EX01_CheckedException;
 
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-/*´ëÇ¥ÀûÀÎ ÀÏ¹İ¿¹¿Ü(Checked Exception)*/
+/*ëŒ€í‘œì ì¸ ì¼ë°˜ì˜ˆì™¸(Checked Exception)*/
 
 class A {
 	@Override

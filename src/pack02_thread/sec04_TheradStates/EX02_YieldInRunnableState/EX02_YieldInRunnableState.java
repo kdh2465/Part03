@@ -1,6 +1,6 @@
-package pack02_thread.sec04_TheradStates.EX02_YieldInRunnableState;
+ï»¿package pack02_thread.sec04_TheradStates.EX02_YieldInRunnableState;
 
-/*RUNNABLE »óÅÂ¿¡¼­ yield() ¸Ş¼­µå¸¦ ÀÌ¿ëÇÑ CPU »ç¿ë ¾çº¸*/
+/*RUNNABLE ìƒíƒœì—ì„œ yield() ë©”ì„œë“œë¥¼ ì´ìš©í•œ CPU ì‚¬ìš© ì–‘ë³´*/
 
 class MyThread extends Thread{
 	boolean yieldFlag;
@@ -10,7 +10,7 @@ class MyThread extends Thread{
 			if(yieldFlag) {
 				Thread.yield();
 			} else {
-				System.out.println(getName()+" ½ÇÇà");
+				System.out.println(getName()+" ì‹¤í–‰");
 				for(long i=0; i<1000000000L; i++) {}
 			}
 		}
@@ -31,7 +31,7 @@ public class EX02_YieldInRunnableState {
 		thread2.setDaemon(true);
 		thread2.start();
 		
-		//#. 1ÃÊ¸¶´Ù ÇÑ¹ø¾¿ ¾çº¸
+		//#. 1ì´ˆë§ˆë‹¤ í•œë²ˆì”© ì–‘ë³´
 		for(int i=0; i<6; i++) {
 			try { Thread.sleep(1000); } catch (InterruptedException e) {}			
 			thread1.yieldFlag=!thread1.yieldFlag;

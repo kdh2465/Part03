@@ -1,18 +1,18 @@
-package pack02_thread.sec01_CreateAndStartThreadObject.EX04_CreateAndStartThread_M2C2;
+ï»¿package pack02_thread.sec01_CreateAndStartThreadObject.EX04_CreateAndStartThread_M2C2;
 
-/*¹æ¹ı #2 : case2 (¼¼°³ÀÇ ¾²·¹µå È°¿ë(main, SMIFileThread, VideoFileThread))*/
+/*ë°©ë²• #2 : case2 (ì„¸ê°œì˜ ì“°ë ˆë“œ í™œìš©(main, SMIFileThread, VideoFileThread))*/
 
 class SMIFileRunnable implements Runnable {
 	@Override
 	public void run() {
-		// (ÀÚ¸· ¹øÈ£) ÇÏ³ª~´Ù¼¸ ÀúÀå Ãâ·Â
-		String[] strArray = new String[] { "ÇÏ³ª", "µÑ", "¼Â", "³İ", "´Ù¼¸" };
+		// (ìë§‰ ë²ˆí˜¸) í•˜ë‚˜~ë‹¤ì„¯ ì €ì¥ ì¶œë ¥
+		String[] strArray = new String[] { "í•˜ë‚˜", "ë‘˜", "ì…‹", "ë„·", "ë‹¤ì„¯" };
 		try {
 			Thread.sleep(10);
 		} catch (InterruptedException e1) {
 		}
 		for (int i = 0; i < strArray.length; i++) {
-			System.out.println("(ÀÚ¸·) " + strArray[i]);
+			System.out.println("(ìë§‰) " + strArray[i]);
 			try {
 				Thread.sleep(200);
 			} catch (InterruptedException e) {
@@ -24,10 +24,10 @@ class SMIFileRunnable implements Runnable {
 class VideoFileRunnable implements Runnable {
 	@Override
 	public void run() {
-		// (ºñµğ¿ÀÇÁ·¹ÀÓ¹øÈ£) 1~5 ÀúÀå + Ãâ·Â
+		// (ë¹„ë””ì˜¤í”„ë ˆì„ë²ˆí˜¸) 1~5 ì €ì¥ + ì¶œë ¥
 		int[] intArray = new int[] { 1, 2, 3, 4, 5 };
 		for (int i = 0; i < intArray.length; i++) {
-			System.out.print("(ºñµğ¿À ÇÁ·¹ÀÓ) " + intArray[i] + "-");
+			System.out.print("(ë¹„ë””ì˜¤ í”„ë ˆì„) " + intArray[i] + "-");
 			try {
 				Thread.sleep(200);
 			} catch (InterruptedException e) {
@@ -39,13 +39,13 @@ class VideoFileRunnable implements Runnable {
 public class EX04_CreateAndStartThread_M2C2 {
 	public static void main(String[] args) {
 
-		// Runnable »ı¼º
+		// Runnable ìƒì„±
 		Runnable smiFileRunnable = new SMIFileRunnable();
 		Runnable videoFileRunnable = new VideoFileRunnable();
-		// Thread »ı¼º
+		// Thread ìƒì„±
 		Thread myThread1 = new Thread(smiFileRunnable);
 		Thread myThread2 = new Thread(videoFileRunnable);
-		// Thread ½ÇÇà
+		// Thread ì‹¤í–‰
 		myThread1.start();
 		myThread2.start();
 

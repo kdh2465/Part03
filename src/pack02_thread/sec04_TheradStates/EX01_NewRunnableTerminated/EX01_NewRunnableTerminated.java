@@ -1,13 +1,13 @@
-package pack02_thread.sec04_TheradStates.EX01_NewRunnableTerminated;
+ï»¿package pack02_thread.sec04_TheradStates.EX01_NewRunnableTerminated;
 
-/*¾²·¹µå »óÅÂ (NEW/RUNNABLE/TERMINATED)*/
+/*ì“°ë ˆë“œ ìƒíƒœ (NEW/RUNNABLE/TERMINATED)*/
 
 public class EX01_NewRunnableTerminated {
 	public static void main(String[] args) {
-		//#.¾²·¹µå »óÅÂ 
+		//#.ì“°ë ˆë“œ ìƒíƒœ 
 		Thread.State state;
 		
-		//#1. °´Ã¼»ı¼º (NEW)
+		//#1. ê°ì²´ìƒì„± (NEW)
 	    Thread thread = new Thread() {
 	      @Override
 	      public void run() {
@@ -17,12 +17,12 @@ public class EX01_NewRunnableTerminated {
 	    state = thread.getState();
 	    System.out.println("thread State : " + state); //NEW
 	    
-	    //#2. Thread ½ÃÀÛ (RUNNABLE)
+	    //#2. Thread ì‹œì‘ (RUNNABLE)
 	    thread.start();
 	    state = thread.getState();
 	    System.out.println("thread State : " + state); //RUNNABLE
 	    
-	    //#3. Thread Á¾·á (TERMINATED)
+	    //#3. Thread ì¢…ë£Œ (TERMINATED)
 	    //try {Thread.sleep(1000);} catch (InterruptedException e) {}
 	    
 	    try {

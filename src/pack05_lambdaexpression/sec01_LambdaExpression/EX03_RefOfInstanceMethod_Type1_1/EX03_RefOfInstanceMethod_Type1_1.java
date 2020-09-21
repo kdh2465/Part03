@@ -1,6 +1,6 @@
-package pack05_lambdaexpression.sec01_LambdaExpression.EX03_RefOfInstanceMethod_Type1_1;
+﻿package pack05_lambdaexpression.sec01_LambdaExpression.EX03_RefOfInstanceMethod_Type1_1;
 
-/*Ȱ��#2-1. �ν��Ͻ� �޼��� ���� Type1(���� ������ �ν��Ͻ� �޼��� ����) */
+/*활용#2-1. 인스턴스 메서드 참조 Type1(직접 정의한 인스턴스 메서드 참조) */
 
 interface A {
 	void abc();
@@ -8,26 +8,26 @@ interface A {
 
 class B {
 	void bcd() {
-		System.out.println("�޼���");
+		System.out.println("메서드");
 	}
 }
 
 public class EX03_RefOfInstanceMethod_Type1_1 {
 	public static void main(String[] args) {
-		//#�ν��Ͻ� �޼��� ���� Type1
-		//#1. �͸��̳�Ŭ���� ǥ�� 
+		//#인스턴스 메서드 참조 Type1
+		//#1. 익명이너클래스 표현 
 		A a1 = new A() {
 			public void abc() {
 				B b = new B();
 				b.bcd();
 			}
 		};
-		// #2. �Ϲ� ���ٽ� ǥ��
+		// #2. 일반 람다식 표현
 		A a2 = () -> {
 			B b = new B();
 			b.bcd();
 		};
-		// #3. �ν��Ͻ� �޼��� ���� Type1 ǥ��
+		// #3. 인스턴스 메서드 참조 Type1 표현
 		B b = new B();
 		A a3 = b::bcd;
 

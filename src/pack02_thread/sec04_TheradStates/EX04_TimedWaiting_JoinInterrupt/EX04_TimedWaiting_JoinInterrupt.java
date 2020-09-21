@@ -1,6 +1,6 @@
-package pack02_thread.sec04_TheradStates.EX04_TimedWaiting_JoinInterrupt;
+ï»¿package pack02_thread.sec04_TheradStates.EX04_TimedWaiting_JoinInterrupt;
 
-/*join(.) ¸Ş¼­µå¸¦ ÀÌ¿ëÇÑ TIMED_WAITING°ú interrupt()*/
+/*join(.) ë©”ì„œë“œë¥¼ ì´ìš©í•œ TIMED_WAITINGê³¼ interrupt()*/
 
 class MyThread1 extends Thread {
 	@Override
@@ -20,7 +20,7 @@ class MyThread2 extends Thread {
 		try {
 			myThread1.join(3000);
 		} catch (InterruptedException e) {
-			System.out.println(" --join() Áß interrupt ¹ß»ı--");
+			System.out.println(" --join() ì¤‘ interrupt ë°œìƒ--");
 		}
 		for (long i = 0; i < 1000000000L; i++) {}
 	}

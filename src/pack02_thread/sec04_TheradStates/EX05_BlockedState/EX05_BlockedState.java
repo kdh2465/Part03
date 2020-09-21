@@ -1,6 +1,6 @@
-package pack02_thread.sec04_TheradStates.EX05_BlockedState;
+ï»¿package pack02_thread.sec04_TheradStates.EX05_BlockedState;
 
-/*°øÀ¯°´Ã¼ µ¿±âÈ­·Î ÀÎÇÑ BLOCKED »óÅÂ*/
+/*ê³µìœ ê°ì²´ ë™ê¸°í™”ë¡œ ì¸í•œ BLOCKED ìƒíƒœ*/
 
 class MyBlockTest {
 	MyClass mc = new MyClass();
@@ -28,7 +28,7 @@ class MyBlockTest {
 	
 	class MyClass{
 		synchronized void syncMethod() {
-			try {Thread.sleep(100);} catch (InterruptedException e) {} //¾²·¹µå ½ÃÀÛ ÁØºñ ½Ã°£
+			try {Thread.sleep(100);} catch (InterruptedException e) {} //ì“°ë ˆë“œ ì‹œì‘ ì¤€ë¹„ ì‹œê°„
 			System.out.println("["+Thread.currentThread().getName()+"]");
 			System.out.println("thread1->"+t1.getState());
 			System.out.println("thread2->"+t2.getState());

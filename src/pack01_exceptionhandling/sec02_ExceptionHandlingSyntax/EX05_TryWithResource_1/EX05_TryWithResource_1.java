@@ -1,28 +1,28 @@
-package pack01_exceptionhandling.sec02_ExceptionHandlingSyntax.EX05_TryWithResource_1;
+ï»¿package pack01_exceptionhandling.sec02_ExceptionHandlingSyntax.EX05_TryWithResource_1;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/*¸®¼Ò½º ÀÚµ¿ ÇØÁ¦ ±â´ÉÀÌ Æ÷ÇÔµÈ try with resource ±¸¹® */
+/*ë¦¬ì†ŒìŠ¤ ìë™ í•´ì œ ê¸°ëŠ¥ì´ í¬í•¨ëœ try with resource êµ¬ë¬¸ */
 
 public class EX05_TryWithResource_1 {
 	public static void main(String[] args) {
 		
-		//Âü°í. System.inÀº ¸®¼Ò½º¸¦ ÇØÁöÇÏ¸é ÀÌÈÄ¿¡´Â ÄÜ¼Ö ÀÔ·Â ºÒ°¡		
-		//#1. try with resource ±¸¹®À» ÀÌ¿ëÇØ¼­ ÀÚµ¿À¸·Î ÇØÁ¦
+		//ì°¸ê³ . System.inì€ ë¦¬ì†ŒìŠ¤ë¥¼ í•´ì§€í•˜ë©´ ì´í›„ì—ëŠ” ì½˜ì†” ì…ë ¥ ë¶ˆê°€		
+		//#1. try with resource êµ¬ë¬¸ì„ ì´ìš©í•´ì„œ ìë™ìœ¼ë¡œ í•´ì œ
 		try (InputStreamReader isr1=new InputStreamReader(System.in);){			
 			char input = (char)isr1.read();
-			System.out.println("ÀÔ·Â±ÛÀÚ = "+input);
+			System.out.println("ì…ë ¥ê¸€ì = "+input);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
 		
-		//#2. ¸®¼Ò½º¸¦ »ç¿ëÇÏ°í finally¿¡¼­ ¸®¼Ò½º ÇØÁ¦ÇÏ±â
+		//#2. ë¦¬ì†ŒìŠ¤ë¥¼ ì‚¬ìš©í•˜ê³  finallyì—ì„œ ë¦¬ì†ŒìŠ¤ í•´ì œí•˜ê¸°
 		InputStreamReader isr2=null;
 		try {
 			isr2=new InputStreamReader(System.in);
 			char input = (char)isr2.read();
-			System.out.println("ÀÔ·Â±ÛÀÚ = "+input);
+			System.out.println("ì…ë ¥ê¸€ì = "+input);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {

@@ -1,6 +1,6 @@
-package pack03_generic.sec02_GenericClass.EX02_TwoGenericArguments;
+ï»¿package pack03_generic.sec02_GenericClass.EX02_TwoGenericArguments;
 
-/*Á¦³×¸¯ Å¸ÀÔº¯¼ö 2°³¸¦ °¡Áø Á¦³×¸¯Å¬·¡½ºÀÇ ¼±¾ğ ¹× È°¿ë*/
+/*ì œë„¤ë¦­ íƒ€ì…ë³€ìˆ˜ 2ê°œë¥¼ ê°€ì§„ ì œë„¤ë¦­í´ë˜ìŠ¤ì˜ ì„ ì–¸ ë° í™œìš©*/
 
 class KeyValue<K, V>{
 	private K key;
@@ -23,7 +23,7 @@ public class EX02_TwoGenericArguments {
 	public static void main(String[] args) {
 		
 		KeyValue<String, Integer> kv1 = new KeyValue<>();
-		kv1.setKey("»ç°ú");
+		kv1.setKey("ì‚¬ê³¼");
 		kv1.setValue(1000);		
 		String key1 = kv1.getKey();
 		int value1 = kv1.getValue();
@@ -31,13 +31,13 @@ public class EX02_TwoGenericArguments {
 		
 		KeyValue<Integer, String> kv2 = new KeyValue<>();
 		kv2.setKey(404);
-		kv2.setValue("Not Found(¿äÃ»ÇÑÆäÀÌÁö¸¦ Ã£À» ¼ö ¾øÀ½)");		
+		kv2.setValue("Not Found(ìš”ì²­í•œí˜ì´ì§€ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŒ)");		
 		int key2 = kv2.getKey();
 		String value2 = kv2.getValue();
 		System.out.println("key: "+key2+" value: "+value2);
 		
 		KeyValue<String, Void> kv3 = new KeyValue<>();
-		kv3.setKey("Å°°ª¸¸ »ç¿ë");
+		kv3.setKey("í‚¤ê°’ë§Œ ì‚¬ìš©");
 		String key3 = kv3.getKey();		
 		System.out.println("key: "+key3);
 		

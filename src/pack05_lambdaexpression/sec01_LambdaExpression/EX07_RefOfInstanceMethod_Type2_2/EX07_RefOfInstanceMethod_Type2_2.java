@@ -1,6 +1,6 @@
-package pack05_lambdaexpression.sec01_LambdaExpression.EX07_RefOfInstanceMethod_Type2_2;
+ï»¿package pack05_lambdaexpression.sec01_LambdaExpression.EX07_RefOfInstanceMethod_Type2_2;
 
-/*È°¿ë#2-3. ÀÎ½ºÅÏ½º ¸Ş¼­µå ÂüÁ¶ Type2(ÀÚ¹Ù Á¦°ø ÀÎ½ºÅÏ½º ¸Ş¼­µå ÂüÁ¶)*/
+/*í™œìš©#2-3. ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œ ì°¸ì¡° Type2(ìë°” ì œê³µ ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œ ì°¸ì¡°)*/
 
 interface A {
 	int abc(String str);
@@ -9,22 +9,22 @@ interface A {
 public class EX07_RefOfInstanceMethod_Type2_2 {
 	public static void main(String[] args) {
 		
-		// #ÀÎ½ºÅÏ½º ¸Ş¼­µå ÂüÁ¶ Type2
-		// #1. ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		// #ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œ ì°¸ì¡° Type2
+		// #1. ìµëª…ì´ë„ˆí´ë˜ìŠ¤ í‘œí˜„
 		A a1 = new A() {
 			public int abc(String str) {
 				return str.length();
 			}
 		};
 
-		// #2. ÀÏ¹İ ¶÷´Ù½Ä Ç¥Çö
+		// #2. ì¼ë°˜ ëŒë‹¤ì‹ í‘œí˜„
 		A a2 = (str) -> str.length();
 
-		// #3. ÀÎ½ºÅÏ½º ¸Ş¼­µå ÂüÁ¶ Type2 Ç¥Çö
+		// #3. ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œ ì°¸ì¡° Type2 í‘œí˜„
 		A a3 = String::length;
 		
-		System.out.println(a1.abc("¾È³ç"));
-		System.out.println(a2.abc("¾È³ç"));
-		System.out.println(a3.abc("¾È³ç"));
+		System.out.println(a1.abc("ì•ˆë…•"));
+		System.out.println(a2.abc("ì•ˆë…•"));
+		System.out.println(a3.abc("ì•ˆë…•"));
 	}
 }

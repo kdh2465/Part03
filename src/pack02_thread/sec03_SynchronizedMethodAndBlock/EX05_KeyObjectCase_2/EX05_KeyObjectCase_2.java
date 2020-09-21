@@ -1,6 +1,6 @@
-package pack02_thread.sec03_SynchronizedMethodAndBlock.EX05_KeyObjectCase_2;
+ï»¿package pack02_thread.sec03_SynchronizedMethodAndBlock.EX05_KeyObjectCase_2;
 
-/*µ¿±âÈ­ ¸Ş¼­µå¿Í µ¿±âÈ­ºí·ÏÀÌ ´Ù¸¥ ¿­¼è(key)¸¦ »ç¿ëÇÏ´Â °æ¿ì*/
+/*ë™ê¸°í™” ë©”ì„œë“œì™€ ë™ê¸°í™”ë¸”ë¡ì´ ë‹¤ë¥¸ ì—´ì‡ (key)ë¥¼ ì‚¬ìš©í•˜ëŠ” ê²½ìš°*/
 
 class MyData {
 	synchronized void abc() {
@@ -13,7 +13,7 @@ class MyData {
 	}
 	synchronized void bcd() {
 		for (int i = 0; i < 3; i++) {
-			System.out.println(i + "ÃÊ");
+			System.out.println(i + "ì´ˆ");
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {}
@@ -22,7 +22,7 @@ class MyData {
 	void cde() {
 		synchronized (new Object()) {
 			for (int i = 0; i < 3; i++) {
-				System.out.println(i + "¹øÂ°");
+				System.out.println(i + "ë²ˆì§¸");
 				try {
 					Thread.sleep(500);
 				} catch (InterruptedException e) {
@@ -34,24 +34,24 @@ class MyData {
 
 public class EX05_KeyObjectCase_2 {
 	public static void main(String[] args) {
-		//#°øÀ¯°´Ã¼
+		//#ê³µìœ ê°ì²´
 		MyData myData = new MyData();
 		
-		// #Thread 1 : abc() ½ÇÇà
+		// #Thread 1 : abc() ì‹¤í–‰
 		new Thread() {
 			public void run() {
 				myData.abc();
 			}
 		}.start();
 
-		// #Thread 2 : bcd() ½ÇÇà
+		// #Thread 2 : bcd() ì‹¤í–‰
 		new Thread() {
 			public void run() {
 				myData.bcd();
 			}
 		}.start();
 
-		// #Thread 3 : cde() ½ÇÇà
+		// #Thread 3 : cde() ì‹¤í–‰
 		new Thread() {
 			public void run() {
 				myData.cde();

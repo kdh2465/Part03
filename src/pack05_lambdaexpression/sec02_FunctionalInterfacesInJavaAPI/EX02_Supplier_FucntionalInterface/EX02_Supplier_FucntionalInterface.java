@@ -1,30 +1,30 @@
-package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX02_Supplier_FucntionalInterface;
+ï»¿package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX02_Supplier_FucntionalInterface;
 import java.util.function.BooleanSupplier;
 import java.util.function.DoubleSupplier;
 import java.util.function.IntSupplier;
 import java.util.function.LongSupplier;
 import java.util.function.Supplier;
 
-/*Supplier<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½º (ÀÚ¹Ù API Á¦°ø)*/
+/*Supplier<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ (ìë°” API ì œê³µ)*/
 
 public class EX02_Supplier_FucntionalInterface {
 	public static void main(String[] args) {
 		
-		//#1. Supplier<T> ÀÇ ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		//#1. Supplier<T> ì˜ ìµëª…ì´ë„ˆí´ë˜ìŠ¤ í‘œí˜„
 		Supplier<String> s = new Supplier<String>() {
 			@Override
 			public String get() {				
-				return "Supplier<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½º";
+				return "Supplier<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤";
 			}
 		};
-		System.out.println(s.get()); //Supplier<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½º
+		System.out.println(s.get()); //Supplier<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤
 		
-		//#2. ±âº» Supplier<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½ºÀÇ ¶÷´Ù½Ä Ç¥Çö
-		//@2-1. ±âº»Çü Supplier
-		Supplier<String> s1 = ()->"Supplier<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½º"; 
-		System.out.println(s1.get()); //Supplier<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½º
+		//#2. ê¸°ë³¸ Supplier<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ì˜ ëŒë‹¤ì‹ í‘œí˜„
+		//@2-1. ê¸°ë³¸í˜• Supplier
+		Supplier<String> s1 = ()->"Supplier<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤"; 
+		System.out.println(s1.get()); //Supplier<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤
 
-		//@2-2. È®Àå Supplier<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½ºÀÇ ¶÷´Ù½Ä Ç¥Çö	
+		//@2-2. í™•ì¥ Supplier<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ì˜ ëŒë‹¤ì‹ í‘œí˜„	
 		BooleanSupplier s2 = ()->false;
 		IntSupplier s3 = ()->2+3;		
 		LongSupplier s4 = ()->10L;

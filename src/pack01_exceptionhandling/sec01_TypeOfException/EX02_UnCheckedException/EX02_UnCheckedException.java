@@ -1,6 +1,6 @@
-package pack01_exceptionhandling.sec01_TypeOfException.EX02_UnCheckedException;
+ï»¿package pack01_exceptionhandling.sec01_TypeOfException.EX02_UnCheckedException;
 
-/*´ëÇ¥ÀûÀÎ ½ÇÇà¿¹¿Ü(RuntimeException, Unchecked Exception)*/
+/*ëŒ€í‘œì ì¸ ì‹¤í–‰ì˜ˆì™¸(RuntimeException, Unchecked Exception)*/
 
 class A{}
 class B extends A{}

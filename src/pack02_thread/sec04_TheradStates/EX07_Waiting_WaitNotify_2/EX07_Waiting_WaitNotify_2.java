@@ -1,6 +1,6 @@
-package pack02_thread.sec04_TheradStates.EX07_Waiting_WaitNotify_2;
+ï»¿package pack02_thread.sec04_TheradStates.EX07_Waiting_WaitNotify_2;
 
-/*wait(), notify()¸¦ ÀÌ¿ëÇÑ ¾²·¹µåÀÇ ±³Â÷ ½ÇÇà*/
+/*wait(), notify()ë¥¼ ì´ìš©í•œ ì“°ë ˆë“œì˜ êµì°¨ ì‹¤í–‰*/
 
 class DataBox {
 	boolean isEmpty=true;
@@ -11,7 +11,7 @@ class DataBox {
 		}
 		isEmpty=false; 
 		this.data = data;		
-		System.out.println("ÀÔ·Â µ¥ÀÌÅÍ: "+data);		 
+		System.out.println("ì…ë ¥ ë°ì´í„°: "+data);		 
 		notify();
 	}
 	synchronized void outputData() throws InterruptedException {
@@ -19,7 +19,7 @@ class DataBox {
 			wait();
 		}
 		isEmpty=true;
-		System.out.println("Ãâ·Â µ¥ÀÌÅÍ: "+data);		
+		System.out.println("ì¶œë ¥ ë°ì´í„°: "+data);		
 		notify();
 	}
 }

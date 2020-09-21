@@ -1,31 +1,31 @@
-package pack04_collectionframework.sec02_Set.EX03_LinkedHashSetMethod;
+ï»¿package pack04_collectionframework.sec02_Set.EX03_LinkedHashSetMethod;
 
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-/*LinkedHashSet<E> Å¬·¡½ºÀÇ ÁÖ¿ä ¸Ş¼­µå È°¿ë¹æ¹ı*/
+/*LinkedHashSet<E> í´ë˜ìŠ¤ì˜ ì£¼ìš” ë©”ì„œë“œ í™œìš©ë°©ë²•*/
 
 public class EX03_LinkedHashSetMethod {
 	public static void main(String[] args) {
 		Set<String> linkedSet1 = new LinkedHashSet<String>();
 		//#1. add(E element)
-		linkedSet1.add("°¡");
-		linkedSet1.add("³ª");
-		linkedSet1.add("°¡");
-		System.out.println(linkedSet1.toString()); //[°¡, ³ª]
+		linkedSet1.add("ê°€");
+		linkedSet1.add("ë‚˜");
+		linkedSet1.add("ê°€");
+		System.out.println(linkedSet1.toString()); //[ê°€, ë‚˜]
 
 		//#2. addAll(Collection<? extends E> c)
 		Set<String> linkedSet2 = new LinkedHashSet<String>();
-		linkedSet2.add("³ª");
-		linkedSet2.add("´Ù");
+		linkedSet2.add("ë‚˜");
+		linkedSet2.add("ë‹¤");
 		linkedSet2.addAll(linkedSet1);
-		System.out.println(linkedSet2.toString()); //[³ª, ´Ù, °¡]
+		System.out.println(linkedSet2.toString()); //[ë‚˜, ë‹¤, ê°€]
 		
 		//#3. remove(Object o)
-		linkedSet2.remove("³ª");
-		System.out.println(linkedSet2.toString()); //[´Ù, °¡]
+		linkedSet2.remove("ë‚˜");
+		System.out.println(linkedSet2.toString()); //[ë‹¤, ê°€]
 
 		//#4. clear()
 		linkedSet2.clear();
@@ -36,11 +36,11 @@ public class EX03_LinkedHashSetMethod {
 
 		//#6. contains(Object o)
 		Set<String> linkedSet3 = new LinkedHashSet<String>();
-		linkedSet3.add("°¡");
-		linkedSet3.add("´Ù");
-		linkedSet3.add("³ª");
-		System.out.println(linkedSet3.contains("³ª")); //true
-		System.out.println(linkedSet3.contains("¶ó")); //false
+		linkedSet3.add("ê°€");
+		linkedSet3.add("ë‹¤");
+		linkedSet3.add("ë‚˜");
+		System.out.println(linkedSet3.contains("ë‚˜")); //true
+		System.out.println(linkedSet3.contains("ë¼")); //false
 
 		//#7. size()
 		System.out.println(linkedSet3.size()); //3
@@ -48,21 +48,21 @@ public class EX03_LinkedHashSetMethod {
 		//#8. iterator()
 		Iterator<String> iterator = linkedSet3.iterator();
 		while(iterator.hasNext()) {
-		  System.out.print(iterator.next() + " "); //°¡ ´Ù ³ª
+		  System.out.print(iterator.next() + " "); //ê°€ ë‹¤ ë‚˜
 		}
 		System.out.println();
 
 		//#9. toArray()
 		Object[] objArray = linkedSet3.toArray();
-		System.out.println(Arrays.toString(objArray)); //[°¡ ´Ù ³ª]
+		System.out.println(Arrays.toString(objArray)); //[ê°€ ë‹¤ ë‚˜]
 
 		//#10-1. toArray(T[] t)
 		String[] strArray1 = linkedSet3.toArray(new String[0]);
-		System.out.println(Arrays.toString(strArray1)); //[°¡ ´Ù ³ª]
+		System.out.println(Arrays.toString(strArray1)); //[ê°€ ë‹¤ ë‚˜]
 
 		//#10-2. toArray(T[] t)
 		String[] strArray2 = linkedSet3.toArray(new String[5]);
-		System.out.println(Arrays.toString(strArray2)); //[°¡ ´Ù ³ª null null]
+		System.out.println(Arrays.toString(strArray2)); //[ê°€ ë‹¤ ë‚˜ null null]
 
 
 		

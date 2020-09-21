@@ -1,10 +1,10 @@
-package pack04_collectionframework.sec02_Set.EX04_TreeSetMethod_1;
+ï»¿package pack04_collectionframework.sec02_Set.EX04_TreeSetMethod_1;
 
 import java.util.NavigableSet;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-/*TreeSet<E> Å¬·¡½ºÀÇ ÁÖ¿ä ¸Ş¼­µå È°¿ë¹æ¹ı*/
+/*TreeSet<E> í´ë˜ìŠ¤ì˜ ì£¼ìš” ë©”ì„œë“œ í™œìš©ë°©ë²•*/
 
 public class EX04_TreeSetMethod_1 {
 	public static void main(String[] args) {

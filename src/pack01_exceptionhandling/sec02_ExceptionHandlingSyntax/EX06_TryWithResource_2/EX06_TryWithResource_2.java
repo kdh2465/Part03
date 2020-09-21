@@ -1,9 +1,9 @@
-package pack01_exceptionhandling.sec02_ExceptionHandlingSyntax.EX06_TryWithResource_2;
+ï»¿package pack01_exceptionhandling.sec02_ExceptionHandlingSyntax.EX06_TryWithResource_2;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/*¸®¼Ò½º ÀÚµ¿ ÇØÁ¦ °¡´ÉÇÑ Å¬·¡½º »ı¼º ¹× try with resource Àû¿ë*/
+/*ë¦¬ì†ŒìŠ¤ ìë™ í•´ì œ ê°€ëŠ¥í•œ í´ë˜ìŠ¤ ìƒì„± ë° try with resource ì ìš©*/
 
 class A implements AutoCloseable{
 	String resource ;
@@ -17,20 +17,20 @@ class A implements AutoCloseable{
 	public void close() throws Exception {
 		if(resource !=null) {
 			resource=null;
-			System.out.println("¸®¼Ò½º°¡ ÇØÁ¦µÇ¾ú½À´Ï´Ù.");
+			System.out.println("ë¦¬ì†ŒìŠ¤ê°€ í•´ì œë˜ì—ˆìŠµë‹ˆë‹¤.");
 		}
 	}
 }
 public class EX06_TryWithResource_2 {
 	public static void main(String[] args) {
 		
-		//#1. ¸®¼Ò½º¸¦ »ç¿ëÇÏ°í finally¿¡¼­ ¸®¼Ò½º ÇØÁ¦ÇÏ±â
+		//#1. ë¦¬ì†ŒìŠ¤ë¥¼ ì‚¬ìš©í•˜ê³  finallyì—ì„œ ë¦¬ì†ŒìŠ¤ í•´ì œí•˜ê¸°
 		A a1 = null;		
 		try {
-			a1=new A("Æ¯Á¤ÆÄÀÏ");
+			a1=new A("íŠ¹ì •íŒŒì¼");
 			a1.abc();
 		} catch (Exception e) {
-			System.out.println("¿¹¿ÜÃ³¸®");
+			System.out.println("ì˜ˆì™¸ì²˜ë¦¬");
 		} finally {
 			if(a1.resource!=null)
 				try {
@@ -38,11 +38,11 @@ public class EX06_TryWithResource_2 {
 				} catch (Exception e) {}
 		}
 		
-		//#2. try with resource ±¸¹®À» ÀÌ¿ëÇØ¼­ ÀÚµ¿À¸·Î ÇØÁ¦			
-		try (A a2 = new A("Æ¯Á¤ÆÄÀÏ");){
+		//#2. try with resource êµ¬ë¬¸ì„ ì´ìš©í•´ì„œ ìë™ìœ¼ë¡œ í•´ì œ			
+		try (A a2 = new A("íŠ¹ì •íŒŒì¼");){
 			a2.abc();
 		} catch (Exception e) {
-			System.out.println("¿¹¿ÜÃ³¸®");
+			System.out.println("ì˜ˆì™¸ì²˜ë¦¬");
 		}		
 	}
 }

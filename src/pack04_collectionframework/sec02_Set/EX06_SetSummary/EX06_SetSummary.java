@@ -1,36 +1,36 @@
-package pack04_collectionframework.sec02_Set.EX06_SetSummary;
+ï»¿package pack04_collectionframework.sec02_Set.EX06_SetSummary;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-/*Set<E> ±¸ÇöÅ¬·¡½º Summary*/
+/*Set<E> êµ¬í˜„í´ë˜ìŠ¤ Summary*/
 
 public class EX06_SetSummary {
 	public static void main(String[] args) {
 		//#1. HashSet
 		Set<String> hashSet = new HashSet<String>();
-		hashSet.add("´Ù");
-		hashSet.add("¸¶");
-		hashSet.add("³ª");
-		hashSet.add("°¡");
-		System.out.println(hashSet.toString()); //[°¡, ´Ù, ¸¶, ³ª]
+		hashSet.add("ë‹¤");
+		hashSet.add("ë§ˆ");
+		hashSet.add("ë‚˜");
+		hashSet.add("ê°€");
+		System.out.println(hashSet.toString()); //[ê°€, ë‹¤, ë§ˆ, ë‚˜]
 
 		//#2. LinkedHashSet
 		Set<String> linkedHashSet = new LinkedHashSet<String>();
-		linkedHashSet.add("´Ù");
-		linkedHashSet.add("¸¶");
-		linkedHashSet.add("³ª");
-		linkedHashSet.add("°¡");
-		System.out.println(linkedHashSet.toString()); //[´Ù, ¸¶, ³ª, °¡]
+		linkedHashSet.add("ë‹¤");
+		linkedHashSet.add("ë§ˆ");
+		linkedHashSet.add("ë‚˜");
+		linkedHashSet.add("ê°€");
+		System.out.println(linkedHashSet.toString()); //[ë‹¤, ë§ˆ, ë‚˜, ê°€]
 
 		//#3. TreeSet
 		Set<String> treeSet = new TreeSet<String>();
-		treeSet.add("´Ù");
-		treeSet.add("¸¶");
-		treeSet.add("³ª");
-		treeSet.add("°¡");
+		treeSet.add("ë‹¤");
+		treeSet.add("ë§ˆ");
+		treeSet.add("ë‚˜");
+		treeSet.add("ê°€");
 		System.out.println(treeSet.toString());
 
 	}

@@ -1,71 +1,71 @@
-package pack05_lambdaexpression.sec01_LambdaExpression.EX02_FunctionToLambdaExpression;
+ï»¿package pack05_lambdaexpression.sec01_LambdaExpression.EX02_FunctionToLambdaExpression;
 
-/*ÇÔ¼öÀû ÀÎÅÍÆäÀÌ½ºÀÇ °´Ã¼»ý¼ºÀ» À§ÇÑ ¶÷´Ù½Ä Ç¥Çö¹æ¹ý*/
+/*í•¨ìˆ˜ì  ì¸í„°íŽ˜ì´ìŠ¤ì˜ ê°ì²´ìƒì„±ì„ ìœ„í•œ ëžŒë‹¤ì‹ í‘œí˜„ë°©ë²•*/
 
-interface A{ //ÀÔ·ÂX, Ãâ·Âx
+interface A{ //ìž…ë ¥X, ì¶œë ¥x
 	void method1();
 }
-interface B{ //ÀÔ·ÂO, Ãâ·Âx
+interface B{ //ìž…ë ¥O, ì¶œë ¥x
 	void method2(int a);
 }
-interface C{ //ÀÔ·ÂX, Ãâ·ÂO
+interface C{ //ìž…ë ¥X, ì¶œë ¥O
 	int method3();
 }
-interface D{ //ÀÔ·ÂO, Ãâ·ÂO
+interface D{ //ìž…ë ¥O, ì¶œë ¥O
 	double method4(int a, double b);
 }
 
 public class EX02_FunctionToLambdaExpression {
 	public static void main(String[] args) {
 		
-		//#ÇÔ¼ö(ÇÔ¼öÀûÀÎÅÍÆäÀÌ½º) --> ¶÷´Ù½Ä
+		//#í•¨ìˆ˜(í•¨ìˆ˜ì ì¸í„°íŽ˜ì´ìŠ¤) --> ëžŒë‹¤ì‹
 		
-		//#1. ÀÔ·ÂX, Ãâ·ÂxÀÇ ÇÔ¼ö
-		//@1-1. ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		//#1. ìž…ë ¥X, ì¶œë ¥xì˜ í•¨ìˆ˜
+		//@1-1. ìµëª…ì´ë„ˆí´ëž˜ìŠ¤ í‘œí˜„
 		A a1 = new A() { 
 			@Override
 			public void method1() {
-				System.out.println("ÀÔ·ÂX, Ãâ·ÂxÀÇ ÇÔ¼ö");				
+				System.out.println("ìž…ë ¥X, ì¶œë ¥xì˜ í•¨ìˆ˜");				
 			}
 		};
-		//@1-2. ¶÷´Ù½Ä Ç¥Çö
-		A a2 = ()->{System.out.println("ÀÔ·ÂX, Ãâ·ÂxÀÇ ÇÔ¼ö");};
-		A a3 = ()-> System.out.println("ÀÔ·ÂX, Ãâ·ÂxÀÇ ÇÔ¼ö"); //Áß°ýÈ£ »èÁ¦
+		//@1-2. ëžŒë‹¤ì‹ í‘œí˜„
+		A a2 = ()->{System.out.println("ìž…ë ¥X, ì¶œë ¥xì˜ í•¨ìˆ˜");};
+		A a3 = ()-> System.out.println("ìž…ë ¥X, ì¶œë ¥xì˜ í•¨ìˆ˜"); //ì¤‘ê´„í˜¸ ì‚­ì œ
 		
-		//#2. //ÀÔ·ÂO, Ãâ·ÂxÀÇ ÇÔ¼ö
-		//@2-1. ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		//#2. //ìž…ë ¥O, ì¶œë ¥xì˜ í•¨ìˆ˜
+		//@2-1. ìµëª…ì´ë„ˆí´ëž˜ìŠ¤ í‘œí˜„
 		B b1 = new B() {
 			public void method2(int a) {
 				System.out.println(a);
 			};
 		};
-		//@2-2. ¶÷´Ù½Ä Ç¥Çö
+		//@2-2. ëžŒë‹¤ì‹ í‘œí˜„
 		B b2 = (int a)->{System.out.println(a);};
 		B b3 = (a)->{System.out.println(a);};
 		B b4 = (a)->System.out.println(a);
 		B b5 = a->System.out.println(a);
 		
-		//#3. //ÀÔ·Âx, Ãâ·ÂOÀÇ ÇÔ¼ö
-		//@3-1. ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		//#3. //ìž…ë ¥x, ì¶œë ¥Oì˜ í•¨ìˆ˜
+		//@3-1. ìµëª…ì´ë„ˆí´ëž˜ìŠ¤ í‘œí˜„
 		C c1 = new C() {
 			@Override
 			public int method3() {				
 				return 4;
 			}
 		};
-		//@3-2. ¶÷´Ù½Ä Ç¥Çö
+		//@3-2. ëžŒë‹¤ì‹ í‘œí˜„
 		C c2 = ()->{return 4;};
 		C c3 = ()->4;
 		
-		//#4. //ÀÔ·Âx, Ãâ·ÂOÀÇ ÇÔ¼ö
-		//@4-1. ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		//#4. //ìž…ë ¥x, ì¶œë ¥Oì˜ í•¨ìˆ˜
+		//@4-1. ìµëª…ì´ë„ˆí´ëž˜ìŠ¤ í‘œí˜„
 		D d1 = new D() {
 			@Override
 			public double method4(int a, double b) {				
 				return a+b;
 			}
 		};
-		//@4-2. ¶÷´Ù½Ä Ç¥Çö
+		//@4-2. ëžŒë‹¤ì‹ í‘œí˜„
 		D d2 = (int a, double b)->{return a+b;};
 		D d3 = (a, b)->{return a+b;};
 		D d4 = (a, b)->a+b;

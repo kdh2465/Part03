@@ -1,9 +1,9 @@
-package pack04_collectionframework.sec02_Set.EX05_TreeSetMethod_2;
+ï»¿package pack04_collectionframework.sec02_Set.EX05_TreeSetMethod_2;
 
 import java.util.Comparator;
 import java.util.TreeSet;
 
-/*»ç¿ëÀÚ Å¬·¡½ºÀÇ ´ë¼Òºñ±³ ±âÁØ Á¦°ø ¹× TreeSet<E> µ¥ÀÌÅÍ·ÎÀÇ È°¿ë*/
+/*ì‚¬ìš©ì í´ë˜ìŠ¤ì˜ ëŒ€ì†Œë¹„êµ ê¸°ì¤€ ì œê³µ ë° TreeSet<E> ë°ì´í„°ë¡œì˜ í™œìš©*/
 
 class MyClass {
 	int data1;
@@ -34,7 +34,7 @@ class MyComparableClass implements Comparable<MyComparableClass>{
 public class EX05_TreeSetMethod_2 {
 	public static void main(String[] args) {
 		
-		//#1. Integer Å©±â ºñ±³
+		//#1. Integer í¬ê¸° ë¹„êµ
 		TreeSet<Integer> treeSet1 = new TreeSet<Integer>();
 		Integer intValue1 = new Integer(20);
 		Integer intValue2 = new Integer(10);
@@ -42,25 +42,25 @@ public class EX05_TreeSetMethod_2 {
 		treeSet1.add(intValue2);
 		System.out.println(treeSet1.toString()); //[10, 20]
 
-		//#2. String Å©±â ºñ±³
+		//#2. String í¬ê¸° ë¹„êµ
 		TreeSet<String> treeSet2 = new TreeSet<String>();
-		String str1 = "°¡³ª";
-		String str2 = "´Ù¶ó";
+		String str1 = "ê°€ë‚˜";
+		String str2 = "ë‹¤ë¼";
 		treeSet2.add(str1);
 		treeSet2.add(str2);
-		System.out.println(treeSet2.toString()); //[°¡³ª, ´Ù¶ó]
+		System.out.println(treeSet2.toString()); //[ê°€ë‚˜, ë‹¤ë¼]
 
 		/*
-		//#3. MyClass Å©±â ºñ±³
+		//#3. MyClass í¬ê¸° ë¹„êµ
 		TreeSet<MyClass> treeSet3 = new TreeSet<MyClass>();
 		MyClass myClass1 = new MyClass(2,5);
 		MyClass myClass2 = new MyClass(3,3);
-		treeSet3.add(myClass1);                  //¿¹¿Ü¹ß»ı
-		treeSet3.add(myClass2);                  //¿¹¿Ü¹ß»ı
-		System.out.println(treeSet3.toString()); //¿¹¿Ü¹ß»ı
+		treeSet3.add(myClass1);                  //ì˜ˆì™¸ë°œìƒ
+		treeSet3.add(myClass2);                  //ì˜ˆì™¸ë°œìƒ
+		System.out.println(treeSet3.toString()); //ì˜ˆì™¸ë°œìƒ
         */
 		
-		//#4. MyComparableClass Å©±â ºñ±³ (¹æ¹ı#1)
+		//#4. MyComparableClass í¬ê¸° ë¹„êµ (ë°©ë²•#1)
 		TreeSet<MyComparableClass> treeSet4 = new TreeSet<MyComparableClass>();
 		MyComparableClass myComparableClass1 = new MyComparableClass(2,5);
 		MyComparableClass myComparableClass2 = new MyComparableClass(3,3);
@@ -70,7 +70,7 @@ public class EX05_TreeSetMethod_2 {
 		  System.out.println(mcc.data1);
 		}
 		
-		//#5. MyClass Å©±â ºñ±³ (Comparator<T> °´Ã¼ »ı¼ºÀÚ Àü´Ş) (¹æ¹ı#2)
+		//#5. MyClass í¬ê¸° ë¹„êµ (Comparator<T> ê°ì²´ ìƒì„±ì ì „ë‹¬) (ë°©ë²•#2)
 		TreeSet<MyClass> treeSet5 = new TreeSet<MyClass>(new Comparator<MyClass>() {
 		  @Override
 		  public int compare(MyClass o1, MyClass o2) {

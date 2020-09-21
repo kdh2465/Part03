@@ -1,6 +1,6 @@
-package pack03_generic.sec05_InheritanceOfGeneric.EX01_InheritanceOfGenericClass;
+ï»¿package pack03_generic.sec05_InheritanceOfGeneric.EX01_InheritanceOfGenericClass;
 
-/*Á¦³×¸¯ Å¬·¡½ºÀÇ »ó¼Ó*/
+/*ì œë„¤ë¦­ í´ë˜ìŠ¤ì˜ ìƒì†*/
 
 class Parent<T> {
 	T t;
@@ -28,19 +28,19 @@ class Child2<T, V> extends Parent<T> {
 	
 public class EX01_InheritanceOfGenericClass {
 	public static void main(String[] args) {
-		//#1. ºÎ¸ğÁ¦³×¸¯ Å¬·¡½º
+		//#1. ë¶€ëª¨ì œë„¤ë¦­ í´ë˜ìŠ¤
 		Parent<String> p = new Parent<>();
-		p.setT("ºÎ¸ğÁ¦³×¸¯Å¬·¡½º");
+		p.setT("ë¶€ëª¨ì œë„¤ë¦­í´ë˜ìŠ¤");
 		System.out.println(p.getT());
 		
-		//#2. ÀÚ½Ä1Á¦³×¸¯ Å¬·¡½º
+		//#2. ìì‹1ì œë„¤ë¦­ í´ë˜ìŠ¤
 		Child1<String> c1 = new Child1<>();
-		c1.setT("ÀÚ½Ä1 Á¦³×¸¯Å¬·¡½º");
+		c1.setT("ìì‹1 ì œë„¤ë¦­í´ë˜ìŠ¤");
 		System.out.println(c1.getT());
 		
-		//#3. ÀÚ½Ä2Á¦³×¸¯ Å¬·¡½º
+		//#3. ìì‹2ì œë„¤ë¦­ í´ë˜ìŠ¤
 		Child2<String, Integer> c2 = new Child2<>();
-		c2.setT("ÀÚ½Ä2 Á¦³×¸¯Å¬·¡½º");
+		c2.setT("ìì‹2 ì œë„¤ë¦­í´ë˜ìŠ¤");
 		c2.setV(100);
 		System.out.println(c2.getT());
 		System.out.println(c2.getV());

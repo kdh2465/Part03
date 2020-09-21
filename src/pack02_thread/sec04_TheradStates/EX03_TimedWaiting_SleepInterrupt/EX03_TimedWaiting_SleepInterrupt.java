@@ -1,6 +1,6 @@
-package pack02_thread.sec04_TheradStates.EX03_TimedWaiting_SleepInterrupt;
+ï»¿package pack02_thread.sec04_TheradStates.EX03_TimedWaiting_SleepInterrupt;
 
-/*Thread.sleep(.) ¸Ş¼­µå¸¦ ÀÌ¿ëÇÑ TIMED_WAITING°ú interrupt()*/
+/*Thread.sleep(.) ë©”ì„œë“œë¥¼ ì´ìš©í•œ TIMED_WAITINGê³¼ interrupt()*/
 
 class MyThread extends Thread {
 	@Override
@@ -8,7 +8,7 @@ class MyThread extends Thread {
 		try { 
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
-			System.out.println(" --sleep() Áß interrupt ¹ß»ı--");
+			System.out.println(" --sleep() ì¤‘ interrupt ë°œìƒ--");
 			for (long i = 0; i < 1000000000L; i++) {} //RUNNABLE
 		}
 	}
@@ -21,12 +21,12 @@ public class EX03_TimedWaiting_SleepInterrupt {
 	    myThread.start();
 	    
 	    //#Thread.sleep() 
-	    try {Thread.sleep(100);} catch (InterruptedException e) {} //run()ÀÌ ½ÃÀÛµÇ±â±îÁö ½Ã°£¿©À¯
+	    try {Thread.sleep(100);} catch (InterruptedException e) {} //run()ì´ ì‹œì‘ë˜ê¸°ê¹Œì§€ ì‹œê°„ì—¬ìœ 
 	    System.out.println("MyThread State : " + myThread.getState()); //TIMED_WAITING
 	    
 	    //#interrupt()
 	    myThread.interrupt();
-	    try {Thread.sleep(100);} catch (InterruptedException e) {} //¿¹¿Ü¹ß»ı±îÁöÀÇ ½Ã°£¿©À¯
+	    try {Thread.sleep(100);} catch (InterruptedException e) {} //ì˜ˆì™¸ë°œìƒê¹Œì§€ì˜ ì‹œê°„ì—¬ìœ 
 	    System.out.println("MyThread State : " + myThread.getState()); //RUNNABLE
 	    
 	}

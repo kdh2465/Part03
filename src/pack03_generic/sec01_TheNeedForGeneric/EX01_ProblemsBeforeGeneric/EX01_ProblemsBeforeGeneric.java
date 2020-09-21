@@ -1,8 +1,8 @@
-package pack03_generic.sec01_TheNeedForGeneric.EX01_ProblemsBeforeGeneric;
+ï»¿package pack03_generic.sec01_TheNeedForGeneric.EX01_ProblemsBeforeGeneric;
 
-/*Á¦³×¸¯ ÀÌÀüÀÇ ¹®Á¦Á¡ È®ÀÎ »ç°ú¿Í ¿¬ÇÊ¸¸À» ÀúÀåÇÒ ¼ö ÀÖ´Â Å¬·¡½ºÀÇ »ı¼º ¹× È°¿ë*/
+/*ì œë„¤ë¦­ ì´ì „ì˜ ë¬¸ì œì  í™•ì¸ ì‚¬ê³¼ì™€ ì—°í•„ë§Œì„ ì €ì¥í•  ìˆ˜ ìˆëŠ” í´ë˜ìŠ¤ì˜ ìƒì„± ë° í™œìš©*/
 
-//#1. Apple Å¬·¡½º¿Í AppleÀ» ´ãÀ» ¼ö ÀÖ´Â Å¬·¡½º
+//#1. Apple í´ë˜ìŠ¤ì™€ Appleì„ ë‹´ì„ ìˆ˜ ìˆëŠ” í´ë˜ìŠ¤
 class Apple{ }
 class Goods1{ 
 	private Apple apple = new Apple();
@@ -14,7 +14,7 @@ class Goods1{
 	}	
 }
 
-//#2. Pencil Å¬·¡½º¿Í PencilÀ» ´ãÀ» ¼ö ÀÖ´Â Å¬·¡½º
+//#2. Pencil í´ë˜ìŠ¤ì™€ Pencilì„ ë‹´ì„ ìˆ˜ ìˆëŠ” í´ë˜ìŠ¤
 class Pencil{ }
 class Goods2{
 	private Pencil pencil = new Pencil();
@@ -28,12 +28,12 @@ class Goods2{
 
 public class EX01_ProblemsBeforeGeneric {
 	public static void main(String[] args) {
-		//Goods1Àº Apple¸¸ »ç¿ë °¡´É
+		//Goods1ì€ Appleë§Œ ì‚¬ìš© ê°€ëŠ¥
 		Goods1 goods1 = new Goods1(); 
 		goods1.set(new Apple());
 		Apple apple = goods1.get(); 
 		
-		//Goods2Àº Pencil¸¸ »ç¿ë °¡´É
+		//Goods2ì€ Pencilë§Œ ì‚¬ìš© ê°€ëŠ¥
 		Goods2 goods2 = new Goods2();
 		goods2.set(new Pencil());
 		Pencil pencil = goods2.get();

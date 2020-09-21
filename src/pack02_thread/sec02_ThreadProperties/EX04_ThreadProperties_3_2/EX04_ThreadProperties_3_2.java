@@ -1,13 +1,13 @@
-package pack02_thread.sec02_ThreadProperties.EX04_ThreadProperties_3_2;
+ï»¿package pack02_thread.sec02_ThreadProperties.EX04_ThreadProperties_3_2;
 
-/*¾²·¹µåÀÇ µ¥¸ó(daemon) ¼³Á¤ #2 : µ¥¸ó¾²·¹µå*/
+/*ì“°ë ˆë“œì˜ ë°ëª¬(daemon) ì„¤ì • #2 : ë°ëª¬ì“°ë ˆë“œ*/
 
 class MyThread extends Thread {
 	@Override
 	public void run() {
-		System.out.println(getName() + ":" + (isDaemon() ? "µ¥¸ó¾²·¹µå" : "ÀÏ¹İ¾²·¹µå"));
+		System.out.println(getName() + ":" + (isDaemon() ? "ë°ëª¬ì“°ë ˆë“œ" : "ì¼ë°˜ì“°ë ˆë“œ"));
 		for (int i = 0; i < 6; i++) {
-			System.out.println(getName() + ":" + i + "ÃÊ");
+			System.out.println(getName() + ":" + i + "ì´ˆ");
 			try {Thread.sleep(1000);} catch (InterruptedException e) {}
 		}
 	}
@@ -16,20 +16,20 @@ class MyThread extends Thread {
 public class EX04_ThreadProperties_3_2 {
 	public static void main(String[] args) {
 		
-		//#1. ÀÏ¹İ¾²·¹µå
+		//#1. ì¼ë°˜ì“°ë ˆë“œ
 		//Thread thread1 = new MyThread();
 		//thread1.setDaemon(false);
 		//thread1.setName("thread1");
 		//thread1.start();
 		
-		//#2. µ¥¸ó¾²·¹µå
+		//#2. ë°ëª¬ì“°ë ˆë“œ
 		Thread thread2 = new MyThread();
 		thread2.setDaemon(true);
 		thread2.setName("thread2");
 		thread2.start();
 				
-		//#3. 3ÃÊÈÄ MainThread Á¾·á
+		//#3. 3ì´ˆí›„ MainThread ì¢…ë£Œ
 		try { Thread.sleep(3500); } catch (InterruptedException e) {}
-		System.out.println("main thread Á¾·á");		
+		System.out.println("main thread ì¢…ë£Œ");		
 	}
 }

@@ -1,47 +1,47 @@
-package pack04_collectionframework.sec03_Map.EX03_HashTableMethod;
+ï»¿package pack04_collectionframework.sec03_Map.EX03_HashTableMethod;
 
 import java.util.Hashtable;
 import java.util.Map;
 import java.util.Set;
 
-/*HashTable<K,V> Å¬·¡½ºÀÇ ÁÖ¿ä ¸Ş¼­µå È°¿ë¹æ¹ı*/
+/*HashTable<K,V> í´ë˜ìŠ¤ì˜ ì£¼ìš” ë©”ì„œë“œ í™œìš©ë°©ë²•*/
 
 public class EX03_HashTableMethod {
 	public static void main(String[] args) {
 		Map<Integer, String> hTable1 = new Hashtable<Integer, String>();
 		//#1. put(K key, V value)
-		hTable1.put(2, "³ª´Ù¶ó");
-		hTable1.put(1, "°¡³ª´Ù");
-		hTable1.put(3, "´Ù¶ó¸¶");
-		System.out.println(hTable1.toString());//{3=´Ù¶ó¸¶, 2=³ª´Ù¶ó, 1=°¡³ª´Ù}
+		hTable1.put(2, "ë‚˜ë‹¤ë¼");
+		hTable1.put(1, "ê°€ë‚˜ë‹¤");
+		hTable1.put(3, "ë‹¤ë¼ë§ˆ");
+		System.out.println(hTable1.toString());//{3=ë‹¤ë¼ë§ˆ, 2=ë‚˜ë‹¤ë¼, 1=ê°€ë‚˜ë‹¤}
 
 		//#2. putAll(<Map<? extends K,? extends V> m)
 		Map<Integer, String> hTable2 = new Hashtable<Integer, String>();
 		hTable2.putAll(hTable1);
-		System.out.println(hTable2.toString());//{3=´Ù¶ó¸¶, 2=³ª´Ù¶ó, 1=°¡³ª´Ù}
+		System.out.println(hTable2.toString());//{3=ë‹¤ë¼ë§ˆ, 2=ë‚˜ë‹¤ë¼, 1=ê°€ë‚˜ë‹¤}
 		
 		//#3.replace(K key, V value)
-		hTable2.replace(1, "°¡°¡°¡");
-		hTable2.replace(4, "¶ó¶ó¶ó"); //µ¿ÀÛ¾ÈÇÔ
-		System.out.println(hTable2.toString());//{3=´Ù¶ó¸¶, 2=³ª´Ù¶ó, 1=°¡°¡°¡}
+		hTable2.replace(1, "ê°€ê°€ê°€");
+		hTable2.replace(4, "ë¼ë¼ë¼"); //ë™ì‘ì•ˆí•¨
+		System.out.println(hTable2.toString());//{3=ë‹¤ë¼ë§ˆ, 2=ë‚˜ë‹¤ë¼, 1=ê°€ê°€ê°€}
 
 		//#4.replace(K key, V oldValue, V newValue)
-		hTable2.replace(1, "°¡°¡°¡", "³ª³ª³ª");
-		hTable2.replace(2, "´Ù´Ù´Ù", "¶ó¶ó¶ó");//µ¿ÀÛ¾ÈÇÔ
-		System.out.println(hTable2.toString());//{3=´Ù¶ó¸¶, 2=³ª´Ù¶ó, 1=³ª³ª³ª}
+		hTable2.replace(1, "ê°€ê°€ê°€", "ë‚˜ë‚˜ë‚˜");
+		hTable2.replace(2, "ë‹¤ë‹¤ë‹¤", "ë¼ë¼ë¼");//ë™ì‘ì•ˆí•¨
+		System.out.println(hTable2.toString());//{3=ë‹¤ë¼ë§ˆ, 2=ë‚˜ë‹¤ë¼, 1=ë‚˜ë‚˜ë‚˜}
 
 		//#5. V get(Object key)
-		System.out.println(hTable2.get(1)); //³ª³ª³ª
-		System.out.println(hTable2.get(2)); //³ª´Ù¶ó
-		System.out.println(hTable2.get(3)); //´Ù¶ó¸¶
+		System.out.println(hTable2.get(1)); //ë‚˜ë‚˜ë‚˜
+		System.out.println(hTable2.get(2)); //ë‚˜ë‹¤ë¼
+		System.out.println(hTable2.get(3)); //ë‹¤ë¼ë§ˆ
 
 		//#6. containsKey(Object key)
 		System.out.println(hTable2.containsKey(1)); //true
 		System.out.println(hTable2.containsKey(5)); //false
 
 		//#7. containsValue(Object value)
-		System.out.println(hTable2.containsValue("³ª³ª³ª")); //true
-		System.out.println(hTable2.containsValue("´Ù´Ù´Ù")); //false
+		System.out.println(hTable2.containsValue("ë‚˜ë‚˜ë‚˜")); //true
+		System.out.println(hTable2.containsValue("ë‹¤ë‹¤ë‹¤")); //false
 
 		//#8. Set<K> keySet()
 		Set<Integer> keySet = hTable2.keySet();
@@ -49,7 +49,7 @@ public class EX03_HashTableMethod {
 
 		//#9. Set<Map.Entry<K,V>> entrySet()
 		Set<Map.Entry<Integer, String>> entrySet = hTable2.entrySet();
-		System.out.println(entrySet); //[1=³ª³ª³ª, 2=³ª´Ù¶ó, 3=´Ù¶ó¸¶]
+		System.out.println(entrySet); //[1=ë‚˜ë‚˜ë‚˜, 2=ë‚˜ë‹¤ë¼, 3=ë‹¤ë¼ë§ˆ]
 
 		//#10. size()
 		System.out.println(hTable2.size()); //3

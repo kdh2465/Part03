@@ -1,14 +1,14 @@
-package pack02_thread.sec03_SynchronizedMethodAndBlock.EX03_SynchronizedBlock;
+ï»¿package pack02_thread.sec03_SynchronizedMethodAndBlock.EX03_SynchronizedBlock;
 
-/*µ¿±âÈ­ ºí·ÏÀ» È°¿ëÇÑ µ¿±âÈ­ ±¸Çö*/
+/*ë™ê¸°í™” ë¸”ë¡ì„ í™œìš©í•œ ë™ê¸°í™” êµ¬í˜„*/
 
-//#. °øÀ¯°´Ã¼ 
+//#. ê³µìœ ê°ì²´ 
 class MyData {
 	int data = 3;
 		
 	public void plusData() {
 		synchronized(this) {
-			int mydata = data; //µ¥ÀÌÅÍ¸¦ ¹Ù·Î °¡Á®¿Í 2ÃÊ µÚ °á°ú°ª ÀúÀå
+			int mydata = data; //ë°ì´í„°ë¥¼ ë°”ë¡œ ê°€ì ¸ì™€ 2ì´ˆ ë’¤ ê²°ê³¼ê°’ ì €ì¥
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {		}
@@ -17,7 +17,7 @@ class MyData {
 	}
 }
 
-//# °øÀ¯°´Ã¼ »ç¿ë ¾²·¹µå
+//# ê³µìœ ê°ì²´ ì‚¬ìš© ì“°ë ˆë“œ
 class PlusThread extends Thread {
 	MyData myData;
 	public PlusThread(MyData myData) {
@@ -26,13 +26,13 @@ class PlusThread extends Thread {
 	@Override
 	public void run() {
 		myData.plusData();
-		System.out.println(getName() + "½ÇÇà°á°ú: " + myData.data);
+		System.out.println(getName() + "ì‹¤í–‰ê²°ê³¼: " + myData.data);
 	}
 }
 
 public class EX03_SynchronizedBlock {
 	public static void main(String[] args) {
-	    //#°øÀ¯°´Ã¼
+	    //#ê³µìœ ê°ì²´
 		MyData myData = new MyData();
 		
 		//#plusThread1

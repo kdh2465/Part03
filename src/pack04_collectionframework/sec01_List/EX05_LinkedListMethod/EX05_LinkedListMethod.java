@@ -1,11 +1,11 @@
-package pack04_collectionframework.sec01_List.EX05_LinkedListMethod;
+ï»¿package pack04_collectionframework.sec01_List.EX05_LinkedListMethod;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
 
-/*LinkedList<E> Å¬·¡½ºÀÇ ÁÖ¿ä ¸Ş¼­µå È°¿ë¹æ¹ı*/
+/*LinkedList<E> í´ë˜ìŠ¤ì˜ ì£¼ìš” ë©”ì„œë“œ í™œìš©ë°©ë²•*/
 
 public class EX05_LinkedListMethod {
 	public static void main(String[] args) {
@@ -65,11 +65,11 @@ public class EX05_LinkedListMethod {
 		System.out.println("size : "+linkedlist3.size()); //size : 3
 
 		//#11. get(int index)
-		System.out.println("0¹øÂ° : " + linkedlist3.get(0)); //0¹øÂ° : 1
-		System.out.println("1¹øÂ° : " + linkedlist3.get(1)); //1¹øÂ° : 2
-		System.out.println("2¹øÂ° : " + linkedlist3.get(2)); //2¹øÂ° : 3
+		System.out.println("0ë²ˆì§¸ : " + linkedlist3.get(0)); //0ë²ˆì§¸ : 1
+		System.out.println("1ë²ˆì§¸ : " + linkedlist3.get(1)); //1ë²ˆì§¸ : 2
+		System.out.println("2ë²ˆì§¸ : " + linkedlist3.get(2)); //2ë²ˆì§¸ : 3
 		for(int i=0; i<linkedlist3.size(); i++) {
-		  System.out.println(i+"¹øÂ° : " + linkedlist3.get(i));
+		  System.out.println(i+"ë²ˆì§¸ : " + linkedlist3.get(i));
 		}		
 
 		//#12. toArray()

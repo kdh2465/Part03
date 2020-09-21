@@ -1,4 +1,4 @@
-package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX05_Unary_BinaryOperator_FunctionalInterface;
+ï»¿package pack05_lambdaexpression.sec02_FunctionalInterfacesInJavaAPI.EX05_Unary_BinaryOperator_FunctionalInterface;
 
 import java.util.function.BinaryOperator;
 import java.util.function.DoubleBinaryOperator;
@@ -9,12 +9,12 @@ import java.util.function.LongBinaryOperator;
 import java.util.function.LongUnaryOperator;
 import java.util.function.UnaryOperator;
 
-/*UnaryOperator<T>¿Í BinaryOperator<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½º (ÀÚ¹Ù API Á¦°ø)*/
+/*UnaryOperator<T>ì™€ BinaryOperator<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ (ìë°” API ì œê³µ)*/
 
 public class EX05_Unary_BinaryOperator_FunctionalInterface {
 	public static void main(String[] args) {
 
-		//#1. UnaryOperator<T>, BinaryOperator<T> ÀÇ ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		//#1. UnaryOperator<T>, BinaryOperator<T> ì˜ ìµëª…ì´ë„ˆí´ë˜ìŠ¤ í‘œí˜„
 		UnaryOperator<Integer> uo;
 		uo = new UnaryOperator<Integer>() {
 			@Override
@@ -30,18 +30,18 @@ public class EX05_Unary_BinaryOperator_FunctionalInterface {
 			}
 		};		
 		System.out.println(uo.apply(5)); //10
-		System.out.println(bo.apply("¾È³ç", "ÇÏ¼¼¿ä")); //¾È³çÇÏ¼¼¿ä
+		System.out.println(bo.apply("ì•ˆë…•", "í•˜ì„¸ìš”")); //ì•ˆë…•í•˜ì„¸ìš”
 		
 		
-		//#2. ±âº» UnaryOperator<T>, BinaryOperator<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½ºÀÇ ¶÷´Ù½Ä Ç¥Çö
-		//@2-1. ±âº»Çü UnaryOperator<T>
+		//#2. ê¸°ë³¸ UnaryOperator<T>, BinaryOperator<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ì˜ ëŒë‹¤ì‹ í‘œí˜„
+		//@2-1. ê¸°ë³¸í˜• UnaryOperator<T>
 		UnaryOperator<Integer> uo1 = value->value*2;		
 		System.out.println(uo1.apply(5)); //10
 		
 		BinaryOperator<String> bo1 = (value1, value2)->value1+value2;		
-		System.out.println(bo1.apply("¾È³ç", "ÇÏ¼¼¿ä")); //¾È³çÇÏ¼¼¿ä
+		System.out.println(bo1.apply("ì•ˆë…•", "í•˜ì„¸ìš”")); //ì•ˆë…•í•˜ì„¸ìš”
 
-		//@2-2. È®Àå UnaryOperator<T> ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½ºÀÇ ¶÷´Ù½Ä Ç¥Çö		
+		//@2-2. í™•ì¥ UnaryOperator<T> í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ì˜ ëŒë‹¤ì‹ í‘œí˜„		
 		IntUnaryOperator uo2 = (num)->num*10; //int->int
 		LongUnaryOperator uo3 = (num)->num+20L;//long->long
 		DoubleUnaryOperator uo4 = (num)->num*10.0; //double->double

@@ -1,23 +1,23 @@
-package pack02_thread.EX01_TheNeedForThread;
+ï»¿package pack02_thread.EX01_TheNeedForThread;
 
-/*¸ÖÆ¼¾²·¹µåÀÇ ÇÊ¿ä¼º (ºñµğ¿ÀÇÁ·¹ÀÓ°ú ÀÚ¸· Ãâ·Â)*/
+/*ë©€í‹°ì“°ë ˆë“œì˜ í•„ìš”ì„± (ë¹„ë””ì˜¤í”„ë ˆì„ê³¼ ìë§‰ ì¶œë ¥)*/
 
 public class EX01_TheNeedforThread {
 	public static void main(String[] args) {
 		
-	    //(ºñµğ¿ÀÇÁ·¹ÀÓ¹øÈ£) 1~5 ÀúÀå
+	    //(ë¹„ë””ì˜¤í”„ë ˆì„ë²ˆí˜¸) 1~5 ì €ì¥
 	    int[] intArray = new int[] {1,2,3,4,5};
-	    //(ÀÚ¸· ¹øÈ£) ÇÏ³ª~´Ù¼¸ ÀúÀå
-	    String[] strArray = new String[] {"ÇÏ³ª","µÑ","¼Â","³İ","´Ù¼¸"};	   
+	    //(ìë§‰ ë²ˆí˜¸) í•˜ë‚˜~ë‹¤ì„¯ ì €ì¥
+	    String[] strArray = new String[] {"í•˜ë‚˜","ë‘˜","ì…‹","ë„·","ë‹¤ì„¯"};	   
 	    
-	    //(ºñµğ¿ÀÇÁ·¹ÀÓ¹øÈ£) 1~5 Ãâ·Â
+	    //(ë¹„ë””ì˜¤í”„ë ˆì„ë²ˆí˜¸) 1~5 ì¶œë ¥
 	    for (int i=0; i<intArray.length; i++) { 
-	      System.out.println("(ºñµğ¿À ÇÁ·¹ÀÓ) " + intArray[i]);
+	      System.out.println("(ë¹„ë””ì˜¤ í”„ë ˆì„) " + intArray[i]);
 	      try { Thread.sleep(200); } catch (InterruptedException e) { }
 	    }
-	    //(ÀÚ¸· ¹øÈ£) ÇÏ³ª~´Ù¼¸ Ãâ·Â
+	    //(ìë§‰ ë²ˆí˜¸) í•˜ë‚˜~ë‹¤ì„¯ ì¶œë ¥
 	    for (int i=0; i<strArray.length; i++) { 
-	      System.out.println("(ÀÚ¸·) "+ strArray[i]);
+	      System.out.println("(ìë§‰) "+ strArray[i]);
 	      try { Thread.sleep(200); } catch (InterruptedException e) { }
 	    }
 

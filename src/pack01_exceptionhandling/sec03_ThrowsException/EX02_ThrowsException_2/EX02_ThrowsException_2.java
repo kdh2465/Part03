@@ -1,6 +1,6 @@
-package pack01_exceptionhandling.sec03_ThrowsException.EX02_ThrowsException_2;
+ï»¿package pack01_exceptionhandling.sec03_ThrowsException.EX02_ThrowsException_2;
 
-/*ÃÖ»óÀ§ ¸Ş¼­µåÀÎ main() ¸Ş¼­µå°¡ ¿¹¿Ü¸¦ Àü°¡ÇÑ °æ¿ì*/
+/*ìµœìƒìœ„ ë©”ì„œë“œì¸ main() ë©”ì„œë“œê°€ ì˜ˆì™¸ë¥¼ ì „ê°€í•œ ê²½ìš°*/
 
 public class EX02_ThrowsException_2 {
 	public static void main(String[] args) throws Exception{

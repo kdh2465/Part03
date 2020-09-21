@@ -1,8 +1,8 @@
-package pack04_collectionframework.sec04_StackAndQueue.EX01_StackMethod;
+ï»¿package pack04_collectionframework.sec04_StackAndQueue.EX01_StackMethod;
 
 import java.util.Stack;
 
-/*Stack<E> Å¬·¡½ºÀÇ ÁÖ¿ä ¸Ş¼­µå È°¿ë¹æ¹ı*/
+/*Stack<E> í´ë˜ìŠ¤ì˜ ì£¼ìš” ë©”ì„œë“œ í™œìš©ë°©ë²•*/
 
 public class EX01_StackMethod {
 	public static void main(String[] args) {

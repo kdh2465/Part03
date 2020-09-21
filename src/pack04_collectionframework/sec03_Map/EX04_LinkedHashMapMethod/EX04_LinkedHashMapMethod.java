@@ -1,48 +1,48 @@
-package pack04_collectionframework.sec03_Map.EX04_LinkedHashMapMethod;
+ï»¿package pack04_collectionframework.sec03_Map.EX04_LinkedHashMapMethod;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
-/*LinkedHashMap<K,V> Å¬·¡½ºÀÇ ÁÖ¿ä ¸Ş¼­µå È°¿ë¹æ¹ı*/
+/*LinkedHashMap<K,V> í´ë˜ìŠ¤ì˜ ì£¼ìš” ë©”ì„œë“œ í™œìš©ë°©ë²•*/
 
 public class EX04_LinkedHashMapMethod {
 	public static void main(String[] args) {
 		
 		Map<Integer, String> lhMap1 = new LinkedHashMap<Integer, String>();
 		//#1. put(K key, V value)
-		lhMap1.put(2, "³ª´Ù¶ó");
-		lhMap1.put(1, "°¡³ª´Ù");
-		lhMap1.put(3, "´Ù¶ó¸¶");
-		System.out.println(lhMap1.toString()); //{2=³ª´Ù¶ó, 1=°¡³ª´Ù, 3=´Ù¶ó¸¶}
+		lhMap1.put(2, "ë‚˜ë‹¤ë¼");
+		lhMap1.put(1, "ê°€ë‚˜ë‹¤");
+		lhMap1.put(3, "ë‹¤ë¼ë§ˆ");
+		System.out.println(lhMap1.toString()); //{2=ë‚˜ë‹¤ë¼, 1=ê°€ë‚˜ë‹¤, 3=ë‹¤ë¼ë§ˆ}
 		
 		//#2. putAll(<Map<? extends K,? extends V> m)
 		Map<Integer, String> lhMap2 = new LinkedHashMap<Integer, String>();
 		lhMap2.putAll(lhMap1);
-		System.out.println(lhMap2.toString()); //{2=³ª´Ù¶ó, 1=°¡³ª´Ù, 3=´Ù¶ó¸¶}
+		System.out.println(lhMap2.toString()); //{2=ë‚˜ë‹¤ë¼, 1=ê°€ë‚˜ë‹¤, 3=ë‹¤ë¼ë§ˆ}
 
 		//#3.replace(K key, V value)
-		lhMap2.replace(1, "°¡°¡°¡");
-		lhMap2.replace(4, "¶ó¶ó¶ó"); //µ¿ÀÛ¾ÈÇÔ
-		System.out.println(lhMap2.toString()); //{2=³ª´Ù¶ó, 1=°¡°¡°¡, 3=´Ù¶ó¸¶}
+		lhMap2.replace(1, "ê°€ê°€ê°€");
+		lhMap2.replace(4, "ë¼ë¼ë¼"); //ë™ì‘ì•ˆí•¨
+		System.out.println(lhMap2.toString()); //{2=ë‚˜ë‹¤ë¼, 1=ê°€ê°€ê°€, 3=ë‹¤ë¼ë§ˆ}
 
 		//#4.replace(K key, V oldValue, V newValue)
-		lhMap2.replace(1, "°¡°¡°¡", "³ª³ª³ª");
-		lhMap2.replace(2, "´Ù´Ù´Ù", "¶ó¶ó¶ó"); //µ¿ÀÛ¾ÈÇÔ
-		System.out.println(lhMap2.toString()); //{2=³ª´Ù¶ó, 1=³ª³ª³ª, 3=´Ù¶ó¸¶}
+		lhMap2.replace(1, "ê°€ê°€ê°€", "ë‚˜ë‚˜ë‚˜");
+		lhMap2.replace(2, "ë‹¤ë‹¤ë‹¤", "ë¼ë¼ë¼"); //ë™ì‘ì•ˆí•¨
+		System.out.println(lhMap2.toString()); //{2=ë‚˜ë‹¤ë¼, 1=ë‚˜ë‚˜ë‚˜, 3=ë‹¤ë¼ë§ˆ}
 
 		//#5. V get(Object key)
-		System.out.println(lhMap2.get(1)); //³ª³ª³ª
-		System.out.println(lhMap2.get(2)); //³ª´Ù¶ó
-		System.out.println(lhMap2.get(3)); //´Ù¶ó¸¶
+		System.out.println(lhMap2.get(1)); //ë‚˜ë‚˜ë‚˜
+		System.out.println(lhMap2.get(2)); //ë‚˜ë‹¤ë¼
+		System.out.println(lhMap2.get(3)); //ë‹¤ë¼ë§ˆ
 
 		//#6. containsKey(Object key)
 		System.out.println(lhMap2.containsKey(1)); //true
 		System.out.println(lhMap2.containsKey(5)); //false
 
 		//#7. containsValue(Object value)
-		System.out.println(lhMap2.containsValue("³ª³ª³ª")); //true
-		System.out.println(lhMap2.containsValue("´Ù´Ù´Ù")); //false
+		System.out.println(lhMap2.containsValue("ë‚˜ë‚˜ë‚˜")); //true
+		System.out.println(lhMap2.containsValue("ë‹¤ë‹¤ë‹¤")); //false
 
 		//#8. Set<K> keySet()
 		Set<Integer> keySet = lhMap2.keySet();
@@ -50,20 +50,20 @@ public class EX04_LinkedHashMapMethod {
 
 		//#9. Set<Map.Entry<K,V>> entrySet()
 		Set<Map.Entry<Integer, String>> entrySet = lhMap2.entrySet();
-		System.out.println(entrySet); //[2=³ª´Ù¶ó, 1=³ª³ª³ª, 3=´Ù¶ó¸¶]
+		System.out.println(entrySet); //[2=ë‚˜ë‹¤ë¼, 1=ë‚˜ë‚˜ë‚˜, 3=ë‹¤ë¼ë§ˆ]
 
 		//#10. size()
 		System.out.println(lhMap2.size()); //3
 		
 		//#11. remove(Object key)
 		lhMap2.remove(1);
-		lhMap2.remove(4); //µ¿ÀÛ¾ÈÇÔ
-		System.out.println(lhMap2.toString()); //{2=³ª´Ù¶ó, 3=´Ù¶ó¸¶}
+		lhMap2.remove(4); //ë™ì‘ì•ˆí•¨
+		System.out.println(lhMap2.toString()); //{2=ë‚˜ë‹¤ë¼, 3=ë‹¤ë¼ë§ˆ}
 
 		//#12. remove(Object key, Object value)
-		lhMap2.remove(2, "³ª´Ù¶ó");
-		lhMap2.remove(3, "´Ù´Ù´Ù"); //µ¿ÀÛ¾ÈÇÔ
-		System.out.println(lhMap2.toString()); //{3=´Ù¶ó¸¶}
+		lhMap2.remove(2, "ë‚˜ë‹¤ë¼");
+		lhMap2.remove(3, "ë‹¤ë‹¤ë‹¤"); //ë™ì‘ì•ˆí•¨
+		System.out.println(lhMap2.toString()); //{3=ë‹¤ë¼ë§ˆ}
 
 		//#13. clear()
 		lhMap2.clear();

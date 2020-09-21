@@ -1,8 +1,8 @@
-package pack01_exceptionhandling.sec03_ThrowsException.EX03_ThrowsMultiException;
+ï»¿package pack01_exceptionhandling.sec03_ThrowsException.EX03_ThrowsMultiException;
 
-/*¿©·¯ °³ÀÇ ¿¹¿Ü ÇÑ²¨¹ø¿¡ Àü°¡ÇÏ±â*/
+/*ì—¬ëŸ¬ ê°œì˜ ì˜ˆì™¸ í•œêº¼ë²ˆì— ì „ê°€í•˜ê¸°*/
 
-//#1. ÇÏÀ§ ¸Ş¼­µå¿¡¼­ ´ÙÁß ¿¹¿ÜÃ³¸®¸¦ ÇÏ´Â °æ¿ì
+//#1. í•˜ìœ„ ë©”ì„œë“œì—ì„œ ë‹¤ì¤‘ ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•˜ëŠ” ê²½ìš°
 class A {
 	void abc() {
 		bcd();
@@ -12,17 +12,17 @@ class A {
 			Class cls = Class.forName("java.lang.Object");
 			Thread.sleep(1000);
 		} catch (InterruptedException | ClassNotFoundException e) {
-			//¿¹¿ÜÃ³¸® ±¸¹®
+			//ì˜ˆì™¸ì²˜ë¦¬ êµ¬ë¬¸
 		}
 	}
 }
-//#2. È£Ãâ¸Ş¼­µå·Î ´ÙÁß ¿¹¿ÜÃ³¸®¸¦ ¸¦ Àü°¡ÇÑ °æ¿ì
+//#2. í˜¸ì¶œë©”ì„œë“œë¡œ ë‹¤ì¤‘ ì˜ˆì™¸ì²˜ë¦¬ë¥¼ ë¥¼ ì „ê°€í•œ ê²½ìš°
 class B {
 	void abc() {
 		try {
 			bcd();
 		} catch (InterruptedException | ClassNotFoundException e) {
-			//¿¹¿ÜÃ³¸® ±¸¹®
+			//ì˜ˆì™¸ì²˜ë¦¬ êµ¬ë¬¸
 		}
 	}
 	void bcd() throws InterruptedException, ClassNotFoundException {

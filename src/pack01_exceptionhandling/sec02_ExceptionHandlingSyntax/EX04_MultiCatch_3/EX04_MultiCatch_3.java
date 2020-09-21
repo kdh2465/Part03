@@ -1,30 +1,30 @@
-package pack01_exceptionhandling.sec02_ExceptionHandlingSyntax.EX04_MultiCatch_3;
+ï»¿package pack01_exceptionhandling.sec02_ExceptionHandlingSyntax.EX04_MultiCatch_3;
 
-/*¿¹¿ÜÀÇ OR(|) ¿¬»êÀ¸·Î ±¸¼ºÇÑ ´ÙÁß catch ±¸¹®*/
+/*ì˜ˆì™¸ì˜ OR(|) ì—°ì‚°ìœ¼ë¡œ êµ¬ì„±í•œ ë‹¤ì¤‘ catch êµ¬ë¬¸*/
 
 public class EX04_MultiCatch_3 {
 	public static void main(String[] args) {
 		
-		//#1. catchºí·ÏÀ» °¢°¢ Ã³¸®ÇÑ °æ¿ì
+		//#1. catchë¸”ë¡ì„ ê°ê° ì²˜ë¦¬í•œ ê²½ìš°
 		try {
 			System.out.println(3/1);
 			int num = Integer.parseInt("10A");			
 		}	
 		catch(ArithmeticException e) {
-			System.out.println("¿¹¿Ü°¡ ¹ß»ıÇß½À´Ï´Ù.");			
+			System.out.println("ì˜ˆì™¸ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");			
 		}
 		catch(NumberFormatException e) {
-			System.out.println("¿¹¿Ü°¡ ¹ß»ıÇß½À´Ï´Ù.");			
+			System.out.println("ì˜ˆì™¸ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");			
 		}
 
 
-		//#2. catch ºí·ÏÀ» ÇÏ³ª·Î ÅëÀÏÇÑ °æ¿ì 		
+		//#2. catch ë¸”ë¡ì„ í•˜ë‚˜ë¡œ í†µì¼í•œ ê²½ìš° 		
 		try {
 			System.out.println(3/1);
 			int num = Integer.parseInt("10A");			
 		}		
 		catch(ArithmeticException | NumberFormatException e) {
-			System.out.println("¿¹¿Ü°¡ ¹ß»ıÇß½À´Ï´Ù.");			
+			System.out.println("ì˜ˆì™¸ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");			
 		}			
 	}
 }

@@ -1,6 +1,6 @@
-package pack05_lambdaexpression.sec01_LambdaExpression.EX01_OOPvsFP;
+ï»¿package pack05_lambdaexpression.sec01_LambdaExpression.EX01_OOPvsFP;
 
-/*°´Ã¼ ÁöÇâ ÇÁ·Î±×·¡¹Ö ¹®¹ý°ú ÇÔ¼öÀû ÇÁ·Î±×·¡¹Ö ¹®¹ý*/
+/*ê°ì²´ ì§€í–¥ í”„ë¡œê·¸ëž˜ë° ë¬¸ë²•ê³¼ í•¨ìˆ˜ì  í”„ë¡œê·¸ëž˜ë° ë¬¸ë²•*/
 
 interface A {
 	void abc();
@@ -8,28 +8,28 @@ interface A {
 
 class B implements A {
 	public void abc() {
-		System.out.println("¸Þ¼­µå ³»¿ë");
+		System.out.println("ë©”ì„œë“œ ë‚´ìš©");
 	}
 }
 
 
 public class EX01_OOPvsFP {
 	public static void main(String[] args) {
-		//#1. °´Ã¼ÁöÇâ ÇÁ·Î±×·¡¹Ö ¹®¹ý 1(case#1)
+		//#1. ê°ì²´ì§€í–¥ í”„ë¡œê·¸ëž˜ë° ë¬¸ë²• 1(case#1)
 		A a1 = new B();
-		a1.abc(); //¸Þ¼­µå ³»¿ë
+		a1.abc(); //ë©”ì„œë“œ ë‚´ìš©
 		
-		//#2. °´Ã¼ÁöÇâ ÇÁ·Î±×·¡¹Ö ¹®¹ý 2(case#2)
+		//#2. ê°ì²´ì§€í–¥ í”„ë¡œê·¸ëž˜ë° ë¬¸ë²• 2(case#2)
 		A a2 = new A() {
 			@Override
 			public void abc() {
-				System.out.println("¸Þ¼­µå ³»¿ë");			
+				System.out.println("ë©”ì„œë“œ ë‚´ìš©");			
 			}
 		};
 		a2.abc();
 		
-		//#3. ÇÔ¼öÀû ÇÁ·Î±×·¡¹Ö ¹®¹ý (¶÷´Ù½Ä)(case#3)
-		A a3 = ()->{System.out.println("¸Þ¼­µå ³»¿ë");};
+		//#3. í•¨ìˆ˜ì  í”„ë¡œê·¸ëž˜ë° ë¬¸ë²• (ëžŒë‹¤ì‹)(case#3)
+		A a3 = ()->{System.out.println("ë©”ì„œë“œ ë‚´ìš©");};
 		a3.abc();
 
 	}

@@ -1,15 +1,15 @@
-package pack02_thread.sec01_CreateAndStartThreadObject.EX01_CreateAndStartThread_M1C1;
+ï»¿package pack02_thread.sec01_CreateAndStartThreadObject.EX01_CreateAndStartThread_M1C1;
 
-/*¹æ¹ı #1 : case1 (µÎ°³ÀÇ ¾²·¹µå È°¿ë(main, SMIFileThread))*/
+/*ë°©ë²• #1 : case1 (ë‘ê°œì˜ ì“°ë ˆë“œ í™œìš©(main, SMIFileThread))*/
 
 class SMIFileThread extends Thread {
 	@Override
 	public void run() {
-		// (ÀÚ¸· ¹øÈ£) ÇÏ³ª~´Ù¼¸ ÀúÀå Ãâ·Â
-		String[] strArray = new String[] { "ÇÏ³ª", "µÑ", "¼Â", "³İ", "´Ù¼¸" };		
-		try {Thread.sleep(10);} catch (InterruptedException e1) {} //ÀÚ¸·ÀÌ ¾à°£ ´Ê°Ô ³ª¿À°Ô ÇÏ±â À§ÇØ¼­ Ãß°¡		
+		// (ìë§‰ ë²ˆí˜¸) í•˜ë‚˜~ë‹¤ì„¯ ì €ì¥ ì¶œë ¥
+		String[] strArray = new String[] { "í•˜ë‚˜", "ë‘˜", "ì…‹", "ë„·", "ë‹¤ì„¯" };		
+		try {Thread.sleep(10);} catch (InterruptedException e1) {} //ìë§‰ì´ ì•½ê°„ ëŠ¦ê²Œ ë‚˜ì˜¤ê²Œ í•˜ê¸° ìœ„í•´ì„œ ì¶”ê°€		
 		for (int i = 0; i < strArray.length; i++) {
-			System.out.println("(ÀÚ¸·) " + strArray[i]);
+			System.out.println("(ìë§‰) " + strArray[i]);
 			try {
 				Thread.sleep(200);
 			} catch (InterruptedException e) {}
@@ -20,14 +20,14 @@ class SMIFileThread extends Thread {
 public class EX01_CreateAndStartThread_M1C1 {
 	public static void main(String[] args) {
 		
-		//SMIFileThread »ı¼º ¹× ½ÇÇà
+		//SMIFileThread ìƒì„± ë° ì‹¤í–‰
 	    Thread smiFileThread = new SMIFileThread();
 	    smiFileThread.start();
 	     
-	    //(ºñµğ¿ÀÇÁ·¹ÀÓ¹øÈ£) 1~5 ÀúÀå + Ãâ·Â
+	    //(ë¹„ë””ì˜¤í”„ë ˆì„ë²ˆí˜¸) 1~5 ì €ì¥ + ì¶œë ¥
 	    int[] intArray = new int[] {1,2,3,4,5};
 	    for (int i=0; i<intArray.length; i++) {
-	    	System.out.print("(ºñµğ¿À ÇÁ·¹ÀÓ) " + intArray[i]+"-");
+	    	System.out.print("(ë¹„ë””ì˜¤ í”„ë ˆì„) " + intArray[i]+"-");
 	      try { Thread.sleep(200); } catch (InterruptedException e) { }
 	    }
 

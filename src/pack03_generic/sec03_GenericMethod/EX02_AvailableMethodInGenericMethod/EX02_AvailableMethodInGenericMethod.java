@@ -1,17 +1,17 @@
-package pack03_generic.sec03_GenericMethod.EX02_AvailableMethodInGenericMethod;
+ï»¿package pack03_generic.sec03_GenericMethod.EX02_AvailableMethodInGenericMethod;
 
-/*Á¦³×¸¯ ¸Ş¼­µå ³»ºÎ¿¡¼­ »ç¿ë°¡´ÉÇÑ ¸Ş¼­µå*/
+/*ì œë„¤ë¦­ ë©”ì„œë“œ ë‚´ë¶€ì—ì„œ ì‚¬ìš©ê°€ëŠ¥í•œ ë©”ì„œë“œ*/
 
 class A{
 	public <T> void method1(T t) {
-		//System.out.println(t.length());//(ºÒ°¡´É)
-		System.out.println(t.equals("¾È³ç")); //°¡´É(Object ¸Ş¼­µå)
+		//System.out.println(t.length());//(ë¶ˆê°€ëŠ¥)
+		System.out.println(t.equals("ì•ˆë…•")); //ê°€ëŠ¥(Object ë©”ì„œë“œ)
 	}
 }
 
 public class EX02_AvailableMethodInGenericMethod {
 	public static void main(String[] args) {
 		A a = new A();
-		a.<String>method1("¾È³ç");
+		a.<String>method1("ì•ˆë…•");
 	}
 }

@@ -1,4 +1,4 @@
-package pack04_collectionframework.sec01_List.EX02_CreateListObject;
+ï»¿package pack04_collectionframework.sec01_List.EX02_CreateListObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,12 +6,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
 
-/*µ¿ÀûÅ©±â¿Í Á¤ÀûÅ©±â¸¦ °¡Áö´Â ¸®½ºÆ® °´Ã¼ »ı¼º*/
+/*ë™ì í¬ê¸°ì™€ ì •ì í¬ê¸°ë¥¼ ê°€ì§€ëŠ” ë¦¬ìŠ¤íŠ¸ ê°ì²´ ìƒì„±*/
 
 public class EX02_CreateListObject {
 	public static void main(String[] args) {
 		
-		//#¹æ¹ı1. µ¿Àû Å©±â¸¦ °¡Áö´Â ¸®½ºÆ® °´Ã¼ »ı¼º
+		//#ë°©ë²•1. ë™ì  í¬ê¸°ë¥¼ ê°€ì§€ëŠ” ë¦¬ìŠ¤íŠ¸ ê°ì²´ ìƒì„±
 		List<Integer> aList1 = new ArrayList<Integer>(); //capacity(10)
 		List<Integer> aList2 = new ArrayList<Integer>(30); //capacity(30)
 			
@@ -19,16 +19,16 @@ public class EX02_CreateListObject {
 		List<String> aList4 = new Vector<String>(20); //capacity(20)		
 		
 		List<String> aList5 = new LinkedList<String>(); //capacity(10)		
-		//List<Double> aList6 = new LinkedList<Double>(20); //(ºÒ°¡´É) capacity ÁöÁ¤ ºÒ°¡´É
+		//List<Double> aList6 = new LinkedList<Double>(20); //(ë¶ˆê°€ëŠ¥) capacity ì§€ì • ë¶ˆê°€ëŠ¥
 			
 		
-		//#¹æ¹ı2. Á¤Àû Å©±â¸¦ ±âÁö´Â ¸®½ºÆ® °´Ã¼ »ı¼º
+		//#ë°©ë²•2. ì •ì  í¬ê¸°ë¥¼ ê¸°ì§€ëŠ” ë¦¬ìŠ¤íŠ¸ ê°ì²´ ìƒì„±
 		List<Integer> aList7 = Arrays.asList(1,2,3,4);
-		List<String> aList8 = Arrays.asList("¾È³ç","¹æ°¡");		
+		List<String> aList8 = Arrays.asList("ì•ˆë…•","ë°©ê°€");		
 		aList7.set(1,7); // [1 7 3 4]
-		aList8.set(0, "°¨»ç"); //["°¨»ç", "¹æ°¡"]		
-		//aList7.add(5); // ¿À·ù UnsupportedOperationException
-		//aList8.remove(0); // ¿À·ù UnsupportedOperationException
+		aList8.set(0, "ê°ì‚¬"); //["ê°ì‚¬", "ë°©ê°€"]		
+		//aList7.add(5); // ì˜¤ë¥˜ UnsupportedOperationException
+		//aList8.remove(0); // ì˜¤ë¥˜ UnsupportedOperationException
 
 	}
 }

@@ -1,6 +1,6 @@
-package pack05_lambdaexpression.sec01_LambdaExpression.EX05_RefOfStaticMethod;
+ï»¿package pack05_lambdaexpression.sec01_LambdaExpression.EX05_RefOfStaticMethod;
 
-/*È°¿ë#2-2. Á¤Àû ¸Þ¼­µå ÂüÁ¶*/
+/*í™œìš©#2-2. ì •ì  ë©”ì„œë“œ ì°¸ì¡°*/
 
 interface A {
 	void abc();
@@ -8,24 +8,24 @@ interface A {
 
 class B {
 	static void bcd() {
-		System.out.println("¸Þ¼­µå");
+		System.out.println("ë©”ì„œë“œ");
 	}
 }
 
 public class EX05_RefOfStaticMethod {
 	public static void main(String[] args) {
-		// #Á¤Àû ¸Þ¼­µå ÂüÁ¶
-		// #1. ÀÍ¸íÀÌ³ÊÅ¬·¡½º Ç¥Çö
+		// #ì •ì  ë©”ì„œë“œ ì°¸ì¡°
+		// #1. ìµëª…ì´ë„ˆí´ëž˜ìŠ¤ í‘œí˜„
 		A a1 = new A() {
 			public void abc() {
 				B.bcd();
 			}
 		};
 
-		// #2. ÀÏ¹Ý ¶÷´Ù½Ä Ç¥Çö
+		// #2. ì¼ë°˜ ëžŒë‹¤ì‹ í‘œí˜„
 		A a2 = () -> B.bcd();
 
-		// #3. Á¤Àû ¸Þ¼­µå ÂüÁ¶ Ç¥Çö
+		// #3. ì •ì  ë©”ì„œë“œ ì°¸ì¡° í‘œí˜„
 		A a3 = B::bcd;
 
 		a1.abc();

@@ -1,8 +1,8 @@
-package pack01_exceptionhandling.sec04_UserException.EX01_CreateUserException;
+ï»¿package pack01_exceptionhandling.sec04_UserException.EX01_CreateUserException;
 
-/*»ç¿ëÀÚÁ¤ÀÇ ÀÏ¹İ¿¹¿Ü ¹× ½ÇÇà¿¹¿Ü¿Í ¿¹¿ÜÀÇ Ã³¸® ¹× Àü°¡*/
+/*ì‚¬ìš©ìì •ì˜ ì¼ë°˜ì˜ˆì™¸ ë° ì‹¤í–‰ì˜ˆì™¸ì™€ ì˜ˆì™¸ì˜ ì²˜ë¦¬ ë° ì „ê°€*/
 
-//#1. »ç¿ëÀÚ ÀÏ¹İ¿¹¿Ü(Checked Exception)
+//#1. ì‚¬ìš©ì ì¼ë°˜ì˜ˆì™¸(Checked Exception)
 class MyException extends Exception {
 	public MyException() {
 		super();	
@@ -12,7 +12,7 @@ class MyException extends Exception {
 	}
 }
 
-//#2. »ç¿ëÀÚ ÀÏ¹İ¿¹¿Ü(UnChecked Exception = RuntimeException) 
+//#2. ì‚¬ìš©ì ì¼ë°˜ì˜ˆì™¸(UnChecked Exception = RuntimeException) 
 class MyRTException extends RuntimeException{
 
 	public MyRTException() {
@@ -26,34 +26,34 @@ class MyRTException extends RuntimeException{
 
 class A {
 	
-	//#3. »ç¿ëÀÚ Á¤ÀÇ ¿¹¿Ü °´Ã¼ »ı¼º
+	//#3. ì‚¬ìš©ì ì •ì˜ ì˜ˆì™¸ ê°ì²´ ìƒì„±
 	MyException me1 = new MyException();
-	MyException me2 = new MyException("¿¹¿Ü¸Ş¼¼Áö: MyException");
+	MyException me2 = new MyException("ì˜ˆì™¸ë©”ì„¸ì§€: MyException");
 	
 	MyRTException mre1 = new MyRTException();
-	MyRTException mre2 = new MyRTException("¿¹¿Ü¸Ş¼¼Áö: MyRTException");
+	MyRTException mre2 = new MyRTException("ì˜ˆì™¸ë©”ì„¸ì§€: MyRTException");
 	
-	//#4. ¿¹¿Ü ´øÁö±â
-	//@¹æ¹ı#1. ¿¹¿Ü¸¦ Á÷Á¢ Ã³¸®
+	//#4. ì˜ˆì™¸ ë˜ì§€ê¸°
+	//@ë°©ë²•#1. ì˜ˆì™¸ë¥¼ ì§ì ‘ ì²˜ë¦¬
 	void abc_1(int num) {		
 		try {			
 			if (num>70) 
-				System.out.println("Á¤»óµ¿ÀÛ");
+				System.out.println("ì •ìƒë™ì‘");
 			else 
 				throw me1;
 		} catch(MyException e) {
-			System.out.println("¿¹¿ÜÃ³¸® 1");
+			System.out.println("ì˜ˆì™¸ì²˜ë¦¬ 1");
 		}		
 	}
 	void bcd_1() {
 		abc_1(65);
 	}
 	
-	//#5. ¿¹¿Ü ´øÁö±â
-	//@¹æ¹ı#2. ¿¹¿Ü¸¦ Àü°¡ÇÏ±â
+	//#5. ì˜ˆì™¸ ë˜ì§€ê¸°
+	//@ë°©ë²•#2. ì˜ˆì™¸ë¥¼ ì „ê°€í•˜ê¸°
 	void abc_2(int num) throws MyException {		
 		if (num>70) 
-			System.out.println("Á¤»óµ¿ÀÛ");
+			System.out.println("ì •ìƒë™ì‘");
 		else 
 			throw me1;
 	}
@@ -61,7 +61,7 @@ class A {
 		try {
 			abc_2(65);
 		} catch (MyException e) {
-			System.out.println("¿¹¿ÜÃ³¸® 2");
+			System.out.println("ì˜ˆì™¸ì²˜ë¦¬ 2");
 		}
 	}
 }

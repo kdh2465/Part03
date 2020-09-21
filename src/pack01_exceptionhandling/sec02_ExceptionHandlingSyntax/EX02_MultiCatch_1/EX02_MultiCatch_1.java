@@ -1,42 +1,42 @@
-package pack01_exceptionhandling.sec02_ExceptionHandlingSyntax.EX02_MultiCatch_1;
+ï»¿package pack01_exceptionhandling.sec02_ExceptionHandlingSyntax.EX02_MultiCatch_1;
 
-/*µÎ °³ÀÇ try-catch ±¸¹®°ú ÇÏ³ªÀÇ ´ÙÁß catch ±¸¹®ÀÇ ºñ±³*/
+/*ë‘ ê°œì˜ try-catch êµ¬ë¬¸ê³¼ í•˜ë‚˜ì˜ ë‹¤ì¤‘ catch êµ¬ë¬¸ì˜ ë¹„êµ*/
 
 public class EX02_MultiCatch_1 {
 	public static void main(String[] args) {
 		
-		//#1. ´ÜÀÏ try-catch ¹®
+		//#1. ë‹¨ì¼ try-catch ë¬¸
 		try {
 			System.out.println(3/0);
 		} catch(ArithmeticException e) {
-			System.out.println("¼ıÀÚ´Â 0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ìˆ«ìëŠ” 0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		finally {
-			System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+			System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 		}
 		
 		try {
 			int a = Integer.parseInt("20A");
 		} catch(NumberFormatException e) {
-			System.out.println("¼ıÀÚ·Î º¯È¯ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ìˆ«ìë¡œ ë³€í™˜í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		finally {
-			System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+			System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 		}
 		
-		//#2. ´ÙÁß catch ±¸¹®
+		//#2. ë‹¤ì¤‘ catch êµ¬ë¬¸
 		try {
 			System.out.println(3/0);
 			int a = Integer.parseInt("20A");
 		}
 		catch(ArithmeticException e) {
-			System.out.println("¼ıÀÚ´Â 0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ìˆ«ìëŠ” 0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		catch(NumberFormatException e) {
-			System.out.println("¼ıÀÚ·Î º¯È¯ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ìˆ«ìë¡œ ë³€í™˜í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		finally {
-			System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+			System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 		}		
 	}
 }

@@ -1,9 +1,9 @@
-package pack04_collectionframework.sec03_Map.EX06_TreeMapMethod_2;
+ï»¿package pack04_collectionframework.sec03_Map.EX06_TreeMapMethod_2;
 
 import java.util.Comparator;
 import java.util.TreeMap;
 
-/*»ç¿ëÀÚ Å¬·¡½ºÀÇ ´ë¼Òºñ±³ ±âÁØ Á¦°ø ¹× TreeMap<K,V> µ¥ÀÌÅÍ·ÎÀÇ È°¿ë*/
+/*ì‚¬ìš©ì í´ë˜ìŠ¤ì˜ ëŒ€ì†Œë¹„êµ ê¸°ì¤€ ì œê³µ ë° TreeMap<K,V> ë°ì´í„°ë¡œì˜ í™œìš©*/
 
 class MyClass {
 	int data1;
@@ -35,46 +35,46 @@ class MyComparableClass implements Comparable<MyComparableClass> {
 public class EX06_TreeMapMethod_2 {
 	public static void main(String[] args) {
 		
-		//#1. Integer Å©±â ºñ±³
+		//#1. Integer í¬ê¸° ë¹„êµ
 		TreeMap<Integer, String> treeMap1 = new TreeMap<Integer, String>();
 		Integer intValue1 = new Integer(20);
 		Integer intValue2 = new Integer(10);
 		// intValue1 > intValue2
-		treeMap1.put(intValue1, "°¡³ª´Ù");
-		treeMap1.put(intValue2, "³ª´Ù¶ó");
-		System.out.println(treeMap1.toString()); //{10=³ª´Ù¶ó, 20=°¡³ª´Ù}
+		treeMap1.put(intValue1, "ê°€ë‚˜ë‹¤");
+		treeMap1.put(intValue2, "ë‚˜ë‹¤ë¼");
+		System.out.println(treeMap1.toString()); //{10=ë‚˜ë‹¤ë¼, 20=ê°€ë‚˜ë‹¤}
 		
-		//#2. String Å©±â ºñ±³
+		//#2. String í¬ê¸° ë¹„êµ
 		TreeMap<String, Integer> treeMap2 = new TreeMap<String, Integer>();
-		String str1 = "°¡³ª";
-		String str2 = "´Ù¶ó";
+		String str1 = "ê°€ë‚˜";
+		String str2 = "ë‹¤ë¼";
 		// str1 < str2
 		treeMap2.put(str1, 10);
 		treeMap2.put(str2, 20);
-		System.out.println(treeMap2.toString()); //{°¡³ª=20, ´Ù¶ó=10}
+		System.out.println(treeMap2.toString()); //{ê°€ë‚˜=20, ë‹¤ë¼=10}
 		
 		/*
-		//#3. MyClass °´Ã¼¸¦ Key·Î »ç¿ë
+		//#3. MyClass ê°ì²´ë¥¼ Keyë¡œ ì‚¬ìš©
 		TreeMap<MyClass, String> treeMap3 = new TreeMap<>();
 		MyClass myClass1 = new MyClass(2,5);
 		MyClass myClass2 = new MyClass(3,3);
 		// myclass1 ?? myclass2
-		//treeMap3.put(myClass1, "°¡³ª´Ù");         //¿¹¿Ü¹ß»ı
-		//treeMap3.put(myClass2, "°¡³ª´Ù");         //¿¹¿Ü¹ß»ı
-		//System.out.println(treeMap3.toString()); //¿¹¿Ü¹ß»ı
+		//treeMap3.put(myClass1, "ê°€ë‚˜ë‹¤");         //ì˜ˆì™¸ë°œìƒ
+		//treeMap3.put(myClass2, "ê°€ë‚˜ë‹¤");         //ì˜ˆì™¸ë°œìƒ
+		//System.out.println(treeMap3.toString()); //ì˜ˆì™¸ë°œìƒ
 		*/
 		
-		//#4. MyComparableClass Å©±â ºñ±³ (¹æ¹ı#1)
+		//#4. MyComparableClass í¬ê¸° ë¹„êµ (ë°©ë²•#1)
 		TreeMap<MyComparableClass, String> treeMap4 = new TreeMap<>();
 		MyComparableClass myComparableClass1 = new MyComparableClass(2,5);
 		MyComparableClass myComparableClass2 = new MyComparableClass(3,3);
-		treeMap4.put(myComparableClass1, "°¡³ª´Ù");
-		treeMap4.put(myComparableClass2, "³ª´Ù¶ó");
+		treeMap4.put(myComparableClass1, "ê°€ë‚˜ë‹¤");
+		treeMap4.put(myComparableClass2, "ë‚˜ë‹¤ë¼");
 		for(MyComparableClass mycomp : treeMap4.keySet()) {
 		  System.out.println(mycomp.data1); //2, 3
 		}
 		
-		//#5. MyClass Å©±â ºñ±³ (Comparator<T> °´Ã¼ »ı¼ºÀÚ Àü´Ş)
+		//#5. MyClass í¬ê¸° ë¹„êµ (Comparator<T> ê°ì²´ ìƒì„±ì ì „ë‹¬)
 		TreeMap<MyClass, String> treeMap5 = new TreeMap<>(new Comparator<MyClass>() {
 			@Override
 			public int compare(MyClass o1, MyClass o2) {
@@ -85,8 +85,8 @@ public class EX06_TreeMapMethod_2 {
 		});
 		MyClass myClass1 = new MyClass(2,5);
 		MyClass myClass2 = new MyClass(3,3);
-		treeMap5.put(myClass1, "°¡³ª´Ù");                 
-		treeMap5.put(myClass2, "³ª´Ù¶ó");   
+		treeMap5.put(myClass1, "ê°€ë‚˜ë‹¤");                 
+		treeMap5.put(myClass2, "ë‚˜ë‹¤ë¼");   
 		for(MyClass mc : treeMap5.keySet()) {
 		  System.out.println(mc.data1); //2, 3
 		}

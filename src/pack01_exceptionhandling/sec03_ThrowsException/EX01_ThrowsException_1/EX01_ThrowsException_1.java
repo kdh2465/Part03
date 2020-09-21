@@ -1,8 +1,8 @@
-package pack01_exceptionhandling.sec03_ThrowsException.EX01_ThrowsException_1;
+ï»¿package pack01_exceptionhandling.sec03_ThrowsException.EX01_ThrowsException_1;
 
-/*Á÷Á¢ ¿¹¿ÜÃ³¸®¸¦ ÇÏ´Â °æ¿ì¿Í È£Ãâ¸Ş¼­µå·Î ¿¹¿Ü¸¦ Àü°¡ÇÏ´Â °æ¿ì*/
+/*ì§ì ‘ ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•˜ëŠ” ê²½ìš°ì™€ í˜¸ì¶œë©”ì„œë“œë¡œ ì˜ˆì™¸ë¥¼ ì „ê°€í•˜ëŠ” ê²½ìš°*/
 
-//#1. ÇÏÀ§ ¸Ş¼­µå¿¡¼­ Á÷Á¢ ¿¹¿ÜÃ³¸®¸¦ ÇÏ´Â °æ¿ì
+//#1. í•˜ìœ„ ë©”ì„œë“œì—ì„œ ì§ì ‘ ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•˜ëŠ” ê²½ìš°
 class A {
 	void abc() {
 		bcd();
@@ -11,17 +11,17 @@ class A {
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
-			//¿¹¿ÜÃ³¸® ±¸¹®
+			//ì˜ˆì™¸ì²˜ë¦¬ êµ¬ë¬¸
 		}
 	}
 }
-//#2. È£Ãâ¸Ş¼­µå·Î ¿¹¿Ü¸¦ Àü°¡ÇÑ °æ¿ì
+//#2. í˜¸ì¶œë©”ì„œë“œë¡œ ì˜ˆì™¸ë¥¼ ì „ê°€í•œ ê²½ìš°
 class B {
 	void abc() {
 		try {
 			bcd();
 		} catch (InterruptedException e) {
-			//¿¹¿ÜÃ³¸® ±¸¹®
+			//ì˜ˆì™¸ì²˜ë¦¬ êµ¬ë¬¸
 		}
 	}
 	void bcd() throws InterruptedException {

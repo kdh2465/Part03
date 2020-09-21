@@ -1,12 +1,12 @@
-package pack04_collectionframework.sec02_Set.EX02_HashSetMachanism;
+ï»¿package pack04_collectionframework.sec02_Set.EX02_HashSetMachanism;
 
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-/*HashSet<E>¿¡¼­ÀÇ Áßº¹È®ÀÎ ¸ŞÄ¿´ÏÁò*/
+/*HashSet<E>ì—ì„œì˜ ì¤‘ë³µí™•ì¸ ë©”ì»¤ë‹ˆì¦˜*/
 
-//#1. CASE1. equals(): ¿À¹ö¶óÀÌµù X + hashcode(): ¿À¹ö¶óÀÌµù X
+//#1. CASE1. equals(): ì˜¤ë²„ë¼ì´ë”© X + hashcode(): ì˜¤ë²„ë¼ì´ë”© X
 class A {
 	int data;
 	public A(int data) {
@@ -14,7 +14,7 @@ class A {
 	}
 }
 
-//#2. CASE2. equals(): ¿À¹ö¶óÀÌµù O + hashcode(): ¿À¹ö¶óÀÌµù X
+//#2. CASE2. equals(): ì˜¤ë²„ë¼ì´ë”© O + hashcode(): ì˜¤ë²„ë¼ì´ë”© X
 class B {
 	int data;
 	public B(int data) {
@@ -30,7 +30,7 @@ class B {
 	}
 }
 
-//#3. CASE3. equals(): ¿À¹ö¶óÀÌµù O + hashcode(): ¿À¹ö¶óÀÌµù O
+//#3. CASE3. equals(): ì˜¤ë²„ë¼ì´ë”© O + hashcode(): ì˜¤ë²„ë¼ì´ë”© O
 class C {
 	int data;
 	public C(int data) {
@@ -52,7 +52,7 @@ class C {
 
 public class EX02_HashSetMachanism {
 	public static void main(String[] args) {
-		//#1. CASE1. equals(): ¿À¹ö¶óÀÌµù X + hashcode(): ¿À¹ö¶óÀÌµù X
+		//#1. CASE1. equals(): ì˜¤ë²„ë¼ì´ë”© X + hashcode(): ì˜¤ë²„ë¼ì´ë”© X
 		Set<A> hashSet1 = new HashSet<>();
 		A a1 = new A(3);
 		A a2 = new A(3);
@@ -61,9 +61,9 @@ public class EX02_HashSetMachanism {
 		System.out.println(a1.hashCode() + " " + a2.hashCode());
 		hashSet1.add(a1);
 		hashSet1.add(a2);
-		System.out.println(hashSet1.size()); //2 (´Ù¸¥ °´Ã¼)
+		System.out.println(hashSet1.size()); //2 (ë‹¤ë¥¸ ê°ì²´)
 		
-		//#2. CASE2. equals(): ¿À¹ö¶óÀÌµù O + hashcode(): ¿À¹ö¶óÀÌµù X
+		//#2. CASE2. equals(): ì˜¤ë²„ë¼ì´ë”© O + hashcode(): ì˜¤ë²„ë¼ì´ë”© X
 		Set<B> hashSet2 = new HashSet<>();
 		B b1 = new B(3);
 		B b2 = new B(3);
@@ -72,9 +72,9 @@ public class EX02_HashSetMachanism {
 		System.out.println(b1.hashCode() + " " + b2.hashCode());
 		hashSet2.add(b1);
 		hashSet2.add(b2);
-		System.out.println(hashSet2.size()); //2 (´Ù¸¥ °´Ã¼)
+		System.out.println(hashSet2.size()); //2 (ë‹¤ë¥¸ ê°ì²´)
 
-		//#3. CASE3. equals(): ¿À¹ö¶óÀÌµù O + hashcode(): ¿À¹ö¶óÀÌµù O
+		//#3. CASE3. equals(): ì˜¤ë²„ë¼ì´ë”© O + hashcode(): ì˜¤ë²„ë¼ì´ë”© O
 		Set<C> hashSet3 = new HashSet<>();
 		C c1 = new C(3);
 		C c2 = new C(3);
@@ -83,6 +83,6 @@ public class EX02_HashSetMachanism {
 		System.out.println(c1.hashCode() + " " + c2.hashCode());
 		hashSet3.add(c1);
 		hashSet3.add(c2);
-		System.out.println(hashSet3.size()); //1 (°°Àº °´Ã¼)
+		System.out.println(hashSet3.size()); //1 (ê°™ì€ ê°ì²´)
 	}
 }

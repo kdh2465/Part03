@@ -1,28 +1,28 @@
-package pack04_collectionframework.sec03_Map.EX05_TreeMapMethod_1;
+ï»¿package pack04_collectionframework.sec03_Map.EX05_TreeMapMethod_1;
 
 import java.util.NavigableMap;
 import java.util.NavigableSet;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-/*TreeMap<K,V> Å¬·¡½ºÀÇ ÁÖ¿ä ¸Ş¼­µå È°¿ë¹æ¹ı*/
+/*TreeMap<K,V> í´ë˜ìŠ¤ì˜ ì£¼ìš” ë©”ì„œë“œ í™œìš©ë°©ë²•*/
 
 public class EX05_TreeMapMethod_1 {
 	public static void main(String[] args) {
 		TreeMap<Integer, String> treeMap = new TreeMap<Integer, String>();
 		for(int i=20; i>0; i-=2) { 
-			treeMap.put(i, i+"¹øÂ° µ¥ÀÌÅÍ"); 
+			treeMap.put(i, i+"ë²ˆì§¸ ë°ì´í„°"); 
 		}
-		System.out.println(treeMap.toString()); //{2=2¹øÂ° µ¥ÀÌÅÍ, 4=4¹øÂ° µ¥ÀÌÅÍ,..20=20¹øÂ° µ¥ÀÌÅÍ}
+		System.out.println(treeMap.toString()); //{2=2ë²ˆì§¸ ë°ì´í„°, 4=4ë²ˆì§¸ ë°ì´í„°,..20=20ë²ˆì§¸ ë°ì´í„°}
 		
 		//#1. firstKey()
 		System.out.println(treeMap.firstKey()); //2
 		//#2. firstEntry()
-		System.out.println(treeMap.firstEntry());//2=2¹øÂ° µ¥ÀÌÅÍ
+		System.out.println(treeMap.firstEntry());//2=2ë²ˆì§¸ ë°ì´í„°
 		//#3. lastKey()
 		System.out.println(treeMap.lastKey()); //20
 		//#4. lasttEntry()
-		System.out.println(treeMap.lastEntry()); //20=20¹øÂ° µ¥ÀÌÅÍ
+		System.out.println(treeMap.lastEntry()); //20=20ë²ˆì§¸ ë°ì´í„°
 		//#5. lowerKey(K key)
 		System.out.println(treeMap.lowerKey(11)); //10
 		System.out.println(treeMap.lowerKey(10)); //8
@@ -32,37 +32,37 @@ public class EX05_TreeMapMethod_1 {
 		
 
 		//#7. pollFirstEntry()
-		System.out.println(treeMap.pollFirstEntry()); //2=2¹øÂ° µ¥ÀÌÅÍ
-		System.out.println(treeMap.toString()); //{4=4¹øÂ° µ¥ÀÌÅÍ, 6=6¹øÂ° µ¥ÀÌÅÍ, ...20=20¹øÂ° µ¥ÀÌÅÍ}
+		System.out.println(treeMap.pollFirstEntry()); //2=2ë²ˆì§¸ ë°ì´í„°
+		System.out.println(treeMap.toString()); //{4=4ë²ˆì§¸ ë°ì´í„°, 6=6ë²ˆì§¸ ë°ì´í„°, ...20=20ë²ˆì§¸ ë°ì´í„°}
 		
 		//#8. pollLastEntry()
-		System.out.println(treeMap.pollLastEntry()); //20=20¹øÂ° µ¥ÀÌÅÍ
-		System.out.println(treeMap.toString()); //{4=4¹øÂ° µ¥ÀÌÅÍ, 6=6¹øÂ° µ¥ÀÌÅÍ, ...18=18¹øÂ° µ¥ÀÌÅÍ}
+		System.out.println(treeMap.pollLastEntry()); //20=20ë²ˆì§¸ ë°ì´í„°
+		System.out.println(treeMap.toString()); //{4=4ë²ˆì§¸ ë°ì´í„°, 6=6ë²ˆì§¸ ë°ì´í„°, ...18=18ë²ˆì§¸ ë°ì´í„°}
 
 
 		//#9. SortedMap<K,V> headMap(K toKey)
 		SortedMap<Integer, String> sortedMap = treeMap.headMap(8);
-		System.out.println(sortedMap); //{4=4¹øÂ° µ¥ÀÌÅÍ, 6=6¹øÂ° µ¥ÀÌÅÍ}
+		System.out.println(sortedMap); //{4=4ë²ˆì§¸ ë°ì´í„°, 6=6ë²ˆì§¸ ë°ì´í„°}
 
 		//#10. NavigableMap<K,V> headMap(K toKey, boolean inclusive)
 		NavigableMap<Integer, String> navigableMap = treeMap.headMap(8, true);
-		System.out.println(navigableMap); //{4=4¹øÂ° µ¥ÀÌÅÍ, 6=6¹øÂ° µ¥ÀÌÅÍ, 8=8¹øÂ° µ¥ÀÌÅÍ}
+		System.out.println(navigableMap); //{4=4ë²ˆì§¸ ë°ì´í„°, 6=6ë²ˆì§¸ ë°ì´í„°, 8=8ë²ˆì§¸ ë°ì´í„°}
 
 		//#11. SortedMap<K,V> tailMap(K toKey)
 		sortedMap = treeMap.tailMap(14);
-		System.out.println(sortedMap); //{14=14¹øÂ° µ¥ÀÌÅÍ, 16=16¹øÂ° µ¥ÀÌÅÍ, 18=18¹øÂ° µ¥ÀÌÅÍ}
+		System.out.println(sortedMap); //{14=14ë²ˆì§¸ ë°ì´í„°, 16=16ë²ˆì§¸ ë°ì´í„°, 18=18ë²ˆì§¸ ë°ì´í„°}
 
 		//#12. NavigableMap<K,V> tailMap(K toKey, boolean inclusive)
 		navigableMap = treeMap.tailMap(14, false);
-		System.out.println(navigableMap); //{16=16¹øÂ° µ¥ÀÌÅÍ, 18=18¹øÂ° µ¥ÀÌÅÍ}
+		System.out.println(navigableMap); //{16=16ë²ˆì§¸ ë°ì´í„°, 18=18ë²ˆì§¸ ë°ì´í„°}
 
 		//#13. SortedMap<K,V> subMap(K fromKey, K toKey)
 		sortedMap = treeMap.subMap(6,10);
-		System.out.println(sortedMap); //{6=6¹øÂ° µ¥ÀÌÅÍ, 8=8¹øÂ° µ¥ÀÌÅÍ}
+		System.out.println(sortedMap); //{6=6ë²ˆì§¸ ë°ì´í„°, 8=8ë²ˆì§¸ ë°ì´í„°}
 
 		//#14. NavigableMap<K,V> subMap(K fromKey, boolean frominclusive, K toKey, boolean toinclusive)
 		navigableMap = treeMap.subMap(6, false, 10, true);
-		System.out.println(navigableMap); //{8=8¹øÂ° µ¥ÀÌÅÍ, 10=10¹øÂ° µ¥ÀÌÅÍ}
+		System.out.println(navigableMap); //{8=8ë²ˆì§¸ ë°ì´í„°, 10=10ë²ˆì§¸ ë°ì´í„°}
 
 		//#15. NavigableSet<K> descendingKeySet()
 		NavigableSet<Integer> navigableSet = treeMap.descendingKeySet();
@@ -71,7 +71,7 @@ public class EX05_TreeMapMethod_1 {
 
 		//#16. NavigableMap<K,V> descendingMap()
 		navigableMap = treeMap.descendingMap();
-		System.out.println(navigableMap); //{18=18¹øÂ° µ¥ÀÌÅÍ, 16=16¹øÂ° µ¥ÀÌÅÍ...,4=4¹øÂ° µ¥ÀÌÅÍ}
-		System.out.println(navigableMap.descendingMap()); // {4=4¹øÂ° µ¥ÀÌÅÍ, 6=6¹øÂ° µ¥ÀÌÅÍ,..., 18=18¹øÂ° µ¥ÀÌÅÍ}
+		System.out.println(navigableMap); //{18=18ë²ˆì§¸ ë°ì´í„°, 16=16ë²ˆì§¸ ë°ì´í„°...,4=4ë²ˆì§¸ ë°ì´í„°}
+		System.out.println(navigableMap.descendingMap()); // {4=4ë²ˆì§¸ ë°ì´í„°, 6=6ë²ˆì§¸ ë°ì´í„°,..., 18=18ë²ˆì§¸ ë°ì´í„°}
 	}
 }

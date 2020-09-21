@@ -1,6 +1,6 @@
-package pack03_generic.sec02_GenericClass.EX01_SingleGenericArgument;
+ï»¿package pack03_generic.sec02_GenericClass.EX01_SingleGenericArgument;
 
-/*Á¦³×¸¯ Å¸ÀÔº¯¼ö 1°³¸¦ °¡Áø Á¦³×¸¯Å¬·¡½ºÀÇ ¼±¾ğ ¹× È°¿ë*/
+/*ì œë„¤ë¦­ íƒ€ì…ë³€ìˆ˜ 1ê°œë¥¼ ê°€ì§„ ì œë„¤ë¦­í´ë˜ìŠ¤ì˜ ì„ ì–¸ ë° í™œìš©*/
 
 class MyClass<T> {
 	private T t;
@@ -15,13 +15,13 @@ class MyClass<T> {
 public class EX01_SingleGenericArgument {
 	public static void main(String[] args) {
 		MyClass<String> mc1 = new MyClass<String>();
-		mc1.set("¾È³ç");
-		System.out.println(mc1.get());// "¾È³ç"
+		mc1.set("ì•ˆë…•");
+		System.out.println(mc1.get());// "ì•ˆë…•"
 		MyClass<Integer> mc2 = new MyClass<>();
 		mc2.set(100);
 		System.out.println(mc2.get());// 100
 		MyClass<Integer> mc3 = new MyClass<>();
-		//mc3.set("¾È³ç"); 	//¹®¹ı¿À·ù(syntax error)
-		                	//°­ÇÑ Å¸ÀÔÃ¼Å©
+		//mc3.set("ì•ˆë…•"); 	//ë¬¸ë²•ì˜¤ë¥˜(syntax error)
+		                	//ê°•í•œ íƒ€ì…ì²´í¬
 	}
 }

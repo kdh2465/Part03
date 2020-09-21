@@ -1,6 +1,6 @@
-package pack03_generic.sec05_InheritanceOfGeneric.EX02_InheritanceOfGenericMethod;
+ï»¿package pack03_generic.sec05_InheritanceOfGeneric.EX02_InheritanceOfGenericMethod;
 
-/*Á¦³×¸¯ ¸Ş¼­µåÀÇ »ó¼Ó*/
+/*ì œë„¤ë¦­ ë©”ì„œë“œì˜ ìƒì†*/
 
 class Parent {
 	<T extends Number> void print(T t) {
@@ -15,12 +15,12 @@ class Child extends Parent {
 public class EX02_InheritanceOfGenericMethod {
 	public static void main(String[] args) {
 		
-		//#1. ºÎ¸ğ Å¬·¡½ºÀÇ Á¦³×¸¯ ¸Ş¼­µå »ç¿ë
+		//#1. ë¶€ëª¨ í´ë˜ìŠ¤ì˜ ì œë„¤ë¦­ ë©”ì„œë“œ ì‚¬ìš©
 		Parent p = new Parent();
 		p.<Integer>print(10);
 		p.print(10);
 		
-		//#2. ÀÚ½Ä Å¬·¡½ºÀÇ Á¦³×¸¯ ¸Ş¼­µå »ç¿ë
+		//#2. ìì‹ í´ë˜ìŠ¤ì˜ ì œë„¤ë¦­ ë©”ì„œë“œ ì‚¬ìš©
 		Child c = new Child();
 		c.<Double>print(5.8);
 		p.print(5.8);
